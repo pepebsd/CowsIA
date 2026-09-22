@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CowsIA | Artificial Intelligence for Everyday Cattle Management</title>
+    <meta name="description" content="CowsIA is an Artificial Intelligence solution designed around everyday cattle handling: simple, practical and built for the people working directly with the herd.">
+    <meta name="robots" content="index, follow">
+    <link rel="alternate" hreflang="es" href="cowsia.html">
+    <link rel="alternate" hreflang="en" href="cowsia-en.html">
+    <link rel="alternate" hreflang="x-default" href="cowsia.html">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+:root {
+    --cows-green: #247347;
+    --cows-green-dark: #174c31;
+    --cows-green-soft: #eaf4ee;
+    --cows-cream: #f7f5ef;
+    --cows-ink: #1c2922;
+    --cows-muted: #66736b;
+}
+html { scroll-behavior: smooth; }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cows-ink);
+    background: #fff;
+}
+.navbar {
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,.95)!important;
+}
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: -.04em;
+    font-size: 1.65rem;
+    color: var(--cows-green-dark)!important;
+}
+.brand-dot {
+    display:inline-block;
+    width:.55rem;height:.55rem;border-radius:50%;
+    background:var(--cows-green);
+    margin-left:.14rem;
+}
+.nav-link { font-weight: 600; color:#314239!important; }
+.nav-link:hover { color:var(--cows-green)!important; }
+.hero {
+    min-height: 92vh;
+    padding-top: 90px;
+    background:
+      linear-gradient(90deg, rgba(15,43,29,.92) 0%, rgba(20,61,40,.78) 48%, rgba(20,61,40,.35) 100%),
+      url('https://images.unsplash.com/photo-1761942997080-a3b3ec0c0e78?auto=format&fit=crop&fm=jpg&q=78&w=2200') center/cover no-repeat;
+}
+.hero .eyebrow, .section-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-weight: 800;
+    font-size: .78rem;
+}
+.hero h1 {
+    max-width: 850px;
+    font-size: clamp(2.5rem, 6vw, 5.25rem);
+    letter-spacing: -.045em;
+    line-height: .98;
+}
+.hero .lead {
+    max-width: 720px;
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+}
+.btn-cows {
+    background: var(--cows-green);
+    color:white;
+    border:2px solid var(--cows-green);
+    font-weight:700;
+}
+.btn-cows:hover { background:var(--cows-green-dark); border-color:var(--cows-green-dark); color:white; }
+.btn-outline-cows {
+    border:2px solid rgba(255,255,255,.8);
+    color:white;
+    font-weight:700;
+}
+.btn-outline-cows:hover { background:white;color:var(--cows-green-dark); }
+.trust-pill {
+    display:inline-flex;align-items:center;gap:.5rem;
+    padding:.5rem .85rem;border-radius:999px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.28);
+    margin:.25rem .35rem .25rem 0;
+    font-size:.9rem;
+}
+section { padding: 88px 0; }
+.section-title {
+    font-weight:800;
+    letter-spacing:-.035em;
+    font-size:clamp(2rem,4vw,3.4rem);
+}
+.section-lead {
+    color:var(--cows-muted);
+    font-size:1.16rem;
+    max-width:800px;
+}
+.bg-soft { background:var(--cows-cream); }
+.bg-green-soft { background:var(--cows-green-soft); }
+.value-card, .use-card {
+    height:100%;
+    border:0;
+    border-radius:22px;
+    box-shadow:0 14px 35px rgba(31,55,42,.08);
+}
+.value-card { padding:30px; }
+.use-card { padding:26px; background:#fff; }
+.icon-bubble {
+    width:48px;height:48px;border-radius:14px;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--cows-green-soft); color:var(--cows-green);
+    font-weight:900; font-size:1.15rem; margin-bottom:18px;
+}
+.compare-box {
+    border-radius:24px;
+    padding:34px;
+    height:100%;
+}
+.compare-old { background:#f1f2f1; }
+.compare-cows { background:var(--cows-green-dark); color:white; }
+.compare-box ul { padding-left:1.15rem; }
+.compare-box li { margin:.8rem 0; }
+.photo-panel {
+    min-height:480px;
+    border-radius:28px;
+    background:url('https://images.unsplash.com/photo-1634049036789-5bfc1d5b5f54?auto=format&fit=crop&fm=jpg&q=78&w=1800') center/cover no-repeat;
+    box-shadow:0 18px 40px rgba(20,52,35,.15);
+}
+.cows-photo {
+    min-height:430px;
+    border-radius:28px;
+    background:
+      linear-gradient(rgba(14,43,29,.18),rgba(14,43,29,.18)),
+      url('https://images.unsplash.com/photo-1636808674522-83fec350e43d?auto=format&fit=crop&fm=jpg&q=78&w=1800') center/cover no-repeat;
+}
+.phone {
+    width:min(330px,92%);
+    margin:auto;
+    background:#111b15;
+    border:10px solid #111b15;
+    border-radius:38px;
+    box-shadow:0 24px 55px rgba(12,31,21,.25);
+    overflow:hidden;
+}
+.phone-screen { background:#f8faf8; min-height:590px; border-radius:28px; padding:24px 18px; }
+.phone-top { text-align:center;font-weight:800;color:var(--cows-green-dark);padding:4px 0 18px; }
+.chat {
+    border-radius:16px;
+    padding:12px 14px;
+    margin:10px 0;
+    font-size:.92rem;
+}
+.chat.user { background:#e5ece7; margin-left:28px; }
+.chat.ai { background:var(--cows-green);color:white;margin-right:18px; }
+.phone-note { color:#7a857e;font-size:.74rem;text-align:center;margin-top:16px; }
+.tech-chip {
+    display:inline-block;
+    padding:.55rem .85rem;
+    border-radius:999px;
+    border:1px solid #c8dbcf;
+    color:var(--cows-green-dark);
+    margin:.25rem;
+    background:white;
+    font-weight:700;
+    font-size:.9rem;
+}
+.cta {
+    border-radius:30px;
+    padding:60px;
+    background:linear-gradient(135deg,var(--cows-green-dark),var(--cows-green));
+    color:white;
+}
+footer {
+    padding:38px 0;
+    background:#14251b;
+    color:#d8e1db;
+}
+footer a { color:#e7efe9; }
+.small-credit { color:#94a49a; font-size:.78rem; }
+@media(max-width:991px) {
+    .hero { min-height:78vh; }
+    section { padding:68px 0; }
+    .cta { padding:38px 26px; }
+    .photo-panel,.cows-photo { min-height:340px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#home">CowsIA<span class="brand-dot"></span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#cowsMenu" aria-controls="cowsMenu" aria-expanded="false" aria-label="Open navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="cowsMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#why">Why CowsIA</a></li>
+        <li class="nav-item"><a class="nav-link" href="#daily-work">Daily work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#technology">Technology</a></li>
+        <li class="nav-item"><a class="nav-link" href="#collaborate">Collaborate</a></li>
+        <li class="nav-item ms-lg-2"><a class="btn btn-outline-success btn-sm" href="cowsia.html" hreflang="es">ES</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="home" class="hero d-flex align-items-center text-white">
+  <div class="container">
+    <div class="eyebrow mb-3">AI for cattle farming</div>
+    <h1 class="fw-bold mb-4">AI that works at the farmer's pace.</h1>
+    <p class="lead mb-4">
+      CowsIA starts with real livestock handling. Its goal is to help the people working with cattle every day
+      record, retrieve, remember and decide with less friction and more useful context.
+    </p>
+    <div class="mb-4">
+      <span class="trust-pill">✓ Built for cattle</span>
+      <span class="trust-pill">✓ Everyday handling</span>
+      <span class="trust-pill">✓ Useful AI, not bureaucracy</span>
+    </div>
+    <a href="#why" class="btn btn-cows btn-lg me-2 mb-2">Discover CowsIA</a>
+    <a href="mailto:info@valdefernando.com?subject=Interest%20in%20CowsIA" class="btn btn-outline-cows btn-lg mb-2">Let's talk</a>
+  </div>
+</header>
+
+<section id="why">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="section-eyebrow text-success mb-2">Where it starts</div>
+        <h2 class="section-title mb-4">Livestock first. Technology second.</h2>
+        <p class="section-lead">
+          Many livestock-management tools are primarily designed around records, forms and administrative obligations.
+          Those tasks matter, but they do not always answer the question that arises while standing next to the animals:
+          <strong>“What do I need to know or do right now?”</strong>
+        </p>
+        <p>
+          CowsIA starts from practical livestock knowledge: checking animals, organising groups, remembering an incident,
+          following an animal's evolution, locating the right information and deciding what needs attention.
+        </p>
+        <p class="mb-0">
+          The principle is simple: <strong>technology should adapt to field work, rather than forcing field work to adapt
+          to technology.</strong>
+        </p>
+      </div>
+      <div class="col-lg-6"><div class="photo-panel" role="img" aria-label="Cattle seen from above"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-soft">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-eyebrow text-success mb-2">A different approach</div>
+      <h2 class="section-title">Less administration. More help at the right moment.</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="compare-box compare-old">
+          <h3 class="h4 fw-bold">Many management tools</h3>
+          <ul class="mb-0">
+            <li>Prioritise records, files and administrative processes.</li>
+            <li>Require users to navigate multiple screens and forms.</li>
+            <li>Are mainly designed for desk-based computer work.</li>
+            <li>Useful handling context may be buried among large amounts of data.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="compare-box compare-cows">
+          <h3 class="h4 fw-bold">The CowsIA approach</h3>
+          <ul class="mb-0">
+            <li>Starts with tasks that happen next to the animal.</li>
+            <li>Aims to record observations in as few steps as possible.</li>
+            <li>Prioritises fast retrieval, context and natural language.</li>
+            <li>Turns everyday data into practical support for action and decisions.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="daily-work">
+  <div class="container">
+    <div class="row justify-content-between align-items-end mb-5">
+      <div class="col-lg-7">
+        <div class="section-eyebrow text-success mb-2">Use cases in development</div>
+        <h2 class="section-title">Designed around what actually happens every day on a cattle operation.</h2>
+      </div>
+      <div class="col-lg-4">
+        <p class="text-muted mb-0">CowsIA is evolving. These areas describe the intended product direction and will be progressively validated with real users.</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">01</div><h3 class="h5">Animals and groups</h3><p class="mb-0">Fast access to useful information about an individual animal or group without navigating complex structures.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">02</div><h3 class="h5">Observations and incidents</h3><p class="mb-0">Capture what is seen in the field simply, through text and potentially voice interaction in future versions.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">03</div><h3 class="h5">Tasks and reminders</h3><p class="mb-0">Remember checks, follow-ups and recurring tasks linked to animals or groups.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">04</div><h3 class="h5">History with context</h3><p class="mb-0">Quickly retrieve what happened before and the information that matters for the current decision.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">05</div><h3 class="h5">Computer vision</h3><p class="mb-0">Explore visual identification, behaviour observation and change detection as support for field staff.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">06</div><h3 class="h5">Sensors and IoT</h3><p class="mb-0">Progressively integrate new data sources when they deliver real handling value and can operate reliably in rural environments.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-green-soft">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-top">CowsIA</div>
+            <div class="chat user">Cow 184 seemed slightly lame this morning.</div>
+            <div class="chat ai">Recorded as today's observation. Would you like a reminder to check her tomorrow?</div>
+            <div class="chat user">Yes. Has she had any related issue before?</div>
+            <div class="chat ai">The conceptual example would show the animal's relevant history and related observations here.</div>
+            <div class="phone-note">Concept interface · functionality in development</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="section-eyebrow text-success mb-2">Natural interaction</div>
+        <h2 class="section-title mb-4">Speak the way people speak in the field.</h2>
+        <p class="section-lead">
+          The goal is not to teach the user how to operate software. It is to make the software increasingly understand
+          how the user works.
+        </p>
+        <p>
+          CowsIA explores natural-language interfaces so that observations can be captured quickly and relevant information
+          can be retrieved through simple questions.
+        </p>
+        <p class="mb-0">
+          The design criterion is to reduce steps, avoid unnecessary screens and retain the context of each animal,
+          group or task.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="technology">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6"><div class="cows-photo" role="img" aria-label="Cattle in the field"></div></div>
+      <div class="col-lg-6">
+        <div class="section-eyebrow text-success mb-2">Technology with a purpose</div>
+        <h2 class="section-title mb-4">Add technology only when it makes livestock handling easier.</h2>
+        <p class="section-lead">
+          CowsIA is not intended to be a technology showcase. Every capability should solve a specific field problem.
+        </p>
+        <div class="mt-4">
+          <span class="tech-chip">Generative AI</span>
+          <span class="tech-chip">Natural language</span>
+          <span class="tech-chip">Computer vision</span>
+          <span class="tech-chip">Sensors</span>
+          <span class="tech-chip">IoT</span>
+          <span class="tech-chip">Edge AI</span>
+          <span class="tech-chip">Cloud</span>
+          <span class="tech-chip">Automation</span>
+        </div>
+        <p class="mt-4 mb-0">
+          Product evolution will depend on on-farm validation, data availability, connectivity, technical reliability
+          and demonstrated usefulness for the people doing the work.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-soft">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-eyebrow text-success mb-2">From problem to product</div>
+      <h2 class="section-title">How CowsIA can be developed</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="value-card bg-white"><div class="icon-bubble">1</div><h3 class="h5">Observe real work</h3><p class="mb-0">Identify friction, decisions and recurring tasks in everyday cattle handling.</p></div></div>
+      <div class="col-md-4"><div class="value-card bg-white"><div class="icon-bubble">2</div><h3 class="h5">Prototype and validate</h3><p class="mb-0">Turn problems into simple workflows, test them with users and remove anything that adds no practical value.</p></div></div>
+      <div class="col-md-4"><div class="value-card bg-white"><div class="icon-bubble">3</div><h3 class="h5">Scale with data and technology</h3><p class="mb-0">Introduce AI, vision, sensors and automation as their usefulness is demonstrated.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="collaborate">
+  <div class="container">
+    <div class="cta">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <div class="section-eyebrow mb-2">Collaboration</div>
+          <h2 class="display-5 fw-bold">Can you help take CowsIA from the field to a scalable product?</h2>
+          <p class="lead mb-0">
+            We are interested in speaking with cattle farmers, veterinarians, researchers, AI and computer-vision specialists,
+            IoT and rural-connectivity companies, technology centres, startups, accelerators and investors.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a class="btn btn-light btn-lg" href="mailto:info@valdefernando.com?subject=Collaboration%20with%20CowsIA">Contact CowsIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row g-3 align-items-end">
+      <div class="col-md-7">
+        <div class="h4 fw-bold text-white">CowsIA</div>
+        <div>Artificial Intelligence for everyday cattle management.</div>
+        <div class="mt-2"><a href="mailto:info@valdefernando.com">info@valdefernando.com</a></div>
+      </div>
+      <div class="col-md-5 text-md-end small-credit">
+        Photography: Pierre Bamin, Judah Estrada and Gytis M · Unsplash License.<br>
+        <a href="https://unsplash.com/photos/farmer-feeding-cows-in-a-barn-wVZRds2XHvY">Photo 1</a> ·
+        <a href="https://unsplash.com/photos/a-herd-of-cattle-standing-on-top-of-a-grass-covered-field-MeWndHZuCdE">Photo 2</a> ·
+        <a href="https://unsplash.com/photos/a-herd-of-cows-standing-on-top-of-a-grass-covered-field-SBM0fc1nmjM">Photo 3</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
