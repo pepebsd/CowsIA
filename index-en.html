@@ -167,6 +167,48 @@ section { padding: 88px 0; }
     font-weight:700;
     font-size:.9rem;
 }
+
+.architecture-flow {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    align-items:stretch;
+}
+.arch-step {
+    position:relative;
+    background:#fff;
+    border:1px solid #dce9e0;
+    border-radius:22px;
+    padding:24px;
+    box-shadow:0 12px 28px rgba(31,55,42,.07);
+}
+.arch-step:not(:last-child)::after {
+    content:'→';
+    position:absolute;
+    right:-17px;
+    top:50%;
+    transform:translateY(-50%);
+    width:32px;height:32px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--cows-green);color:white;font-weight:900;
+    z-index:2;
+}
+.arch-step h3 { font-size:1rem; font-weight:800; margin-bottom:.7rem; }
+.arch-step p { margin:0; color:var(--cows-muted); font-size:.92rem; }
+.arch-core { background:var(--cows-green-dark); color:white; border-color:var(--cows-green-dark); }
+.arch-core p { color:#d9e7de; }
+.feature-note {
+    border-left:4px solid var(--cows-green);
+    padding-left:18px;
+    color:var(--cows-muted);
+}
+@media(max-width:991px) {
+    .architecture-flow { grid-template-columns:1fr 1fr; }
+    .arch-step::after { display:none!important; }
+}
+@media(max-width:575px) {
+    .architecture-flow { grid-template-columns:1fr; }
+}
 .cta {
     border-radius:30px;
     padding:60px;
@@ -288,20 +330,50 @@ footer a { color:#e7efe9; }
   <div class="container">
     <div class="row justify-content-between align-items-end mb-5">
       <div class="col-lg-7">
-        <div class="section-eyebrow text-success mb-2">Use cases in development</div>
-        <h2 class="section-title">Designed around what actually happens every day on a cattle operation.</h2>
+        <div class="section-eyebrow text-success mb-2">Future capabilities and work in progress</div>
+        <h2 class="section-title">AI for the animal, the herd and the farm.</h2>
       </div>
       <div class="col-lg-4">
-        <p class="text-muted mb-0">CowsIA is evolving. These areas describe the intended product direction and will be progressively validated with real users.</p>
+        <p class="text-muted mb-0">CowsIA is exploring these capabilities progressively, prioritising field value, data quality and real-world validation.</p>
       </div>
     </div>
     <div class="row g-4">
-      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">01</div><h3 class="h5">Animals and groups</h3><p class="mb-0">Fast access to useful information about an individual animal or group without navigating complex structures.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">02</div><h3 class="h5">Observations and incidents</h3><p class="mb-0">Capture what is seen in the field simply, through text and potentially voice interaction in future versions.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">03</div><h3 class="h5">Tasks and reminders</h3><p class="mb-0">Remember checks, follow-ups and recurring tasks linked to animals or groups.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">04</div><h3 class="h5">History with context</h3><p class="mb-0">Quickly retrieve what happened before and the information that matters for the current decision.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">05</div><h3 class="h5">Computer vision</h3><p class="mb-0">Explore visual identification, behaviour observation and change detection as support for field staff.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">06</div><h3 class="h5">Sensors and IoT</h3><p class="mb-0">Progressively integrate new data sources when they deliver real handling value and can operate reliably in rural environments.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">01</div><h3 class="h5">Automatic ear-tag reading</h3><p class="mb-0">Photo or video → tag detection → OCR → retrieve the animal record.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">02</div><h3 class="h5">Biometric identification</h3><p class="mb-0">Recognise animals from face, muzzle, markings and body even when the tag is not visible.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">03</div><h3 class="h5">Automatic photo history</h3><p class="mb-0">Link each image to the animal with date, time, location and visual evolution.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">04</div><h3 class="h5">Weight without scales</h3><p class="mb-0">Estimate live weight and growth curves from one or more photographs.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">05</div><h3 class="h5">Body condition score</h3><p class="mb-0">Estimate BCS and detect relevant losses in condition over time.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">06</div><h3 class="h5">Lameness and mobility</h3><p class="mb-0">Analyse gait in video and detect changes consistent with mobility problems.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">07</div><h3 class="h5">Wounds and visual anomalies</h3><p class="mb-0">Classify visible lesions or changes for review prioritisation, not veterinary replacement.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">08</div><h3 class="h5">Thermal imaging + AI</h3><p class="mb-0">Combine RGB and thermal imagery to flag abnormal temperature patterns for review.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">09</div><h3 class="h5">Video behaviour analysis</h3><p class="mb-0">Recognise activity and detect deviations from each animal's normal behaviour.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">10</div><h3 class="h5">IoT sensors + AI</h3><p class="mb-0">Combine activity, temperature, GPS, rumination, environment and other sensors into useful alerts.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">11</div><h3 class="h5">Heat, reproduction and calving</h3><p class="mb-0">Combine activity, temperature, feeding, video and reproductive history to anticipate events.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">12</div><h3 class="h5">Automatic drone counting</h3><p class="mb-0">Detect, track and count livestock while avoiding duplicate counts in dense groups.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">13</div><h3 class="h5">Missing-animal location</h3><p class="mb-0">Compare inventory with detected identities to indicate exactly which animals are not located.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">14</div><h3 class="h5">Farm-use maps</h3><p class="mb-0">Build maps of grazing, routes, water, shade, resting areas and stocking pressure.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">15</div><h3 class="h5">Pasture and stocking load</h3><p class="mb-0">Combine livestock, weight, NDVI, rain and temperature to estimate forage and grazing days.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">16</div><h3 class="h5">Strays and anomalies</h3><p class="mb-0">Detect separation, prolonged immobility, enclosure exits or unusual movement patterns.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">17</div><h3 class="h5">Water and feeding</h3><p class="mb-0">Identify visits to feeders and drinkers and flag abnormal drops in intake.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">18</div><h3 class="h5">Economic forecasting</h3><p class="mb-0">Project future weight and margin per animal from growth, costs and expected prices.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">19</div><h3 class="h5">Selection indicators</h3><p class="mb-0">Summarise growth, fertility, health, efficiency and longevity to support farmer decisions.</p></div></div>
+    </div>
+    <p class="feature-note mt-5 mb-0">The central idea is that every new image, video or sensor reading improves the animal's <strong>unique digital identity</strong> and history.</p>
+  </div>
+</section>
+
+<section class="bg-soft">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-eyebrow text-success mb-2">Functional architecture</div>
+      <h2 class="section-title">From field data to a useful decision.</h2>
+      <p class="section-lead mx-auto">A shared identity layer allows the same data to support multiple models and capabilities.</p>
+    </div>
+    <div class="architecture-flow">
+      <div class="arch-step"><h3>1 · Capture</h3><p>Photos · video · drone · GPS · RFID · LoRaWAN · sensors · thermal imaging.</p></div>
+      <div class="arch-step"><h3>2 · AI</h3><p>OCR · biometrics · computer vision · tracking · time series · predictive models.</p></div>
+      <div class="arch-step arch-core"><h3>3 · Digital identity</h3><p>Unique ID + history + biometrics + weight + health + reproduction + location.</p></div>
+      <div class="arch-step"><h3>4 · Outcome</h3><p>Alerts · search · monitoring · forecasts · maps · decision support.</p></div>
     </div>
   </div>
 </section>

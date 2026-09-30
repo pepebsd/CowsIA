@@ -167,6 +167,48 @@ section { padding: 88px 0; }
     font-weight:700;
     font-size:.9rem;
 }
+
+.architecture-flow {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    align-items:stretch;
+}
+.arch-step {
+    position:relative;
+    background:#fff;
+    border:1px solid #dce9e0;
+    border-radius:22px;
+    padding:24px;
+    box-shadow:0 12px 28px rgba(31,55,42,.07);
+}
+.arch-step:not(:last-child)::after {
+    content:'→';
+    position:absolute;
+    right:-17px;
+    top:50%;
+    transform:translateY(-50%);
+    width:32px;height:32px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--cows-green);color:white;font-weight:900;
+    z-index:2;
+}
+.arch-step h3 { font-size:1rem; font-weight:800; margin-bottom:.7rem; }
+.arch-step p { margin:0; color:var(--cows-muted); font-size:.92rem; }
+.arch-core { background:var(--cows-green-dark); color:white; border-color:var(--cows-green-dark); }
+.arch-core p { color:#d9e7de; }
+.feature-note {
+    border-left:4px solid var(--cows-green);
+    padding-left:18px;
+    color:var(--cows-muted);
+}
+@media(max-width:991px) {
+    .architecture-flow { grid-template-columns:1fr 1fr; }
+    .arch-step::after { display:none!important; }
+}
+@media(max-width:575px) {
+    .architecture-flow { grid-template-columns:1fr; }
+}
 .cta {
     border-radius:30px;
     padding:60px;
@@ -202,7 +244,7 @@ footer a { color:#e7efe9; }
         <li class="nav-item"><a class="nav-link" href="#manejo">Manejo diario</a></li>
         <li class="nav-item"><a class="nav-link" href="#tecnologia">Tecnología</a></li>
         <li class="nav-item"><a class="nav-link" href="#colaborar">Colaborar</a></li>
-        <li class="nav-item ms-lg-2"><a class="btn btn-outline-success btn-sm" href="cowsia-en.html" hreflang="en">EN</a></li>
+        <li class="nav-item ms-lg-2"><a class="btn btn-outline-success btn-sm" href="index-en.html" hreflang="en">EN</a></li>
       </ul>
     </div>
   </div>
@@ -288,20 +330,50 @@ footer a { color:#e7efe9; }
   <div class="container">
     <div class="row justify-content-between align-items-end mb-5">
       <div class="col-lg-7">
-        <div class="section-eyebrow text-success mb-2">Casos de uso en desarrollo</div>
-        <h2 class="section-title">Pensado para lo que ocurre cada día en una explotación.</h2>
+        <div class="section-eyebrow text-success mb-2">Funcionalidades futuras y en desarrollo</div>
+        <h2 class="section-title">IA aplicada al animal, al rebaño y a la explotación.</h2>
       </div>
       <div class="col-lg-4">
-        <p class="text-muted mb-0">CowsIA está en evolución. Estos ámbitos representan la dirección funcional del producto y se validarán progresivamente con usuarios reales.</p>
+        <p class="text-muted mb-0">Líneas de trabajo que CowsIA estudia integrar progresivamente, priorizando utilidad en campo, calidad de datos y validación real.</p>
       </div>
     </div>
     <div class="row g-4">
-      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">01</div><h3 class="h5">Animales y lotes</h3><p class="mb-0">Acceso rápido a la información útil de un animal o grupo sin navegar por estructuras complejas.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">02</div><h3 class="h5">Observaciones e incidencias</h3><p class="mb-0">Registrar de forma sencilla lo que se observa en campo, mediante texto y, en futuras versiones, interacción por voz.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">03</div><h3 class="h5">Pendientes y recordatorios</h3><p class="mb-0">Recordar revisiones, seguimientos y tareas recurrentes asociadas a animales o lotes.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">04</div><h3 class="h5">Historial con contexto</h3><p class="mb-0">Recuperar rápidamente qué ocurrió antes y qué información resulta relevante para la decisión actual.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">05</div><h3 class="h5">Visión artificial</h3><p class="mb-0">Explorar identificación visual, observación de comportamiento y detección de cambios como apoyo al personal de campo.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">06</div><h3 class="h5">Sensores e IoT</h3><p class="mb-0">Integrar progresivamente nuevas fuentes de datos cuando aporten valor real al manejo y puedan funcionar en entorno rural.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">01</div><h3 class="h5">Lectura automática del crotal</h3><p class="mb-0">Foto o vídeo → detección del crotal → OCR → consulta de la ficha del animal.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">02</div><h3 class="h5">Identificación biométrica</h3><p class="mb-0">Reconocer al animal por cara, morro, manchas y cuerpo incluso sin crotal visible.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">03</div><h3 class="h5">Histórico fotográfico automático</h3><p class="mb-0">Asociar cada imagen al animal con fecha, hora, posición y evolución visual.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">04</div><h3 class="h5">Peso sin báscula</h3><p class="mb-0">Estimar peso y curva de crecimiento a partir de una o varias fotografías.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">05</div><h3 class="h5">Condición corporal (BCS)</h3><p class="mb-0">Estimar condición corporal y detectar pérdidas relevantes a lo largo del tiempo.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">06</div><h3 class="h5">Cojera y movilidad</h3><p class="mb-0">Analizar la marcha en vídeo y detectar cambios compatibles con problemas de movilidad.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">07</div><h3 class="h5">Heridas y anomalías visuales</h3><p class="mb-0">Clasificar lesiones o cambios visibles para priorizar revisión, no para sustituir al veterinario.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">08</div><h3 class="h5">Termografía + IA</h3><p class="mb-0">Combinar imagen RGB y térmica para localizar anomalías de temperatura que requieran revisión.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">09</div><h3 class="h5">Comportamiento por vídeo</h3><p class="mb-0">Reconocer actividad y detectar desviaciones respecto al comportamiento habitual de cada animal.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">10</div><h3 class="h5">Sensores IoT + IA</h3><p class="mb-0">Cruzar actividad, temperatura, GPS, rumia, ambiente y otros sensores para generar alertas útiles.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">11</div><h3 class="h5">Celo, reproducción y parto</h3><p class="mb-0">Combinar actividad, temperatura, alimentación, vídeo e historial reproductivo para anticipar eventos.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">12</div><h3 class="h5">Conteo automático con drones</h3><p class="mb-0">Detectar, seguir y contar animales evitando duplicados incluso en grupos densos.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">13</div><h3 class="h5">Localización de animales ausentes</h3><p class="mb-0">Comparar inventario e identificaciones detectadas para señalar qué animales no se han localizado.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">14</div><h3 class="h5">Mapas de uso de la finca</h3><p class="mb-0">Construir mapas de pastoreo, rutas, agua, sombra, descanso y presión ganadera.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">15</div><h3 class="h5">Pasto y carga ganadera</h3><p class="mb-0">Cruzar animales, peso, NDVI, lluvia y temperatura para estimar disponibilidad y días de pastoreo.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">16</div><h3 class="h5">Extraviados y anomalías</h3><p class="mb-0">Detectar separación del rebaño, inmovilidad, salida del recinto o movimientos inusuales.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">17</div><h3 class="h5">Agua y alimentación</h3><p class="mb-0">Identificar visitas a comederos y bebederos y detectar caídas anómalas de consumo.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">18</div><h3 class="h5">Predicción económica</h3><p class="mb-0">Proyectar peso y margen futuro por animal combinando crecimiento, costes y precios esperados.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="use-card"><div class="icon-bubble">19</div><h3 class="h5">Indicadores para selección</h3><p class="mb-0">Resumir crecimiento, fertilidad, salud, eficiencia y longevidad para apoyar decisiones del ganadero.</p></div></div>
+    </div>
+    <p class="feature-note mt-5 mb-0">La idea central es que cada nueva fotografía, vídeo o dato de sensor mejore la <strong>identidad digital única</strong> y el histórico del animal.</p>
+  </div>
+</section>
+
+<section class="bg-soft">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-eyebrow text-success mb-2">Arquitectura funcional</div>
+      <h2 class="section-title">De los datos de campo a una decisión útil.</h2>
+      <p class="section-lead mx-auto">Una misma base de identidad permite reutilizar los datos entre diferentes modelos y funcionalidades.</p>
+    </div>
+    <div class="architecture-flow">
+      <div class="arch-step"><h3>1 · Captura</h3><p>Fotos · vídeo · dron · GPS · RFID · LoRaWAN · sensores · termografía.</p></div>
+      <div class="arch-step"><h3>2 · IA</h3><p>OCR · biometría · visión artificial · tracking · series temporales · predicción.</p></div>
+      <div class="arch-step arch-core"><h3>3 · Identidad digital</h3><p>ID único + histórico + biometría + peso + salud + reproducción + localización.</p></div>
+      <div class="arch-step"><h3>4 · Resultado</h3><p>Alertas · búsquedas · seguimiento · predicciones · mapas · apoyo a decisiones.</p></div>
     </div>
   </div>
 </section>
