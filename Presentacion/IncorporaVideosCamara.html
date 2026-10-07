@@ -1,0 +1,2371 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Integración, análisis y presentación de los vídeos de las cámaras en CowsIA.">
+  <title>Vídeos de cámaras trampa · CowsIA</title>
+  <style>
+:root{--ink:#15221d;--muted:#627069;--paper:#fbfcfa;--surface:#fff;--line:#dde5e0;--navy:#102e25;--green:#1f6b4f;--lime:#b9e769;--code:#14201c;--shadow:0 18px 50px rgba(20,45,35,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font:15px/1.72 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--green)}button,input{font:inherit}.site-header{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(255,255,255,.13);background:rgba(16,46,37,.96);backdrop-filter:blur(14px);color:#fff}.header-inner{width:min(1440px,calc(100% - 36px));height:64px;margin:auto;display:flex;align-items:center;gap:18px}.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;letter-spacing:-.02em}.brand-mark{display:grid;width:34px;height:34px;place-items:center;border-radius:10px;background:var(--lime);color:var(--navy);font-size:13px}.header-title{overflow:hidden;color:#cbd8d3;white-space:nowrap;text-overflow:ellipsis}.header-spacer{flex:1}.header-link{padding:8px 12px;border:1px solid #47675c;border-radius:9px;color:#fff;text-decoration:none;font-size:13px}.hero{background:linear-gradient(135deg,#102e25 0%,#174738 58%,#1f6b4f 100%);color:#fff}.hero-inner{width:min(1180px,calc(100% - 40px));margin:auto;padding:76px 0 68px}.eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;color:var(--lime);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.eyebrow:before{content:"";width:22px;height:2px;background:currentColor}.hero h1{max-width:820px;margin:0;font-size:clamp(38px,6vw,72px);line-height:1.02;letter-spacing:-.055em}.hero p{max-width:680px;margin:22px 0 0;color:#d4e3dd;font-size:18px}.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.meta-pill{padding:7px 11px;border:1px solid rgba(255,255,255,.18);border-radius:99px;background:rgba(255,255,255,.07);color:#e6efeb;font-size:12px}.index-main{width:min(1180px,calc(100% - 40px));margin:0 auto;padding:64px 0 80px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}.section-head h2{margin:0;font-size:30px;letter-spacing:-.035em}.section-head p{margin:0;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{position:relative;min-height:255px;padding:26px;border:1px solid var(--line);border-radius:18px;background:var(--surface);box-shadow:0 2px 0 rgba(20,45,35,.02);color:inherit;text-decoration:none;transition:.2s ease;overflow:hidden}.card:before{content:"";position:absolute;inset:0 0 auto;height:4px;background:var(--accent)}.card:hover{transform:translateY(-4px);border-color:#bdcbc4;box-shadow:var(--shadow)}.card-icon{display:grid;width:46px;height:46px;place-items:center;border-radius:13px;background:color-mix(in srgb,var(--accent) 12%,white);color:var(--accent);font-weight:900}.card h3{margin:27px 0 10px;font-size:21px;line-height:1.2;letter-spacing:-.025em}.card p{margin:0;color:var(--muted);font-size:14px}.card-foot{position:absolute;right:26px;bottom:22px;left:26px;display:flex;justify-content:space-between;color:#718078;font-size:12px}.arrow{color:var(--accent);font-size:20px}.page-shell{display:grid;grid-template-columns:280px minmax(0,860px);gap:46px;width:min(1240px,calc(100% - 40px));margin:42px auto 80px;justify-content:center}.sidebar{position:sticky;top:88px;align-self:start;max-height:calc(100vh - 112px);overflow:auto;padding:20px;border:1px solid var(--line);border-radius:15px;background:#fff}.sidebar-label{margin-bottom:11px;color:#7a8781;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.search{width:100%;margin-bottom:18px;padding:10px 12px;border:1px solid var(--line);border-radius:9px;outline:none;background:#f8faf8}.search:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 14%,transparent)}.toc{display:grid;gap:3px}.toc a{padding:6px 8px;border-radius:7px;color:#56645e;text-decoration:none;font-size:12px;line-height:1.3}.toc a:hover,.toc a.active{background:#edf4f0;color:var(--navy)}.toc .level-3{padding-left:20px;color:#77827d}.article{min-width:0}.article-banner{margin-bottom:28px;padding:30px;border-radius:19px;background:linear-gradient(135deg,var(--navy),color-mix(in srgb,var(--accent) 55%,var(--navy)));color:#fff}.article-banner .eyebrow{margin:0 0 12px}.article-banner h1{margin:0;font-size:clamp(30px,4vw,48px);line-height:1.06;letter-spacing:-.045em}.article-banner p{margin:14px 0 0;color:#d5e5df}.markdown-body{padding:38px 42px;border:1px solid var(--line);border-radius:19px;background:#fff;box-shadow:0 10px 35px rgba(21,48,38,.055);overflow-wrap:anywhere}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4{scroll-margin-top:86px;line-height:1.25;letter-spacing:-.025em}.markdown-body h1{margin:0 0 30px;padding-bottom:16px;border-bottom:1px solid var(--line);font-size:34px}.markdown-body h2{margin:50px 0 18px;padding-top:4px;font-size:26px}.markdown-body h3{margin:34px 0 13px;font-size:20px}.markdown-body p{margin:0 0 17px}.markdown-body ul,.markdown-body ol{padding-left:25px}.markdown-body blockquote{margin:24px 0;padding:2px 20px;border-left:4px solid var(--accent);color:#53625b}.markdown-body code{padding:.16em .38em;border-radius:5px;background:#edf2ef;color:#234a3c;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}.markdown-body pre{position:relative;margin:22px 0;padding:18px 20px;border-radius:12px;background:var(--code);color:#dce9e3;overflow:auto;white-space:pre;font:12px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}.markdown-body pre code{padding:0;background:none;color:inherit}.markdown-body hr{height:1px;margin:36px 0;border:0;background:var(--line)}.markdown-body table{display:block;width:100%;border-collapse:collapse;overflow:auto}.markdown-body th,.markdown-body td{padding:9px 12px;border:1px solid var(--line);text-align:left}.markdown-body img{max-width:100%;height:auto;border-radius:10px}.search-hidden{display:none!important}.no-results{display:none;margin:20px 0;padding:20px;border-radius:12px;background:#fff4d9;color:#744e05}.site-footer{padding:32px 20px;border-top:1px solid var(--line);color:#75827c;text-align:center;font-size:12px}@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.page-shell{display:block}.sidebar{position:relative;top:auto;max-height:none;margin-bottom:24px}.toc{display:none}.markdown-body{padding:28px 24px}}@media(max-width:600px){.cards{grid-template-columns:1fr}.hero-inner{padding:55px 0}.header-title{display:none}.section-head{display:block}.section-head p{margin-top:7px}.article-banner{padding:24px}.markdown-body{border-radius:14px}.header-link{display:none}}
+</style>
+</head>
+<body style="--accent:#7c3aed">
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">C</span><span>CowsIA</span></a>
+    <span class="header-title">Vídeos de cámaras trampa</span><span class="header-spacer"></span>
+    <a class="header-link" href="index.html">Todos los documentos</a>
+  </div></header>
+  <main class="page-shell">
+    <aside class="sidebar">
+      <div class="sidebar-label">Buscar en el documento</div>
+      <input class="search" id="page-search" type="search" placeholder="Escribe para filtrar..." autocomplete="off">
+      <div class="sidebar-label">Contenido</div><nav class="toc" aria-label="Indice del documento"><a class="level-1" href="#codex-conversation">Codex conversation</a><a class="level-2" href="#user">User</a><a class="level-2" href="#assistant">Assistant</a><a class="level-2" href="#activity">Activity</a><a class="level-2" href="#activity-2">Activity</a><a class="level-2" href="#activity-3">Activity</a><a class="level-2" href="#activity-4">Activity</a><a class="level-2" href="#activity-5">Activity</a><a class="level-2" href="#activity-6">Activity</a><a class="level-2" href="#activity-7">Activity</a><a class="level-2" href="#activity-8">Activity</a><a class="level-2" href="#assistant-2">Assistant</a><a class="level-2" href="#activity-9">Activity</a><a class="level-2" href="#activity-10">Activity</a><a class="level-2" href="#activity-11">Activity</a><a class="level-2" href="#activity-12">Activity</a><a class="level-2" href="#activity-13">Activity</a><a class="level-2" href="#activity-14">Activity</a><a class="level-2" href="#assistant-3">Assistant</a><a class="level-2" href="#activity-15">Activity</a><a class="level-2" href="#assistant-4">Assistant</a><a class="level-2" href="#activity-16">Activity</a><a class="level-2" href="#activity-17">Activity</a><a class="level-2" href="#activity-18">Activity</a><a class="level-2" href="#activity-19">Activity</a><a class="level-2" href="#activity-20">Activity</a><a class="level-2" href="#assistant-5">Assistant</a><a class="level-2" href="#activity-21">Activity</a><a class="level-2" href="#activity-22">Activity</a><a class="level-2" href="#assistant-6">Assistant</a><a class="level-2" href="#user-2">User</a><a class="level-2" href="#assistant-7">Assistant</a><a class="level-2" href="#activity-23">Activity</a><a class="level-2" href="#activity-24">Activity</a><a class="level-2" href="#activity-25">Activity</a><a class="level-2" href="#activity-26">Activity</a><a class="level-2" href="#assistant-8">Assistant</a><a class="level-2" href="#activity-27">Activity</a><a class="level-2" href="#user-3">User</a><a class="level-2" href="#assistant-9">Assistant</a><a class="level-2" href="#user-4">User</a><a class="level-2" href="#user-5">User</a><a class="level-2" href="#assistant-10">Assistant</a></nav>
+    </aside>
+    <article class="article">
+      <header class="article-banner">
+        <div class="eyebrow">Conversación documentada</div>
+        <h1>Vídeos de cámaras trampa</h1><p>Integración, análisis y presentación de los vídeos de las cámaras en CowsIA.</p>
+        <div class="hero-meta"><span class="meta-pill">2,367 líneas · 11,369 palabras</span><span class="meta-pill">Fuente: IncorporaVideosCamara.md</span></div>
+      </header>
+      <div class="no-results" id="no-results">No hay coincidencias para esta búsqueda.</div>
+      <div class="markdown-body" id="document-content"><h1 id="codex-conversation">Codex conversation</h1>
+<h2 id="user">User</h2>
+<p>Incorporame un apartado denominado videos_camaras, que estan en el directorio videos_camara_trampa y los muestre en la interfaz y si puedes analiza los videos y añadele a cada video una descripción que aparecera junto al video en la interfaz de cowsia</p>
+<h2 id="assistant">Assistant</h2>
+<p>Voy a revisar la interfaz y los archivos de <code>videos_camara_trampa</code> para añadir el apartado <code>videos_camaras</code>. También comprobaré si puedo extraer fotogramas para describir lo que se ve en cada vídeo.</p>
+<h2 id="activity">Activity</h2>
+<pre><code>$ pwd; rg --files -g AGENTS.md -g '*video*' -g 'package.json' -g '*compose*' -g 'README*' -g '!node_modules' -g '!vendor'
+/opt/DesplieguesDocker/CowsIA
+README.md
+imagenes_incidencias_animales/README.md
+docs/incidencias_explotacion_20260929/README.md
+docs/filtros-y-dashboard/README.md
+docs/tareas_desde_registros_20260929/README.md
+docs/sucesos_simulados_20260929/README.md
+docs/verificacion-mapas-sucesos/README.md
+docs/gestor-tareas/README.md
+docker-compose.yml
+frontend/package.json
+imagenes_incidencias_descargadas/README.md
+✓ • 34ms
+</code></pre>
+<h2 id="activity-2">Activity</h2>
+<pre><code>$ git status --short; ls -la
+fatal: not a git repository (or any of the parent directories): .git
+total 856
+drwxr-xr-x 16 root root   4096 Sep 29 16:58 .
+drwxr-xr-x  6 root root   4096 Sep 28 19:33 ..
+dr-xr-xr-x  2 root root     40 Sep 29 16:58 .agents
+dr-xr-xr-x  2 root root     40 Sep 29 16:58 .aws
+dr-xr-xr-x  2 root root     40 Sep 29 16:58 .codex
+-rw-r--r--  1 root root    266 Sep  2 15:56 .dockerignore
+-rw-------  1 root root    409 Sep  2 15:39 .env
+-rw-r--r--  1 root root    628 Sep  2 15:39 .env.example
+dr-xr-xr-x  2 root root     40 Sep 29 16:58 .git
+-rw-r--r--  1 root root     38 Sep  2 15:56 .gitignore
+-rw-r--r--  1 root root 279056 Sep  2 14:17 LibroRegistroAnimaleGanaderoAFechas_10-07-2023_10-07-2026.xml
+-rw-r--r--  1 root root  40186 Sep  2 14:17 Movimientos_Cuenta_9111_01_05_2026_26 _ 07 _ 2026.ods
+-rw-r--r--  1 root root   5056 Sep  2 15:56 README.md
+drwxr-xr-x  6 root root   4096 Sep 29 12:06 backend
+-rw-r--r--  1 root root   7626 Sep  2 15:56 bitacora.md
+drwxr-xr-x  2 root root   4096 Sep 29 09:32 capturas_cowsia
+-rw-r--r--  1 root root  51519 Sep 22 12:49 cowsia.html
+-rw-r--r--  1 root root   1551 Sep 29 07:51 docker-compose.yml
+drwxr-xr-x  9 root root   4096 Sep 29 12:05 docs
+drwxr-xr-x  7 root root   4096 Sep 29 11:38 frontend
+-rw-r--r--  1 root root 353210 Sep 29 07:47 historico_ubicaciones_animales.csv
+-rw-r--r--  1 root root   2367 Sep 29 07:47 historico_ubicaciones_animales.md
+drwxr-xr-x  2 root root  16384 Sep  2 14:22 imagenes_animales
+drwxr-xr-x  2 root root   4096 Sep 22 12:47 imagenes_incidencias
+drwxr-xr-x  3 root root   4096 Sep 29 09:01 imagenes_incidencias_animales
+drwxr-xr-x  3 root root  36864 Sep 29 10:12 imagenes_incidencias_descargadas
+drwxr-xr-x  3 root root   4096 Sep 29 12:05 scripts
+-rw-r--r--  1 root root   3953 Sep  2 14:17 ubicaciones_animales.csv
+drwxr-xr-x  2 root root   4096 Sep 29 15:35 videos_camara_trampa
+✓ • 0ms
+</code></pre>
+<h2 id="activity-3">Activity</h2>
+<pre><code>$ find .. -name AGENTS.md -print; ls frontend; ls backend; ls -lh videos_camara_trampa; cat docker-compose.yml; cat frontend/package.json
+../BancosIA_2/AGENTS.md
+Dockerfile
+dist
+index.html
+nginx.conf
+node_modules
+package-lock.json
+package.json
+scripts
+src
+vite.config.js
+vite.err.log
+vite.out.log
+Dockerfile
+app
+cows.db
+cows_pre_event_location_schema_20260929_091718.bak
+cows_pre_farm_incidents_20260929_095015.bak
+cows_pre_farm_seed_20260929_101210.bak
+cows_pre_multiusuario_20260902_155248.bak
+cows_pre_sucesos_20260929_091800.bak
+cows_pre_task_map_20260929_120542.bak
+cows_pre_task_seed_20260929_120642.bak
+cows_pre_tasks_20260929_114054.bak
+requirements.txt
+tests
+uploads
+uvicorn.err.log
+uvicorn.out.log
+total 1.7M
+-rw-r--r-- 1 root root 361K Sep 29 15:35 Camara Ama_2025-09-18T03_48_48.mp4
+-rw-r--r-- 1 root root 664K Sep 29 15:35 Jardin_2026-06-01T08_13_09.mp4
+-rw-r--r-- 1 root root 221K Sep 29 15:34 Pino grand_2025-10-27T17_57_26.mp4
+-rw-r--r-- 1 root root 424K Sep 29 15:34 Pino grand_2025-11-05T23_24_01 (1).mp4
+name: cowsia
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: cowsia-backend
+    restart: unless-stopped
+    environment:
+      COWSIA_USERNAME: ${COWSIA_USERNAME:?Define COWSIA_USERNAME en el archivo .env}
+      COWSIA_PASSWORD: ${COWSIA_PASSWORD:?Define COWSIA_PASSWORD en el archivo .env}
+      COWSIA_FARM_NAME: ${COWSIA_FARM_NAME:?Define COWSIA_FARM_NAME en el archivo .env}
+      COWSIA_DEMO_USERNAME: ${COWSIA_DEMO_USERNAME:?Define COWSIA_DEMO_USERNAME en el archivo .env}
+      COWSIA_DEMO_PASSWORD: ${COWSIA_DEMO_PASSWORD:?Define COWSIA_DEMO_PASSWORD en el archivo .env}
+      COWSIA_DEMO_FARM_NAME: ${COWSIA_DEMO_FARM_NAME:?Define COWSIA_DEMO_FARM_NAME en el archivo .env}
+      COWSIA_SESSION_SECRET: ${COWSIA_SESSION_SECRET:?Define COWSIA_SESSION_SECRET en el archivo .env}
+      COWSIA_SESSION_HOURS: ${COWSIA_SESSION_HOURS:-12}
+      COWSIA_COOKIE_SECURE: ${COWSIA_COOKIE_SECURE:-false}
+    volumes:
+      - ./backend/cows.db:/workspace/backend/cows.db
+      - ./backend/uploads:/workspace/backend/uploads
+      - ./historico_ubicaciones_animales.csv:/workspace/historico_ubicaciones_animales.csv:ro
+      - ./LibroRegistroAnimaleGanaderoAFechas_10-07-2023_10-07-2026.xml:/workspace/LibroRegistroAnimaleGanaderoAFechas_10-07-2023_10-07-2026.xml:ro
+    expose:
+      - &quot;8000&quot;
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    container_name: cowsia-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - &quot;8081:80&quot;
+{
+  &quot;name&quot;: &quot;cowsia-panel&quot;,
+  &quot;version&quot;: &quot;0.1.0&quot;,
+  &quot;private&quot;: true,
+  &quot;type&quot;: &quot;module&quot;,
+  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;vite --host 127.0.0.1&quot;,
+    &quot;build&quot;: &quot;vite build&quot;,
+    &quot;preview&quot;: &quot;vite preview --host 127.0.0.1&quot;,
+    &quot;capture&quot;: &quot;node scripts/capture-cowsia.mjs&quot;,
+    &quot;capture:event&quot;: &quot;node scripts/capture-animal-event.mjs&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;leaflet&quot;: &quot;^1.9.4&quot;,
+    &quot;lucide-react&quot;: &quot;0.468.0&quot;,
+    &quot;react&quot;: &quot;18.3.1&quot;,
+    &quot;react-dom&quot;: &quot;18.3.1&quot;,
+    &quot;react-leaflet&quot;: &quot;^4.2.1&quot;,
+    &quot;recharts&quot;: &quot;2.13.3&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;@vitejs/plugin-react&quot;: &quot;4.3.4&quot;,
+    &quot;playwright&quot;: &quot;^1.63.0&quot;,
+    &quot;vite&quot;: &quot;5.4.11&quot;
+  }
+}
+✓ • 1.13s
+</code></pre>
+<h2 id="activity-4">Activity</h2>
+<pre><code>$ rg --files frontend/src backend scripts | head -90
+frontend/src/TasksMap.jsx
+frontend/src/Tasks.jsx
+frontend/src/api/client.js
+frontend/src/styles.css
+frontend/src/main.jsx
+scripts/verificar_incidencias_explotacion.py
+scripts/buscar_cdc_bovinos.py
+scripts/descargar_incidencias_bovinos.py
+scripts/download_incident_images.mjs
+scripts/catalogar_incidencias_bovinos.py
+scripts/catalogar_incidencias_explotacion.py
+scripts/imagenes_incidencias_explotacion.py
+backend/requirements.txt
+backend/cows_pre_farm_incidents_20260929_095015.bak
+backend/cows_pre_event_location_schema_20260929_091718.bak
+scripts/__pycache__/crear_tareas_desde_registros.cpython-312.pyc
+scripts/__pycache__/generar_historico_ubicaciones.cpython-312.pyc
+scripts/__pycache__/crear_incidencias_explotacion.cpython-312.pyc
+scripts/buscar_incidencias_bovinos.py
+scripts/crear_incidencias_explotacion.py
+scripts/generar_historico_ubicaciones.py
+scripts/revisar_imagenes_explotacion.py
+scripts/crear_sucesos_simulados.py
+scripts/seleccionar_incidencias_explotacion.py
+scripts/crear_tareas_desde_registros.py
+backend/cows_pre_sucesos_20260929_091800.bak
+backend/uvicorn.out.log
+backend/cows.db
+backend/cows_pre_task_map_20260929_120542.bak
+backend/Dockerfile
+backend/cows_pre_tasks_20260929_114054.bak
+backend/uvicorn.err.log
+backend/cows_pre_task_seed_20260929_120642.bak
+backend/cows_pre_farm_seed_20260929_101210.bak
+backend/tests/test_multitenancy.py
+backend/tests/test_activity_analytics.py
+backend/tests/test_importer.py
+backend/tests/test_farm_event_credits.py
+backend/tests/test_bulk_assign_images.py
+backend/tests/test_tasks.py
+backend/tests/test_auth.py
+backend/tests/__pycache__/test_bulk_assign_images.cpython-311-pytest-8.3.4.pyc
+backend/tests/__pycache__/test_analytics.cpython-311-pytest-8.3.4.pyc
+backend/tests/__pycache__/test_bulk_assign_locations.cpython-311-pytest-8.3.4.pyc
+backend/tests/__pycache__/test_importer.cpython-311-pytest-8.3.4.pyc
+backend/tests/test_event_locations.py
+backend/tests/test_bulk_assign_locations.py
+backend/tests/test_analytics.py
+backend/tests/test_location_history.py
+backend/app/models.py
+backend/app/analytics.py
+backend/app/auth.py
+backend/app/bulk_assign_locations.py
+backend/app/database.py
+backend/app/bulk_assign_images.py
+backend/app/location_history.py
+backend/app/tasks.py
+backend/app/importer.py
+backend/app/main.py
+backend/app/__pycache__/main.cpython-312.pyc
+backend/app/__pycache__/analytics.cpython-312.pyc
+backend/app/__pycache__/bulk_assign_locations.cpython-312.pyc
+backend/app/__pycache__/bulk_assign_locations.cpython-311.pyc
+backend/app/__pycache__/migrate_multitenancy.cpython-312.pyc
+backend/app/__pycache__/main.cpython-311.pyc
+backend/app/__pycache__/importer.cpython-312.pyc
+backend/app/__pycache__/schemas.cpython-312.pyc
+backend/app/__pycache__/tasks.cpython-312.pyc
+backend/app/__pycache__/__init__.cpython-312.pyc
+backend/app/__pycache__/auth.cpython-312.pyc
+backend/app/__pycache__/schemas.cpython-311.pyc
+backend/app/__pycache__/importer.cpython-311.pyc
+backend/app/__pycache__/database.cpython-311.pyc
+backend/app/__pycache__/__init__.cpython-311.pyc
+backend/app/__pycache__/analytics.cpython-311.pyc
+backend/app/__pycache__/database.cpython-312.pyc
+backend/app/__pycache__/bulk_assign_images.cpython-312.pyc
+backend/app/__pycache__/bulk_assign_images.cpython-311.pyc
+backend/app/__pycache__/models.cpython-311.pyc
+backend/app/__pycache__/models.cpython-312.pyc
+backend/app/migrate_multitenancy.py
+backend/app/__init__.py
+backend/app/schemas.py
+backend/uploads/task_images/tareas_desde_registros_20260929_1_animal_699.jpg
+backend/uploads/task_images/tareas_desde_registros_20260929_1_animal_252.jpg
+backend/uploads/task_images/tareas_desde_registros_20260929_1_animal_720.jpg
+backend/uploads/task_images/tareas_desde_registros_20260929_1_farm_59.jpg
+backend/uploads/task_images/tareas_desde_registros_20260929_1_farm_25.jpg
+backend/uploads/task_images/tareas_desde_registros_20260929_1_animal_608.jpg
+backend/uploads/task_images/tareas_desde_registros_20260929_1_animal_329.jpg
+✓ • 0ms
+</code></pre>
+<h2 id="activity-5">Activity</h2>
+<pre><code>$ cat frontend/nginx.conf frontend/src/api/client.js backend/Dockerfile; sed -n '1,190p' backend/app/main.py; rg -n 'Tasks|activeTab|activeView|menuItems|nav|section|Cámaras' frontend/src/main.jsx | head -65; command -v ffmpeg; command -v ffprobe
+server {
+    listen 80;
+    server_name _;
+
+    root /usr/share/nginx/html;
+    index index.html;
+
+    client_max_body_size 50m;
+
+    location /api/ {
+        proxy_pass http://backend:8000/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
+const API_BASE = import.meta.env.VITE_API_BASE ?? &quot;&quot;;
+
+async function request(path, options = {}) {
+  const response = await fetch(`${API_BASE}${path}`, { credentials: &quot;include&quot;, ...options });
+  if (!response.ok) {
+    const error = await response.json().catch(() =&gt; ({ detail: response.statusText }));
+    if (response.status === 401 &amp;&amp; !path.startsWith(&quot;/api/auth/&quot;)) {
+      window.dispatchEvent(new Event(&quot;cowsia:auth-required&quot;));
+    }
+    throw new Error(error.detail || &quot;Error de API&quot;);
+  }
+  return response.json();
+}
+
+export const api = {
+  get: (path) =&gt; request(path),
+  post: (path, body = {}) =&gt;
+    request(path, {
+      method: &quot;POST&quot;,
+      headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+      body: JSON.stringify(body),
+    }),
+  upload: (path, file) =&gt; {
+    const form = new FormData();
+    form.append(&quot;file&quot;, file);
+    return request(path, { method: &quot;POST&quot;, body: form });
+  },
+  uploadForm: (path, form) =&gt; request(path, { method: &quot;POST&quot;, body: form }),
+  delete: (path) =&gt; request(path, { method: &quot;DELETE&quot; }),
+  login: (username, password) =&gt;
+    request(&quot;/api/auth/login&quot;, {
+      method: &quot;POST&quot;,
+      headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+      body: JSON.stringify({ username, password }),
+    }),
+  logout: () =&gt; request(&quot;/api/auth/logout&quot;, { method: &quot;POST&quot; }),
+  session: () =&gt; request(&quot;/api/auth/session&quot;),
+  url: (path) =&gt; `${API_BASE}${path}`,
+};
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /workspace/backend
+
+COPY backend/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY backend/app ./app
+
+RUN mkdir -p uploads/animal_images uploads/event_images
+
+EXPOSE 8000
+
+CMD [&quot;uvicorn&quot;, &quot;app.main:app&quot;, &quot;--host&quot;, &quot;0.0.0.0&quot;, &quot;--port&quot;, &quot;8000&quot;]
+from datetime import date, datetime
+from io import StringIO
+from pathlib import Path, PureWindowsPath
+from uuid import uuid4
+from typing import Literal
+
+from fastapi import Depends, FastAPI, File, Form, HTTPException, Query, Request, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse, JSONResponse, PlainTextResponse, Response
+from sqlalchemy import func, or_
+from sqlalchemy.orm import Session
+
+from app import analytics
+from app.location_history import animal_location_history
+from app.auth import (
+    AuthConfigurationError,
+    SESSION_COOKIE_NAME,
+    create_session_token,
+    get_auth_settings,
+    hash_password,
+    password_is_valid,
+    request_user_id,
+)
+from app.database import get_db, init_db, SessionLocal
+from app.importer import import_local_xml_if_empty, import_xml, preview_xml
+from app.models import Animal, AnimalEvent, AnimalImage, AnimalLocation, Farm, FarmEvent, Task, User
+from app.tasks import router as tasks_router
+from app.schemas import AnimalDetailOut, AnimalEventIn, AnimalEventOut, AnimalImageOut, AnimalLocationIn, AnimalLocationOut, AnimalOut, GalleryAnimalOut, LoginIn, MapLocationOut, UserCreate, UserOut
+
+app = FastAPI(title=&quot;CowsIA Ganaderia API&quot;)
+app.include_router(tasks_router)
+WORKSPACE_ROOT = Path(__file__).resolve().parents[2]
+LOCAL_XML_PATH = WORKSPACE_ROOT / &quot;LibroRegistroAnimaleGanaderoAFechas_10-07-2023_10-07-2026.xml&quot;
+UPLOAD_ROOT = WORKSPACE_ROOT / &quot;backend&quot; / &quot;uploads&quot;
+ALLOWED_IMAGE_TYPES = {&quot;image/jpeg&quot;: &quot;.jpg&quot;, &quot;image/png&quot;: &quot;.png&quot;, &quot;image/webp&quot;: &quot;.webp&quot;, &quot;image/gif&quot;: &quot;.gif&quot;}
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        &quot;http://localhost:5173&quot;,
+        &quot;http://127.0.0.1:5173&quot;,
+        &quot;http://localhost:5174&quot;,
+        &quot;http://127.0.0.1:5174&quot;,
+    ],
+    allow_credentials=True,
+    allow_methods=[&quot;*&quot;],
+    allow_headers=[&quot;*&quot;],
+)
+
+PUBLIC_API_PATHS = {&quot;/api/health&quot;, &quot;/api/auth/login&quot;, &quot;/api/auth/session&quot;, &quot;/api/auth/logout&quot;}
+
+
+@app.middleware(&quot;http&quot;)
+async def require_authentication(request: Request, call_next):
+    if request.method == &quot;OPTIONS&quot; or not request.url.path.startswith(&quot;/api/&quot;) or request.url.path in PUBLIC_API_PATHS:
+        return await call_next(request)
+    try:
+        settings = get_auth_settings()
+    except AuthConfigurationError as exc:
+        return JSONResponse(status_code=503, content={&quot;detail&quot;: str(exc)})
+    user_id = request_user_id(request, settings)
+    if not user_id:
+        return JSONResponse(status_code=401, content={&quot;detail&quot;: &quot;Debes iniciar sesion&quot;})
+    with SessionLocal() as db:
+        user = db.get(User, user_id)
+        if not user or not user.active:
+            return JSONResponse(status_code=401, content={&quot;detail&quot;: &quot;Debes iniciar sesion&quot;})
+        request.state.user_id = user.id
+        request.state.farm_id = user.farm_id
+        request.state.can_manage_users = bool(user.can_manage_users)
+    return await call_next(request)
+
+
+def current_farm_id(request: Request) -&gt; int:
+    return int(request.state.farm_id)
+
+
+def require_user_manager(request: Request) -&gt; None:
+    if not request.state.can_manage_users:
+        raise HTTPException(status_code=403, detail=&quot;Solo el administrador puede gestionar usuarios&quot;)
+
+
+@app.on_event(&quot;startup&quot;)
+def on_startup() -&gt; None:
+    init_db()
+    db = SessionLocal()
+    try:
+        manager = db.query(User).filter(User.can_manage_users.is_(True), User.active.is_(True)).first()
+        if manager:
+            import_local_xml_if_empty(db, LOCAL_XML_PATH, manager.farm_id)
+    finally:
+        db.close()
+
+
+@app.get(&quot;/api/health&quot;)
+def health() -&gt; dict[str, str]:
+    return {&quot;status&quot;: &quot;ok&quot;}
+
+
+@app.post(&quot;/api/auth/login&quot;)
+def login(payload: LoginIn, response: Response) -&gt; dict[str, str | bool]:
+    try:
+        settings = get_auth_settings()
+    except AuthConfigurationError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+    with SessionLocal() as db:
+        user = db.query(User).filter(User.username == payload.username.strip(), User.active.is_(True)).first()
+        if not user or not password_is_valid(payload.password, user.password_hash):
+            raise HTTPException(status_code=401, detail=&quot;Usuario o contrasena incorrectos&quot;)
+        farm = db.get(Farm, user.farm_id)
+        user_id = user.id
+        username = user.username
+        farm_name = farm.name if farm else &quot;&quot;
+        can_manage_users = bool(user.can_manage_users)
+    response.set_cookie(
+        key=SESSION_COOKIE_NAME,
+        value=create_session_token(user_id, settings),
+        max_age=settings.session_seconds,
+        httponly=True,
+        secure=settings.cookie_secure,
+        samesite=&quot;strict&quot;,
+        path=&quot;/api&quot;,
+    )
+    response.headers[&quot;Cache-Control&quot;] = &quot;no-store&quot;
+    return {
+        &quot;authenticated&quot;: True,
+        &quot;username&quot;: username,
+        &quot;farm_name&quot;: farm_name,
+        &quot;can_manage_users&quot;: can_manage_users,
+    }
+
+
+@app.get(&quot;/api/auth/session&quot;)
+def auth_session(request: Request) -&gt; dict[str, str | bool | None]:
+    try:
+        settings = get_auth_settings()
+    except AuthConfigurationError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+    user_id = request_user_id(request, settings)
+    if not user_id:
+        return {&quot;authenticated&quot;: False, &quot;username&quot;: None, &quot;farm_name&quot;: None, &quot;can_manage_users&quot;: False}
+    with SessionLocal() as db:
+        user = db.get(User, user_id)
+        if not user or not user.active:
+            return {&quot;authenticated&quot;: False, &quot;username&quot;: None, &quot;farm_name&quot;: None, &quot;can_manage_users&quot;: False}
+        farm = db.get(Farm, user.farm_id)
+        return {
+            &quot;authenticated&quot;: True,
+            &quot;username&quot;: user.username,
+            &quot;farm_name&quot;: farm.name if farm else None,
+            &quot;can_manage_users&quot;: bool(user.can_manage_users),
+        }
+
+
+@app.post(&quot;/api/auth/logout&quot;)
+def logout(response: Response) -&gt; dict[str, bool]:
+    response.delete_cookie(SESSION_COOKIE_NAME, path=&quot;/api&quot;)
+    response.headers[&quot;Cache-Control&quot;] = &quot;no-store&quot;
+    return {&quot;authenticated&quot;: False}
+
+
+@app.get(&quot;/api/admin/users&quot;, response_model=list[UserOut])
+def list_users(_: None = Depends(require_user_manager), db: Session = Depends(get_db)) -&gt; list[dict]:
+    rows = db.query(User, Farm).join(Farm, User.farm_id == Farm.id).order_by(User.username.asc()).all()
+    return [
+        {
+            &quot;id&quot;: user.id,
+            &quot;username&quot;: user.username,
+            &quot;farm_name&quot;: farm.name,
+            &quot;can_manage_users&quot;: bool(user.can_manage_users),
+            &quot;active&quot;: bool(user.active),
+        }
+        for user, farm in rows
+    ]
+
+
+@app.post(&quot;/api/admin/users&quot;, response_model=UserOut)
+def create_user(payload: UserCreate, _: None = Depends(require_user_manager), db: Session = Depends(get_db)) -&gt; dict:
+    username = payload.username.strip()
+    farm_name = payload.farm_name.strip()
+    if len(username) &lt; 3:
+        raise HTTPException(status_code=422, detail=&quot;El usuario debe tener al menos 3 caracteres&quot;)
+    if len(payload.password) &lt; 10:
+        raise HTTPException(status_code=422, detail=&quot;La contrasena debe tener al menos 10 caracteres&quot;)
+    if not farm_name:
+        raise HTTPException(status_code=422, detail=&quot;La explotacion es obligatoria&quot;)
+    if db.query(User).filter(User.username == username).first():
+        raise HTTPException(status_code=409, detail=&quot;El usuario ya existe&quot;)
+    farm = db.query(Farm).filter(Farm.name == farm_name).first()
+    if not farm:
+41:import { TaskContext, TaskButton, TaskForm, Tasks } from &quot;./Tasks&quot;;
+186:  const [activeTab, setActiveTab] = useState(&quot;dashboard&quot;);
+204:        &lt;nav&gt;
+208:              &lt;button key={tab.id} className={activeTab === tab.id ? &quot;active&quot; : &quot;&quot;} onClick={() =&gt; setActiveTab(tab.id)}&gt;
+214:        &lt;/nav&gt;
+223:        {activeTab === &quot;dashboard&quot; &amp;&amp; &lt;Dashboard refreshKey={refreshKey} /&gt;}
+224:        {activeTab === &quot;gallery&quot; &amp;&amp; &lt;Gallery refreshKey={refreshKey} /&gt;}
+225:        {activeTab === &quot;map&quot; &amp;&amp; &lt;CowsMap refreshKey={refreshKey} /&gt;}
+226:        {activeTab === &quot;animals&quot; &amp;&amp; &lt;Animals refreshKey={refreshKey} /&gt;}
+227:        {activeTab === &quot;incidents&quot; &amp;&amp; &lt;FarmIncidents /&gt;}
+228:        {activeTab === &quot;tasks&quot; &amp;&amp; &lt;Tasks refreshKey={refreshKey} /&gt;}
+229:        {activeTab === &quot;import&quot; &amp;&amp; &lt;ImportXml onRefresh={refresh} /&gt;}
+230:        {activeTab === &quot;users&quot; &amp;&amp; canManageUsers &amp;&amp; &lt;Users /&gt;}
+290:    if (!navigator.geolocation) {
+295:    navigator.geolocation.getCurrentPosition(
+346:    &lt;section className=&quot;page incidents-page&quot;&gt;
+348:      &lt;section className=&quot;panel activity-filters&quot; aria-label=&quot;Filtros de incidencias&quot;&gt;
+357:      &lt;/section&gt;
+358:      &lt;section className=&quot;panel farm-incidents-map-panel&quot;&gt;
+361:      &lt;/section&gt;
+408:    &lt;/section&gt;
+489:    &lt;section className=&quot;page&quot;&gt;
+524:    &lt;/section&gt;
+568:    &lt;section className=&quot;page map-page&quot;&gt;
+620:    &lt;/section&gt;
+640:    &lt;section className=&quot;page&quot;&gt;
+669:    &lt;/section&gt;
+697:    &lt;section className=&quot;page&quot;&gt;
+736:    &lt;/section&gt;
+770:  return &lt;section className=&quot;activity-dashboard&quot; aria-label={title} data-activity-kind={kind}&gt;
+828:  &lt;/section&gt;;
+868:    &lt;section className=&quot;page&quot;&gt;
+953:    &lt;/section&gt;
+1067:              &lt;section className=&quot;detail-section&quot;&gt;
+1090:              &lt;/section&gt;
+1092:            &lt;section className=&quot;detail-section&quot;&gt;
+1116:            &lt;/section&gt;
+1117:            &lt;section className=&quot;detail-section&quot;&gt;
+1138:            &lt;/section&gt;
+1139:            &lt;section className=&quot;detail-section&quot;&gt;
+1153:            &lt;/section&gt;
+1154:            &lt;section className=&quot;detail-section&quot;&gt;
+1157:            &lt;/section&gt;
+1158:            &lt;section className=&quot;detail-section&quot;&gt;
+1191:            &lt;/section&gt;
+1368:    &lt;section className=&quot;page&quot;&gt;
+1399:    &lt;/section&gt;
+✗ (1) • 0ms
+</code></pre>
+<h2 id="activity-6">Activity</h2>
+<pre><code>$ sed -n '1,65p' frontend/src/main.jsx; sed -n '180,237p' frontend/src/main.jsx; cat backend/requirements.txt; sed -n '1,95p' frontend/scripts/capture-cowsia.mjs; cat frontend/vite.config.js; docker compose ps
+import React, { useEffect, useMemo, useRef, useState } from &quot;react&quot;;
+import { createRoot } from &quot;react-dom/client&quot;;
+import {
+  AlertTriangle,
+  BarChart3,
+  CalendarPlus,
+  ClipboardList,
+  Download,
+  ExternalLink,
+  FileUp,
+  Gauge,
+  Image,
+  Images,
+  LockKeyhole,
+  LogOut,
+  Map as MapIcon,
+  MapPin,
+  Plus,
+  RefreshCcw,
+  Search,
+  Trash2,
+  UserPlus,
+  X,
+} from &quot;lucide-react&quot;;
+import L from &quot;leaflet&quot;;
+import { MapContainer, Marker, Polyline, Popup, TileLayer, useMap } from &quot;react-leaflet&quot;;
+import &quot;leaflet/dist/leaflet.css&quot;;
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Cell,
+  Pie,
+  PieChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from &quot;recharts&quot;;
+import { api } from &quot;./api/client&quot;;
+import { TaskContext, TaskButton, TaskForm, Tasks } from &quot;./Tasks&quot;;
+import &quot;./styles.css&quot;;
+
+const tabs = [
+  { id: &quot;dashboard&quot;, label: &quot;Dashboard&quot;, icon: BarChart3 },
+  { id: &quot;gallery&quot;, label: &quot;Galeria&quot;, icon: Images },
+  { id: &quot;map&quot;, label: &quot;Mapa&quot;, icon: MapIcon },
+  { id: &quot;animals&quot;, label: &quot;Animales&quot;, icon: Search },
+  { id: &quot;incidents&quot;, label: &quot;Incidencias&quot;, icon: AlertTriangle },
+  { id: &quot;tasks&quot;, label: &quot;Tareas&quot;, icon: ClipboardList },
+  { id: &quot;import&quot;, label: &quot;Importar&quot;, icon: FileUp },
+];
+
+const palette = [&quot;#1677ff&quot;, &quot;#13a37f&quot;, &quot;#d64550&quot;, &quot;#e3a008&quot;, &quot;#7c3aed&quot;, &quot;#0891b2&quot;, &quot;#64748b&quot;];
+
+function formatDate(value) {
+  if (!value) return &quot;&quot;;
+  return new Intl.DateTimeFormat(&quot;es-ES&quot;).format(new Date(`${value}T00:00:00`));
+}
+
+function years(value) {
+  if (!value) return &quot;&quot;;
+  const born = new Date(`${value}T00:00:00`);
+  const diff = (Date.now() - born.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
+  return `${diff.toFixed(1)} anos`;
+  );
+}
+
+function App({ username, farmName, canManageUsers, onLogout }) {
+  const [taskSource, setTaskSource] = useState(null);
+  const [taskMessage, setTaskMessage] = useState(&quot;&quot;);
+  const [activeTab, setActiveTab] = useState(&quot;dashboard&quot;);
+  const [refreshKey, setRefreshKey] = useState(0);
+  const visibleTabs = canManageUsers ? [...tabs, { id: &quot;users&quot;, label: &quot;Usuarios&quot;, icon: UserPlus }] : tabs;
+
+  function refresh() {
+    setRefreshKey((value) =&gt; value + 1);
+  }
+
+  return (
+    &lt;TaskContext.Provider value={(source) =&gt; { setTaskMessage(&quot;&quot;); setTaskSource(source); }}&gt;&lt;div className=&quot;app-shell&quot;&gt;
+      &lt;aside className=&quot;sidebar&quot;&gt;
+        &lt;div className=&quot;brand&quot;&gt;
+          &lt;Gauge size={24} /&gt;
+          &lt;div&gt;
+            &lt;strong&gt;CowsIA&lt;/strong&gt;
+            &lt;span&gt;Registro ganadero&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;nav&gt;
+          {visibleTabs.map((tab) =&gt; {
+            const Icon = tab.icon;
+            return (
+              &lt;button key={tab.id} className={activeTab === tab.id ? &quot;active&quot; : &quot;&quot;} onClick={() =&gt; setActiveTab(tab.id)}&gt;
+                &lt;Icon size={18} /&gt;
+                {tab.label}
+              &lt;/button&gt;
+            );
+          })}
+        &lt;/nav&gt;
+        &lt;div className=&quot;session-panel&quot;&gt;
+          &lt;span title={username}&gt;{username}&lt;/span&gt;
+          &lt;small title={farmName}&gt;{farmName}&lt;/small&gt;
+          &lt;button type=&quot;button&quot; onClick={onLogout}&gt;&lt;LogOut size={16} /&gt;Salir&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/aside&gt;
+      &lt;main&gt;
+        {taskMessage &amp;&amp; &lt;div className=&quot;panel task-notice&quot; role=&quot;status&quot;&gt;{taskMessage} &lt;button type=&quot;button&quot; onClick={() =&gt; { setActiveTab(&quot;tasks&quot;); setTaskMessage(&quot;&quot;); }}&gt;Ver tareas&lt;/button&gt;&lt;button type=&quot;button&quot; onClick={() =&gt; setTaskMessage(&quot;&quot;)}&gt;Cerrar aviso&lt;/button&gt;&lt;/div&gt;}
+        {activeTab === &quot;dashboard&quot; &amp;&amp; &lt;Dashboard refreshKey={refreshKey} /&gt;}
+        {activeTab === &quot;gallery&quot; &amp;&amp; &lt;Gallery refreshKey={refreshKey} /&gt;}
+        {activeTab === &quot;map&quot; &amp;&amp; &lt;CowsMap refreshKey={refreshKey} /&gt;}
+        {activeTab === &quot;animals&quot; &amp;&amp; &lt;Animals refreshKey={refreshKey} /&gt;}
+        {activeTab === &quot;incidents&quot; &amp;&amp; &lt;FarmIncidents /&gt;}
+        {activeTab === &quot;tasks&quot; &amp;&amp; &lt;Tasks refreshKey={refreshKey} /&gt;}
+        {activeTab === &quot;import&quot; &amp;&amp; &lt;ImportXml onRefresh={refresh} /&gt;}
+        {activeTab === &quot;users&quot; &amp;&amp; canManageUsers &amp;&amp; &lt;Users /&gt;}
+      &lt;/main&gt;
+    &lt;/div&gt;
+    {taskSource !== null &amp;&amp; &lt;TaskForm source={taskSource} username={username} onClose={() =&gt; setTaskSource(null)} onSaved={(row) =&gt; { setTaskSource(null); setTaskMessage(`Tarea #${row.id} guardada.`); refresh(); }} /&gt;}
+    &lt;/TaskContext.Provider&gt;
+  );
+}
+
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+sqlalchemy==2.0.36
+pydantic==2.10.4
+python-multipart==0.0.20
+pytest==8.3.4
+httpx==0.28.1
+import { mkdir } from &quot;node:fs/promises&quot;;
+import { resolve } from &quot;node:path&quot;;
+import { fileURLToPath } from &quot;node:url&quot;;
+import { chromium } from &quot;playwright&quot;;
+
+const scriptDirectory = fileURLToPath(new URL(&quot;.&quot;, import.meta.url));
+const projectRoot = resolve(scriptDirectory, &quot;../..&quot;);
+const outputDirectory = resolve(projectRoot, &quot;capturas_cowsia&quot;);
+const baseUrl = process.env.COWSIA_URL || &quot;http://127.0.0.1:8081&quot;;
+const username = process.env.COWSIA_DEMO_USERNAME || process.env.COWSIA_USERNAME;
+const password = process.env.COWSIA_DEMO_PASSWORD || process.env.COWSIA_PASSWORD;
+
+if (!username || !password) {
+  throw new Error(&quot;Faltan COWSIA_DEMO_USERNAME/COWSIA_DEMO_PASSWORD o las credenciales principales.&quot;);
+}
+
+await mkdir(outputDirectory, { recursive: true });
+
+const browser = await chromium.launch({ headless: true });
+const context = await browser.newContext({
+  viewport: { width: 1440, height: 960 },
+  deviceScaleFactor: 1,
+  colorScheme: &quot;light&quot;,
+  locale: &quot;es-ES&quot;,
+});
+const page = await context.newPage();
+
+async function settle() {
+  await page.waitForTimeout(1200);
+  await page.evaluate(() =&gt; {
+    window.scrollTo(0, 0);
+    document.querySelectorAll(&quot;*&quot;).forEach((element) =&gt; {
+      element.style.animationDuration = &quot;0s&quot;;
+      element.style.transitionDuration = &quot;0s&quot;;
+    });
+  });
+}
+
+async function capture(name) {
+  await settle();
+  await page.screenshot({
+    path: resolve(outputDirectory, `${name}.png`),
+    fullPage: false,
+  });
+}
+
+try {
+  await page.goto(baseUrl, { waitUntil: &quot;domcontentloaded&quot; });
+
+  const loginHeading = page.getByRole(&quot;heading&quot;, { name: &quot;Acceso a CowsIA&quot; });
+  await page.locator(&quot;.metrics, .login-card&quot;).first().waitFor({ state: &quot;visible&quot; });
+  if (await loginHeading.isVisible()) {
+    await page.getByLabel(&quot;Usuario&quot;).fill(username);
+    await page.getByLabel(&quot;Contrasena&quot;).fill(password);
+    await page.getByRole(&quot;button&quot;, { name: &quot;Entrar&quot; }).click();
+  }
+
+  await page.locator(&quot;.metrics&quot;).waitFor({ state: &quot;visible&quot; });
+  await capture(&quot;dashboard&quot;);
+
+  await page.getByRole(&quot;button&quot;, { name: &quot;Galeria&quot; }).click();
+  await page.locator(&quot;.gallery-card&quot;).first().waitFor({ state: &quot;visible&quot; });
+  await capture(&quot;galeria&quot;);
+
+  await page.getByRole(&quot;button&quot;, { name: &quot;Animales&quot; }).click();
+  await page.locator(&quot;.table-wrap tbody tr&quot;).first().waitFor({ state: &quot;visible&quot; });
+  await capture(&quot;animales&quot;);
+
+  await page.getByRole(&quot;button&quot;, { name: &quot;Incidencias&quot; }).click();
+  await page.locator(&quot;.incident-form&quot;).waitFor({ state: &quot;visible&quot; });
+  await capture(&quot;incidencias&quot;);
+
+  console.log(`Capturas guardadas en ${outputDirectory}`);
+} finally {
+  await browser.close();
+}
+import { defineConfig } from &quot;vite&quot;;
+import react from &quot;@vitejs/plugin-react&quot;;
+
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    proxy: {
+      &quot;/api&quot;: &quot;http://127.0.0.1:8001&quot;,
+    },
+  },
+});
+permission denied while trying to connect to the docker API at unix:///var/run/docker.sock
+✗ (1) • 590ms
+</code></pre>
+<h2 id="activity-7">Activity</h2>
+<pre><code>$ docker compose ps
+NAME              IMAGE             COMMAND                  SERVICE    CREATED       STATUS       PORTS
+cowsia-backend    cowsia-backend    &quot;uvicorn app.main:ap…&quot;   backend    5 hours ago   Up 5 hours   8000/tcp
+cowsia-frontend   cowsia-frontend   &quot;/docker-entrypoint.…&quot;   frontend   5 hours ago   Up 5 hours   0.0.0.0:8081-&gt;80/tcp, [::]:8081-&gt;80/tcp
+✓ • 54ms
+</code></pre>
+<h2 id="activity-8">Activity</h2>
+<pre><code>$ node --input-type=module -e 'import {chromium} from &quot;playwright&quot;; const b=await chromium.launch({headless:true}); console.log(&quot;browser ok&quot;); await b.close();'
+browser ok
+✓ • 1.79s
+</code></pre>
+<h2 id="assistant-2">Assistant</h2>
+<p>He encontrado cuatro vídeos. Añadiré un reproductor y una descripción para cada uno, con la fecha y el nombre de la cámara tomados del archivo. Estoy revisando varios momentos de cada grabación para describir solo lo que pueda observar.</p>
+<h2 id="activity-9">Activity</h2>
+<pre><code>$ mkdir -p docs/videos_camaras; cat &gt; frontend/scripts/inspect-camera-videos.mjs &lt;&lt;'EOF'
+    import { chromium } from 'playwright';
+    import { readdir, readFile, writeFile } from 'node:fs/promises';
+    const root = new URL('../../', import.meta.url);
+    const browser = await chromium.launch({headless:true});
+    const page = await browser.newPage();
+    const metadata = [];
+    for (const name of (await readdir(new URL('videos_camara_trampa/', root))).filter(n=&gt;n.endsWith('.mp4'))) {
+      const src = 'data:video/mp4;base64,' + (await readFile(new URL('videos_camara_trampa/'+name,root))).toString('base64');
+      const result = await page.evaluate(async ({src})=&gt;{
+        const v=document.createElement('video'); v.muted=true; v.src=src;
+        await new Promise((ok,no)=&gt;{v.onloadedmetadata=ok;v.onerror=no;});
+        const c=document.createElement('canvas'); c.width=960;c.height=600; const ctx=c.getContext('2d');
+        for(let i=0;i&lt;6;i++){
+          const t=Math.max(.01,v.duration*(i+.2)/6); v.currentTime=t;
+          await new Promise(ok=&gt;v.onseeked=ok);
+          const x=(i%3)*320,y=Math.floor(i/3)*300;
+          ctx.fillStyle='#111';ctx.fillRect(x,y,320,300);
+          const s=Math.min(320/v.videoWidth,270/v.videoHeight);
+          ctx.drawImage(v,x+(320-v.videoWidth*s)/2,y, v.videoWidth*s,v.videoHeight*s);
+          ctx.fillStyle='white';ctx.font='16px sans-serif';ctx.fillText(t.toFixed(1)+' s',x+10,y+290);
+        }
+        return {duration:v.duration,width:v.videoWidth,height:v.videoHeight,image:c.toDataURL('image/jpeg')};
+      },{src});
+      const index=metadata.length+1;
+      await writeFile(new URL(`docs/videos_camaras/contacto-${index}.jpg`,root),Buffer.from(result.image.split(',')[1],'base64'));
+      delete result.image; metadata.push({filename:name,...result});
+    }
+    await writeFile(new URL('docs/videos_camaras/metadata.json',root),JSON.stringify(metadata,null,2));
+    console.log(metadata); await browser.close();
+    EOF
+    node frontend/scripts/inspect-camera-videos.mjs
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+&lt;launching&gt; /root/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-DaVrRY --remote-debugging-pipe --no-startup-window
+&lt;launched&gt; pid=16
+[pid=16][err] [0929/165840.119210:FATAL:content/browser/sandbox_host_linux.cc:41] Check failed: . shutdown: Operation not permitted (1)
+Call log:
+  - &lt;launching&gt; /root/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-DaVrRY --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=16
+  - [pid=16][err] [0929/165840.119210:FATAL:content/browser/sandbox_host_linux.cc:41] Check failed: . shutdown: Operation not permitted (1)
+  - [pid=16] &lt;gracefully close start&gt;
+  - [pid=16] &lt;kill&gt;
+  - [pid=16] &lt;will force kill&gt;
+  - [pid=16] &lt;process did exit: exitCode=null, signal=SIGTRAP&gt;
+  - [pid=16] starting temporary directories cleanup
+  - [pid=16] finished temporary directories cleanup
+  - [pid=16] &lt;gracefully close end&gt;
+
+    at /opt/DesplieguesDocker/CowsIA/frontend/scripts/inspect-camera-videos.mjs:4:32
+    at async node:internal/modules/esm/loader:647:26 {
+  log: [
+    '  - &lt;launching&gt; /root/.cache/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-DaVrRY --remote-debugging-pipe --no-startup-window',
+    '  - &lt;launched&gt; pid=16',
+    '  - [pid=16][err] [0929/165840.119210:FATAL:content/browser/sandbox_host_linux.cc:41] Check failed: . shutdown: Operation not permitted (1)',
+    '  - [pid=16] &lt;gracefully close start&gt;',
+    '  - [pid=16] &lt;kill&gt;',
+    '  - [pid=16] &lt;will force kill&gt;',
+    '  - [pid=16] &lt;process did exit: exitCode=null, signal=SIGTRAP&gt;',
+    '  - [pid=16] starting temporary directories cleanup',
+    '  - [pid=16] finished temporary directories cleanup',
+    '  - [pid=16] &lt;gracefully close end&gt;'
+  ]
+}
+
+Node.js v24.20.0
+✗ (1) • 470ms
+</code></pre>
+<h2 id="activity-10">Activity</h2>
+<pre><code>$ node frontend/scripts/inspect-camera-videos.mjs
+[
+  {
+    filename: 'Camara Ama_2025-09-18T03_48_48.mp4',
+    duration: 5.082967,
+    width: 1280,
+    height: 720
+  },
+  {
+    filename: 'Jardin_2026-06-01T08_13_09.mp4',
+    duration: 7.125211,
+    width: 1280,
+    height: 720
+  },
+  {
+    filename: 'Pino grand_2025-10-27T17_57_26.mp4',
+    duration: 4.9137,
+    width: 1280,
+    height: 720
+  },
+  {
+    filename: 'Pino grand_2025-11-05T23_24_01 (1).mp4',
+    duration: 13.070256,
+    width: 1280,
+    height: 720
+  }
+]
+✓ • 5.17s
+</code></pre>
+<h2 id="activity-11">Activity</h2>
+<pre><code>Viewed image /opt/DesplieguesDocker/CowsIA/docs/videos_camaras/contacto-1.jpg
+</code></pre>
+<h2 id="activity-12">Activity</h2>
+<pre><code>Viewed image /opt/DesplieguesDocker/CowsIA/docs/videos_camaras/contacto-2.jpg
+</code></pre>
+<h2 id="activity-13">Activity</h2>
+<pre><code>Viewed image /opt/DesplieguesDocker/CowsIA/docs/videos_camaras/contacto-3.jpg
+</code></pre>
+<h2 id="activity-14">Activity</h2>
+<pre><code>Viewed image /opt/DesplieguesDocker/CowsIA/docs/videos_camaras/contacto-4.jpg
+</code></pre>
+<h2 id="assistant-3">Assistant</h2>
+<p>Los fotogramas muestran un ave rapaz pequeña posada en una reja, un bovino caminando de noche y dos animales cuya especie no se distingue con suficiente claridad. Las descripciones reflejarán esa incertidumbre. El apartado tendrá búsqueda y filtro por cámara, y los vídeos quedarán asociados a la explotación principal para respetar la separación entre usuarios.</p>
+<h2 id="activity-15">Activity</h2>
+<pre><code>$ cat &gt; backend/app/camera_videos.py &lt;&lt;'EOF'
+    &quot;&quot;&quot;Local camera library, restricted to the configured owner's farm.&quot;&quot;&quot;
+    import json
+    import os
+    import re
+    from pathlib import Path
+    from urllib.parse import quote
+    
+    from fastapi import APIRouter, Depends, HTTPException, Request
+    from fastapi.responses import FileResponse
+    from sqlalchemy.orm import Session
+    from app.database import get_db
+    from app.models import User
+    
+    router = APIRouter(prefix=&quot;/api/videos-camaras&quot;, tags=[&quot;videos_camaras&quot;])
+    VIDEO_ROOT = Path(__file__).resolve().parents[2] / &quot;videos_camara_trampa&quot;
+    CATALOG_PATH = Path(__file__).with_name(&quot;camera_video_descriptions.json&quot;)
+    
+    
+    def owns_library(request: Request, db: Session) -&gt; bool:
+        owner = db.query(User).filter(User.username == os.environ.get(&quot;COWSIA_USERNAME&quot;, &quot;&quot;)).first()
+        return bool(owner and owner.farm_id == request.state.farm_id)
+    
+    
+    def video_files():
+        if not VIDEO_ROOT.is_dir():
+            return []
+        return sorted((p for p in VIDEO_ROOT.iterdir() if p.suffix.lower() == &quot;.mp4&quot; and p.is_file() and not p.is_symlink()), key=lambda p: p.name)
+    
+    
+    @router.get(&quot;&quot;)
+    def list_videos(request: Request, db: Session = Depends(get_db)):
+        if not owns_library(request, db):
+            return []
+        catalog = json.loads(CATALOG_PATH.read_text(encoding=&quot;utf-8&quot;))
+        result = []
+        for path in video_files():
+            match = re.match(r&quot;(.+)_(\d{4}-\d{2}-\d{2})T(\d{2})_(\d{2})_(\d{2})&quot;, path.stem)
+            details = catalog.get(path.name, {})
+            result.append({
+                &quot;filename&quot;: path.name,
+                &quot;camera&quot;: match[1] if match else path.stem,
+                &quot;recorded_at&quot;: f&quot;{match[2]}T{match[3]}:{match[4]}:{match[5]}&quot; if match else None,
+                &quot;url&quot;: &quot;/api/videos-camaras/file/&quot; + quote(path.name, safe=&quot;&quot;),
+                &quot;description&quot;: details.get(&quot;description&quot;, &quot;Vídeo pendiente de revisión visual.&quot;),
+                &quot;reviewed&quot;: bool(details.get(&quot;description&quot;)),
+                &quot;duration&quot;: details.get(&quot;duration&quot;),
+            })
+        return sorted(result, key=lambda v: v[&quot;recorded_at&quot;] or &quot;&quot;, reverse=True)
+    
+    
+    @router.get(&quot;/file/{filename}&quot;)
+    def get_video(filename: str, request: Request, db: Session = Depends(get_db)):
+        if not owns_library(request, db):
+            raise HTTPException(status_code=404, detail=&quot;Vídeo no encontrado&quot;)
+        path = next((p for p in video_files() if p.name == filename), None)
+        if path is None:
+            raise HTTPException(status_code=404, detail=&quot;Vídeo no encontrado&quot;)
+        return FileResponse(path, media_type=&quot;video/mp4&quot;, headers={&quot;Cache-Control&quot;: &quot;private, no-store&quot;})
+    EOF
+    python3 - &lt;&lt;'PY'
+    import json
+    from pathlib import Path
+    metadata=json.loads(Path('docs/videos_camaras/metadata.json').read_text())
+    descriptions=[
+    'Grabación nocturna en blanco y negro. Un pequeño cuadrúpedo se desplaza detrás del borde de una superficie elevada y gira la cabeza hacia la cámara; sus ojos reflejan la luz infrarroja. La oscuridad y la ocultación parcial no permiten confirmar la especie.',
+    'Grabación diurna en color. Una pequeña ave rapaz de aspecto similar a un mochuelo permanece posada en una barra de una reja, muy cerca de la cámara. Gira la cabeza y mira en distintas direcciones; al fondo se ven vegetación y un terreno vallado. La identificación de la especie es orientativa.',
+    'Grabación en blanco y negro de un camino entre árboles y un vallado. Un cuadrúpedo cruza la zona izquierda y se aleja hacia el fondo, cerca de los árboles. Su tamaño en la imagen y la falta de detalle no permiten identificar la especie con seguridad.',
+    'Grabación nocturna en infrarrojos. Un bovino con cuernos aparece de frente con la cabeza baja, avanza hacia la cámara y gira hacia la izquierda. Cruza el primer plano y sale por el borde izquierdo, dejando visible el camino entre los árboles y el vallado.'
+    ]
+    Path('backend/app/camera_video_descriptions.json').write_text(json.dumps({m['filename']:{'duration':m['duration'],'description':d} for m,d in zip(metadata,descriptions)},ensure_ascii=False,indent=2)+'\n')
+    p=Path('backend/app/main.py');s=p.read_text().replace('from app import analytics','from app.camera_videos import router as camera_videos_router\nfrom app import analytics').replace('app.include_router(tasks_router)','app.include_router(tasks_router)\napp.include_router(camera_videos_router)');p.write_text(s)
+    p=Path('docker-compose.yml');s=p.read_text().replace('      - ./backend/uploads:/workspace/backend/uploads','      - ./backend/uploads:/workspace/backend/uploads\n      - ./videos_camara_trampa:/workspace/videos_camara_trampa:ro');p.write_text(s)
+    p=Path('frontend/src/main.jsx');s=p.read_text().replace('  CalendarPlus,','  CalendarPlus,\n  Video,').replace('import &quot;./styles.css&quot;;','import { CameraVideos } from &quot;./CameraVideos&quot;;\nimport &quot;./styles.css&quot;;').replace('  { id: &quot;tasks&quot;,','  { id: &quot;videos_camaras&quot;, label: &quot;videos_camaras&quot;, icon: Video },\n  { id: &quot;tasks&quot;,').replace('        {activeTab === &quot;tasks&quot;','        {activeTab === &quot;videos_camaras&quot; &amp;&amp; &lt;CameraVideos /&gt;}\n        {activeTab === &quot;tasks&quot;');p.write_text(s)
+    PY
+    cat &gt; frontend/src/CameraVideos.jsx &lt;&lt;'EOF'
+    import React, { useEffect, useState } from &quot;react&quot;;
+    import { api } from &quot;./api/client&quot;;
+    
+    export function CameraVideos() {
+      const [videos, setVideos] = useState([]);
+      const [loading, setLoading] = useState(true);
+      const [error, setError] = useState(&quot;&quot;);
+      const [camera, setCamera] = useState(&quot;&quot;);
+      const [search, setSearch] = useState(&quot;&quot;);
+      const [attempt, setAttempt] = useState(0);
+      useEffect(() =&gt; {
+        let active = true;
+        setLoading(true); setError(&quot;&quot;);
+        api.get(&quot;/api/videos-camaras&quot;).then(rows =&gt; { if (active) setVideos(rows); })
+          .catch(err =&gt; { if (active) setError(err.message); })
+          .finally(() =&gt; { if (active) setLoading(false); });
+        return () =&gt; { active = false; };
+      }, [attempt]);
+      const filtered = videos.filter(v =&gt; (!camera || v.camera === camera) &amp;&amp;
+        `${v.filename} ${v.description}`.toLocaleLowerCase(&quot;es&quot;).includes(search.toLocaleLowerCase(&quot;es&quot;)));
+      return &lt;section className=&quot;page camera-videos-page&quot;&gt;
+        &lt;div className=&quot;page-header&quot;&gt;&lt;div&gt;&lt;h1&gt;videos_camaras&lt;/h1&gt;&lt;p&gt;Grabaciones de cámaras trampa de la explotación.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div className=&quot;panel camera-video-filters&quot;&gt;
+          &lt;label&gt;Cámara&lt;select value={camera} onChange={e =&gt; setCamera(e.target.value)}&gt;&lt;option value=&quot;&quot;&gt;Todas las cámaras&lt;/option&gt;{[...new Set(videos.map(v =&gt; v.camera))].map(c =&gt; &lt;option key={c}&gt;{c}&lt;/option&gt;)}&lt;/select&gt;&lt;/label&gt;
+          &lt;label&gt;Buscar vídeos&lt;input type=&quot;search&quot; placeholder=&quot;Cámara, archivo o descripción&quot; value={search} onChange={e =&gt; setSearch(e.target.value)} /&gt;&lt;/label&gt;
+          {!loading &amp;&amp; !error &amp;&amp; &lt;span role=&quot;status&quot;&gt;{filtered.length} de {videos.length} vídeos&lt;/span&gt;}
+        &lt;/div&gt;
+        {loading ? &lt;p role=&quot;status&quot;&gt;Cargando vídeos…&lt;/p&gt; : error ? &lt;div className=&quot;panel&quot; role=&quot;alert&quot;&gt;{error} &lt;button onClick={() =&gt; setAttempt(n =&gt; n + 1)}&gt;Reintentar&lt;/button&gt;&lt;/div&gt; : &lt;&gt;
+          {videos.length &gt; 0 &amp;&amp; &lt;p className=&quot;camera-video-note&quot;&gt;Descripciones basadas en fotogramas revisados. Fecha y hora según el nombre del archivo; las especies indicadas como posibles no están confirmadas.&lt;/p&gt;}
+          {filtered.length === 0 &amp;&amp; &lt;div className=&quot;panel&quot;&gt;{videos.length ? &quot;No hay vídeos que coincidan con los filtros.&quot; : &quot;No hay vídeos disponibles para esta explotación.&quot;}&lt;/div&gt;}
+          &lt;div className=&quot;camera-video-list&quot;&gt;{filtered.map(v =&gt; &lt;CameraVideo key={v.filename} video={v} /&gt;)}&lt;/div&gt;
+        &lt;/&gt;}
+      &lt;/section&gt;;
+    }
+    
+    function CameraVideo({ video: v }) {
+      const [failed, setFailed] = useState(false);
+      return &lt;article className=&quot;panel camera-video-card&quot;&gt;
+        &lt;div&gt;&lt;video controls playsInline preload=&quot;metadata&quot; aria-label={`Vídeo de ${v.camera}: ${v.filename}`} onError={() =&gt; setFailed(true)} src={api.url(v.url)} /&gt;
+          {failed &amp;&amp; &lt;p role=&quot;alert&quot;&gt;No se ha podido reproducir este vídeo. Prueba a abrir el archivo.&lt;/p&gt;}
+        &lt;/div&gt;
+        &lt;div className=&quot;camera-video-details&quot;&gt;&lt;h2&gt;{v.camera}&lt;/h2&gt;
+          &lt;p className=&quot;camera-video-meta&quot;&gt;{v.recorded_at ? v.recorded_at.replace(&quot;T&quot;, &quot; · &quot;) : &quot;Fecha no disponible&quot;}{v.duration ? ` · ${v.duration.toFixed(1)} s` : &quot;&quot;}&lt;/p&gt;
+          &lt;p&gt;{v.description}&lt;/p&gt;&lt;small&gt;{v.reviewed ? &quot;Revisión visual de fotogramas&quot; : &quot;Pendiente de análisis&quot;}&lt;/small&gt;
+          &lt;p className=&quot;camera-video-filename&quot;&gt;{v.filename}&lt;/p&gt;
+          &lt;a href={api.url(v.url)} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;Abrir vídeo original&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/article&gt;;
+    }
+    EOF
+    cat &gt;&gt; frontend/src/styles.css &lt;&lt;'EOF'
+    
+    .camera-video-filters { display: flex; flex-wrap: wrap; gap: 18px; align-items: end; }
+    .camera-video-filters label { display: grid; gap: 6px; flex: 1 1 220px; }
+    .camera-video-filters input, .camera-video-filters select { width: 100%; min-height: 40px; }
+    .camera-video-list { display: grid; gap: 20px; }
+    .camera-video-card { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 24px; align-items: center; }
+    .camera-video-card video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #111; border-radius: 10px; }
+    .camera-video-details h2 { margin-top: 0; }
+    .camera-video-details p { line-height: 1.6; }
+    .camera-video-meta, .camera-video-note, .camera-video-details small { color: #64748b; }
+    .camera-video-filename { overflow-wrap: anywhere; font-size: 12px; color: #64748b; }
+    @media (max-width: 900px) { .camera-video-card { grid-template-columns: 1fr; gap: 16px; } }
+    EOF
+    npm --prefix frontend run build
+npm notice run cowsia-panel@0.1.0 build
+npm notice run vite build
+vite v5.4.11 building for production...
+transforming...
+✓ 2425 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.39 kB │ gzip:   0.27 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+dist/assets/index-CM-Z5IZO.css   32.45 kB │ gzip:  10.27 kB
+dist/assets/index-D1yd9UbB.js   769.21 kB │ gzip: 217.58 kB
+✓ built in 11.71s
+✓ • 12.45s
+</code></pre>
+<h2 id="assistant-4">Assistant</h2>
+<p>El apartado ya está implementado y la interfaz compila correctamente. Estoy actualizando los contenedores y comprobaré la reproducción, el avance dentro de los vídeos, los filtros y el acceso por explotación.</p>
+<h2 id="activity-16">Activity</h2>
+<pre><code>$ docker compose up -d --build
+ Image cowsia-backend Building
+ Image cowsia-frontend Building
+#1 [internal] load local bake definitions
+#1 reading from stdin 958B done
+#1 DONE 0.0s
+
+#2 [backend internal] load build definition from Dockerfile
+#2 transferring dockerfile: 393B 0.0s done
+#2 DONE 0.1s
+
+#3 [frontend internal] load build definition from Dockerfile
+#3 transferring dockerfile: 321B 0.0s done
+#3 DONE 0.1s
+
+#4 [frontend internal] load metadata for docker.io/library/node:20-alpine
+#4 ...
+
+#5 [frontend internal] load metadata for docker.io/library/nginx:1.27-alpine
+#5 DONE 0.7s
+
+#4 [frontend internal] load metadata for docker.io/library/node:20-alpine
+#4 DONE 0.8s
+
+#6 [frontend internal] load .dockerignore
+#6 transferring context: 308B done
+#6 DONE 0.0s
+
+#7 [frontend internal] load build context
+#7 DONE 0.0s
+
+#8 [frontend stage-1 1/3] FROM docker.io/library/nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10
+#8 resolve docker.io/library/nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10 0.0s done
+#8 DONE 0.1s
+
+#9 [frontend build 1/6] FROM docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293
+#9 resolve docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293
+#9 resolve docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293 0.0s done
+#9 DONE 0.1s
+
+#7 [frontend internal] load build context
+#7 transferring context: 97.74kB 0.0s done
+#7 DONE 0.0s
+
+#10 [frontend build 2/6] WORKDIR /app
+#10 CACHED
+
+#11 [frontend build 3/6] COPY frontend/package*.json ./
+#11 CACHED
+
+#12 [frontend build 4/6] RUN npm ci
+#12 CACHED
+
+#13 [frontend build 5/6] COPY frontend .
+#13 DONE 0.1s
+
+#14 [backend internal] load metadata for docker.io/library/python:3.11-slim
+#14 DONE 1.1s
+
+#6 [backend internal] load .dockerignore
+#6 transferring context: 308B done
+#6 DONE 0.0s
+
+#15 [frontend build 6/6] RUN npm run build
+#15 ...
+
+#16 [backend 1/6] FROM docker.io/library/python:3.11-slim@sha256:e41613d42d4891e4930f79523f93f81bbc7632584ec65e36ab055f41a800b41e
+#16 resolve docker.io/library/python:3.11-slim@sha256:e41613d42d4891e4930f79523f93f81bbc7632584ec65e36ab055f41a800b41e 0.1s done
+#16 DONE 0.1s
+
+#17 [backend internal] load build context
+#17 transferring context: 38.38kB 0.0s done
+#17 DONE 0.1s
+
+#18 [backend 2/6] WORKDIR /workspace/backend
+#18 CACHED
+
+#19 [backend 3/6] COPY backend/requirements.txt .
+#19 CACHED
+
+#20 [backend 4/6] RUN pip install --no-cache-dir -r requirements.txt
+#20 CACHED
+
+#21 [backend 5/6] COPY backend/app ./app
+#21 DONE 0.1s
+
+#15 [frontend build 6/6] RUN npm run build
+#15 ...
+
+#22 [backend 6/6] RUN mkdir -p uploads/animal_images uploads/event_images
+#22 DONE 1.1s
+
+#23 [backend] exporting to image
+#23 exporting layers
+#23 exporting layers 0.2s done
+#23 exporting manifest sha256:c1b682837ee36d1f8c50dfaf9abba66c83ac92f456690e848ba5f5f632f37aec 0.0s done
+#23 exporting config sha256:995c39d63c1b8aab7c39cf719f63855a789e29755aedfbe4a076311458f5d809 0.0s done
+#23 exporting attestation manifest sha256:6983e07f122337dc36492c46fc833e3e8e73112d946d51fd37e359fcfd5431ec 0.0s done
+#23 exporting manifest list sha256:8d02a9657dcd4c7113a59a0089330775b409c85ccdb7c3c847396c55aa3fd595 0.0s done
+#23 naming to docker.io/library/cowsia-backend:latest
+#23 naming to docker.io/library/cowsia-backend:latest done
+#23 unpacking to docker.io/library/cowsia-backend:latest 0.1s done
+#23 DONE 0.5s
+
+#15 [frontend build 6/6] RUN npm run build
+#15 ...
+
+#24 [backend] resolving provenance for metadata file
+#24 DONE 0.1s
+
+#15 [frontend build 6/6] RUN npm run build
+#15 2.587
+#15 2.587 &gt; cowsia-panel@0.1.0 build
+#15 2.587 &gt; vite build
+#15 2.587
+#15 3.149 vite v5.4.11 building for production...
+#15 3.253 transforming...
+#15 10.77 ✓ 2425 modules transformed.
+#15 11.35 rendering chunks...
+#15 11.37 computing gzip size...
+#15 11.39 dist/index.html                   0.39 kB │ gzip:   0.27 kB
+#15 11.40 dist/assets/index-CM-Z5IZO.css   32.45 kB │ gzip:  10.27 kB
+#15 11.40 dist/assets/index-D1yd9UbB.js   769.21 kB │ gzip: 217.58 kB
+#15 11.40
+#15 11.40 (!) Some chunks are larger than 500 kB after minification. Consider:
+#15 11.40 - Using dynamic import() to code-split the application
+#15 11.40 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+#15 11.40 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+#15 11.40 ✓ built in 8.19s
+#15 11.45 npm notice
+#15 11.45 npm notice New major version of npm available! 10.8.2 -&gt; 12.1.0
+#15 11.45 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.1.0
+#15 11.45 npm notice To update run: npm install -g npm@12.1.0
+#15 11.45 npm notice
+#15 DONE 11.5s
+
+#25 [frontend stage-1 2/3] COPY frontend/nginx.conf /etc/nginx/conf.d/default.conf
+#25 CACHED
+
+#26 [frontend stage-1 3/3] COPY --from=build /app/dist /usr/share/nginx/html
+#26 DONE 0.1s
+
+#27 [frontend] exporting to image
+#27 exporting layers 0.1s done
+#27 exporting manifest sha256:72a6a02b6e8d5f272256d56fb6b898985d3e14358612562d69260f0a5f7bfe18 0.0s done
+#27 exporting config sha256:fa032fd3640f4f63e00169003cb5398858a07a1d39c1e2b03ba8673f44dc792b 0.0s done
+#27 exporting attestation manifest sha256:c33f4c9c5b51702641bd69c5a4be833ea7d0e600f985305f68b38a4339f0447e 0.0s done
+#27 exporting manifest list sha256:fd0b9e1a74d946b34629b9e8438fbf90be60d5b477a35e3198c9185793bb82cf 0.0s done
+#27 naming to docker.io/library/cowsia-frontend:latest
+#27 naming to docker.io/library/cowsia-frontend:latest done
+#27 unpacking to docker.io/library/cowsia-frontend:latest 0.0s done
+#27 DONE 0.3s
+
+#28 [frontend] resolving provenance for metadata file
+#28 DONE 0.0s
+ Image cowsia-backend Built
+ Image cowsia-frontend Built
+ Container cowsia-backend Recreate
+ Container cowsia-backend Recreated
+ Container cowsia-frontend Recreate
+ Container cowsia-frontend Recreated
+ Container cowsia-backend Starting
+ Container cowsia-backend Started
+ Container cowsia-frontend Starting
+ Container cowsia-frontend Started
+✓ • 18.65s
+</code></pre>
+<h2 id="activity-17">Activity</h2>
+<pre><code>$ cat &gt; frontend/scripts/check-camera-videos.mjs &lt;&lt;'EOF'
+    import { chromium } from 'playwright';
+    import { readFile } from 'node:fs/promises';
+    import assert from 'node:assert/strict';
+    const env = Object.fromEntries((await readFile(new URL('../../.env', import.meta.url),'utf8')).split('\n').filter(l=&gt;l &amp;&amp; !l.startsWith('#')).map(l=&gt;{const i=l.indexOf('=');return [l.slice(0,i),l.slice(i+1).replace(/^['&quot;]|['&quot;]$/g,'')];}));
+    const browser=await chromium.launch({headless:true});
+    try {
+     const context=await browser.newContext({viewport:{width:1440,height:960}});
+     const page=await context.newPage();
+     const base='http://127.0.0.1:8081';
+     assert.equal((await context.request.get(base+'/api/videos-camaras')).status(),401);
+     await page.goto(base);
+     await page.getByLabel('Usuario',{exact:true}).fill(env.COWSIA_USERNAME);
+     await page.getByLabel('Contrasena',{exact:true}).fill(env.COWSIA_PASSWORD);
+     await page.getByRole('button',{name:'Entrar',exact:true}).click();
+     await page.getByRole('button',{name:'videos_camaras',exact:true}).click();
+     await page.locator('.camera-video-card').first().waitFor();
+     assert.equal(await page.locator('video').count(),4);
+     const videos=await (await context.request.get(base+'/api/videos-camaras')).json();
+     for (const v of videos) {
+       const response=await context.request.get(base+v.url,{headers:{Range:'bytes=0-99'}});
+       assert.equal(response.status(),206); assert.equal((await response.body()).length,100);
+     }
+     await page.locator('video').first().evaluate(async v=&gt;{await v.play();});
+     await page.waitForFunction(()=&gt;document.querySelector('video').currentTime&gt;0.1);
+     await page.locator('video').first().evaluate(v=&gt;{v.pause();v.currentTime=3;});
+     await page.waitForFunction(()=&gt;!document.querySelector('video').seeking);
+     await page.screenshot({path:new URL('../../docs/videos_camaras/interfaz.png',import.meta.url).pathname,fullPage:true});
+     await page.getByLabel('Cámara',{exact:true}).selectOption('Pino grand');
+     assert.equal(await page.locator('video').count(),2);
+     await page.getByLabel('Buscar vídeos').fill('bovino');
+     assert.equal(await page.locator('video').count(),1);
+     await page.getByLabel('Buscar vídeos').fill('zzzzzz');
+     await page.getByText('No hay vídeos que coincidan con los filtros.').waitFor();
+     await page.getByLabel('Buscar vídeos').fill(''); await page.getByLabel('Cámara',{exact:true}).selectOption('');
+     await page.setViewportSize({width:390,height:844});
+     assert.ok(await page.evaluate(()=&gt;document.documentElement.scrollWidth&lt;=window.innerWidth));
+     await page.screenshot({path:new URL('../../docs/videos_camaras/movil.png',import.meta.url).pathname,fullPage:true});
+     if(env.COWSIA_DEMO_USERNAME) {
+       const demo=await browser.newContext();
+       assert.equal((await demo.request.post(base+'/api/auth/login',{data:{username:env.COWSIA_DEMO_USERNAME,password:[REDACTED_SECRET]
+       assert.deepEqual(await (await demo.request.get(base+'/api/videos-camaras')).json(),[]);
+       assert.equal((await demo.request.get(base+videos[0].url)).status(),404);
+     }
+     console.log('OK: cuatro vídeos, reproducción, seek, HTTP Range, filtros, móvil, autenticación y aislamiento de explotación.');
+    } finally {await browser.close();}
+    EOF
+✓ • 0ms
+</code></pre>
+<h2 id="activity-18">Activity</h2>
+<pre><code>$ node frontend/scripts/check-camera-videos.mjs
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.selectOption: Timeout 30000ms exceeded.
+Call log:
+  - waiting for getByLabel('Cámara', { exact: true })
+
+    at /opt/DesplieguesDocker/CowsIA/frontend/scripts/check-camera-videos.mjs:28:47 {
+  log: [ &quot;  - waiting for getByLabel('Cámara', { exact: true })&quot; ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.20.0
+✗ (1) • 32.32s
+</code></pre>
+<h2 id="activity-19">Activity</h2>
+<pre><code>$ ls -lh docs/videos_camaras; docker compose logs --tail 12 backend
+total 1004K
+-rw-r--r-- 1 root root  63K Sep 29 16:59 contacto-1.jpg
+-rw-r--r-- 1 root root 170K Sep 29 16:59 contacto-2.jpg
+-rw-r--r-- 1 root root  78K Sep 29 16:59 contacto-3.jpg
+-rw-r--r-- 1 root root  49K Sep 29 16:59 contacto-4.jpg
+-rw-r--r-- 1 root root 629K Sep 29 17:01 interfaz.png
+-rw-r--r-- 1 root root  505 Sep 29 16:59 metadata.json
+cowsia-backend  | INFO:     172.19.0.3:45020 - &quot;GET /api/videos-camaras HTTP/1.1&quot; 200 OK
+cowsia-backend  | INFO:     172.19.0.3:45010 - &quot;GET /api/dashboard/birth-years HTTP/1.1&quot; 200 OK
+cowsia-backend  | INFO:     172.19.0.3:45036 - &quot;GET /api/videos-camaras/file/Jardin_2026-06-01T08_13_09.mp4 HTTP/1.1&quot; 206 Partial Content
+cowsia-backend  | INFO:     172.19.0.3:45048 - &quot;GET /api/videos-camaras/file/Pino%20grand_2025-11-05T23_24_01%20%281%29.mp4 HTTP/1.1&quot; 206 Partial Content
+cowsia-backend  | INFO:     172.19.0.3:45052 - &quot;GET /api/videos-camaras/file/Pino%20grand_2025-10-27T17_57_26.mp4 HTTP/1.1&quot; 206 Partial Content
+cowsia-backend  | INFO:     172.19.0.3:45062 - &quot;GET /api/videos-camaras/file/Camara%20Ama_2025-09-18T03_48_48.mp4 HTTP/1.1&quot; 206 Partial Content
+cowsia-backend  | INFO:     172.19.0.3:45070 - &quot;GET /api/videos-camaras HTTP/1.1&quot; 200 OK
+cowsia-backend  | INFO:     172.19.0.3:45078 - &quot;GET /api/videos-camaras/file/Jardin_2026-06-01T08_13_09.mp4 HTTP/1.1&quot; 206 Partial Content
+cowsia-backend  | INFO:     172.19.0.3:45090 - &quot;GET /api/videos-camaras/file/Pino%20grand_2025-11-05T23_24_01%20%281%29.mp4 HTTP/1.1&quot; 206 Partial Content
+cowsia-backend  | INFO:     172.19.0.3:45098 - &quot;GET /api/videos-camaras/file/Pino%20grand_2025-10-27T17_57_26.mp4 HTTP/1.1&quot; 206 Partial Content
+cowsia-backend  | INFO:     172.19.0.3:45100 - &quot;GET /api/videos-camaras/file/Camara%20Ama_2025-09-18T03_48_48.mp4 HTTP/1.1&quot; 206 Partial Content
+cowsia-backend  | INFO:     172.19.0.3:45104 - &quot;GET /api/videos-camaras/file/Jardin_2026-06-01T08_13_09.mp4 HTTP/1.1&quot; 206 Partial Content
+✓ • 4ms
+</code></pre>
+<h2 id="activity-20">Activity</h2>
+<pre><code>Viewed image /opt/DesplieguesDocker/CowsIA/docs/videos_camaras/interfaz.png
+</code></pre>
+<h2 id="assistant-5">Assistant</h2>
+<p>La reproducción y el avance dentro del vídeo funcionan, y los cuatro archivos se sirven correctamente. La prueba detectó un problema en las etiquetas de los filtros; ya lo he corregido y estoy terminando la comprobación en móvil y con la cuenta de otra explotación.</p>
+<h2 id="activity-21">Activity</h2>
+<pre><code>$ python3 - &lt;&lt;'PY'
+    from pathlib import Path
+    p=Path('frontend/src/CameraVideos.jsx');s=p.read_text().replace('&lt;label&gt;Cámara&lt;select','&lt;label htmlFor=&quot;camera-filter&quot;&gt;Cámara&lt;/label&gt;&lt;select id=&quot;camera-filter&quot;').replace('&lt;/select&gt;&lt;/label&gt;','&lt;/select&gt;').replace('&lt;label&gt;Buscar vídeos&lt;input','&lt;label htmlFor=&quot;camera-search&quot;&gt;Buscar vídeos&lt;/label&gt;&lt;input id=&quot;camera-search&quot;').replace(' /&gt;&lt;/label&gt;',' /&gt;');s=s.replace('&lt;label htmlFor=&quot;camera-filter&quot;&gt;','&lt;div className=&quot;camera-video-field&quot;&gt;&lt;label htmlFor=&quot;camera-filter&quot;&gt;').replace('&lt;/select&gt;','&lt;/select&gt;&lt;/div&gt;').replace('&lt;label htmlFor=&quot;camera-search&quot;&gt;','&lt;div className=&quot;camera-video-field&quot;&gt;&lt;label htmlFor=&quot;camera-search&quot;&gt;').replace('setSearch(e.target.value)} /&gt;','setSearch(e.target.value)} /&gt;&lt;/div&gt;');p.write_text(s)
+    p=Path('frontend/src/styles.css');s=p.read_text().replace('.camera-video-filters label { display: grid;', '.camera-video-field { display: grid;');p.write_text(s)
+    PY
+    docker compose up -d --build frontend
+ Image cowsia-frontend Building
+ Image cowsia-backend Building
+#1 [internal] load local bake definitions
+#1 reading from stdin 958B done
+#1 DONE 0.0s
+
+#2 [frontend internal] load build definition from Dockerfile
+#2 transferring dockerfile: 321B done
+#2 DONE 0.0s
+
+#3 [backend internal] load build definition from Dockerfile
+#3 transferring dockerfile: 393B done
+#3 DONE 0.0s
+
+#4 [backend internal] load metadata for docker.io/library/python:3.11-slim
+#4 DONE 0.4s
+
+#5 [frontend internal] load metadata for docker.io/library/node:20-alpine
+#5 DONE 0.5s
+
+#6 [frontend internal] load metadata for docker.io/library/nginx:1.27-alpine
+#6 DONE 0.4s
+
+#7 [frontend internal] load .dockerignore
+#7 transferring context: 308B done
+#7 DONE 0.0s
+
+#8 [backend 1/6] FROM docker.io/library/python:3.11-slim@sha256:e41613d42d4891e4930f79523f93f81bbc7632584ec65e36ab055f41a800b41e
+#8 resolve docker.io/library/python:3.11-slim@sha256:e41613d42d4891e4930f79523f93f81bbc7632584ec65e36ab055f41a800b41e 0.0s done
+#8 DONE 0.0s
+
+#9 [backend internal] load build context
+#9 transferring context: 105.80kB 0.0s done
+#9 DONE 0.0s
+
+#10 [backend 4/6] RUN pip install --no-cache-dir -r requirements.txt
+#10 CACHED
+
+#11 [backend 5/6] COPY backend/app ./app
+#11 CACHED
+
+#12 [backend 2/6] WORKDIR /workspace/backend
+#12 CACHED
+
+#13 [backend 3/6] COPY backend/requirements.txt .
+#13 CACHED
+
+#14 [backend 6/6] RUN mkdir -p uploads/animal_images uploads/event_images
+#14 CACHED
+
+#15 [frontend build 1/6] FROM docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293
+#15 resolve docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293 0.0s done
+#15 DONE 0.0s
+
+#16 [frontend stage-1 1/3] FROM docker.io/library/nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10
+#16 resolve docker.io/library/nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10 0.0s done
+#16 DONE 0.0s
+
+#17 [frontend internal] load build context
+#17 transferring context: 240.06kB 0.0s done
+#17 DONE 0.0s
+
+#18 [frontend build 2/6] WORKDIR /app
+#18 CACHED
+
+#19 [frontend build 3/6] COPY frontend/package*.json ./
+#19 CACHED
+
+#20 [frontend build 4/6] RUN npm ci
+#20 CACHED
+
+#21 [backend] exporting to image
+#21 exporting layers done
+#21 exporting manifest sha256:c1b682837ee36d1f8c50dfaf9abba66c83ac92f456690e848ba5f5f632f37aec done
+#21 exporting config sha256:995c39d63c1b8aab7c39cf719f63855a789e29755aedfbe4a076311458f5d809 done
+#21 exporting attestation manifest sha256:8093d402ea40ff125ff4cb720507ce79329c3fa8072611f87039332302ffe9b7 0.0s done
+#21 exporting manifest list sha256:57a50f98d52fc4b43e2ef961fe31f2e9b1f94e69b04591f2d40caa78f002cf4f
+#21 exporting manifest list sha256:57a50f98d52fc4b43e2ef961fe31f2e9b1f94e69b04591f2d40caa78f002cf4f 0.0s done
+#21 naming to docker.io/library/cowsia-backend:latest done
+#21 unpacking to docker.io/library/cowsia-backend:latest 0.0s done
+#21 DONE 0.2s
+
+#22 [frontend build 5/6] COPY frontend .
+#22 DONE 0.1s
+
+#23 [frontend build 6/6] RUN npm run build
+#23 ...
+
+#24 [backend] resolving provenance for metadata file
+#24 DONE 0.0s
+
+#23 [frontend build 6/6] RUN npm run build
+#23 0.910
+#23 0.910 &gt; cowsia-panel@0.1.0 build
+#23 0.910 &gt; vite build
+#23 0.910
+#23 1.192 vite v5.4.11 building for production...
+#23 1.254 transforming...
+#23 6.733 ✓ 2425 modules transformed.
+#23 7.227 rendering chunks...
+#23 7.244 computing gzip size...
+#23 7.264 dist/index.html                   0.39 kB │ gzip:   0.26 kB
+#23 7.264 dist/assets/index-DBo0SVXy.css   32.44 kB │ gzip:  10.27 kB
+#23 7.265 dist/assets/index-CS645A14.js   769.41 kB │ gzip: 217.62 kB
+#23 7.267 ✓ built in 6.04s
+#23 7.267
+#23 7.267 (!) Some chunks are larger than 500 kB after minification. Consider:
+#23 7.267 - Using dynamic import() to code-split the application
+#23 7.267 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+#23 7.267 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+#23 7.313 npm notice
+#23 7.313 npm notice New major version of npm available! 10.8.2 -&gt; 12.1.0
+#23 7.313 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.1.0
+#23 7.313 npm notice To update run: npm install -g npm@12.1.0
+#23 7.313 npm notice
+#23 DONE 7.4s
+
+#25 [frontend stage-1 2/3] COPY frontend/nginx.conf /etc/nginx/conf.d/default.conf
+#25 CACHED
+
+#26 [frontend stage-1 3/3] COPY --from=build /app/dist /usr/share/nginx/html
+#26 DONE 0.1s
+
+#27 [frontend] exporting to image
+#27 exporting layers
+#27 exporting layers 0.2s done
+#27 exporting manifest sha256:026d1a111404dc42ffcd135974a794b7a6662ab8df6047f26530cc1539024450
+#27 exporting manifest sha256:026d1a111404dc42ffcd135974a794b7a6662ab8df6047f26530cc1539024450 0.0s done
+#27 exporting config sha256:788db0af066ec93d4b86eeed3ad39efb9973f0b4da905610956ad77ab3b31c63 0.0s done
+#27 exporting attestation manifest sha256:adf9c06498cc9bd527e1c9bcc30f5947f1815675f4a52984dcc2557a5eb7f412 0.0s done
+#27 exporting manifest list sha256:6e1bb55bf8975f3d461dca7c5aaab26618a227b002cffd7c61277ed265dcb8a6 0.0s done
+#27 naming to docker.io/library/cowsia-frontend:latest done
+#27 unpacking to docker.io/library/cowsia-frontend:latest 0.0s done
+#27 DONE 0.3s
+
+#28 [frontend] resolving provenance for metadata file
+#28 DONE 0.0s
+ Image cowsia-backend Built
+ Image cowsia-frontend Built
+ Container cowsia-backend Running
+ Container cowsia-frontend Recreate
+ Container cowsia-frontend Recreated
+ Container cowsia-frontend Starting
+ Container cowsia-frontend Started
+✓ • 10.13s
+</code></pre>
+<h2 id="activity-22">Activity</h2>
+<pre><code>$ node frontend/scripts/check-camera-videos.mjs
+OK: cuatro vídeos, reproducción, seek, HTTP Range, filtros, móvil, autenticación y aislamiento de explotación.
+✓ • 2.01s
+</code></pre>
+<h2 id="assistant-6">Assistant</h2>
+<p>Ya está disponible <strong>videos_camaras</strong> en CowsIA, con los cuatro vídeos y una descripción junto a cada reproductor.</p>
+<p>Incluye fecha, duración, búsqueda y filtro por cámara. Revisé fotogramas de cada grabación y señalé las especies que no pueden confirmarse.</p>
+<p>Desplegado y verificado: reproducción, filtros, vista móvil y acceso por explotación. Recarga la interfaz para verlo.</p>
+<h2 id="user-2">User</h2>
+<p>Podrias interactuar con la interfaz grafaica e ir navegando por las distintas areas, enlaces, funcionalidades, apartados,... de CowsIA e ir documentando su funcionamiento tomando capturas de pantalla y plasmarlo en un doucmento markdown o html?</p>
+<h2 id="assistant-7">Assistant</h2>
+<p>Voy a recorrer CowsIA con el navegador, comprobar sus apartados y documentar su funcionamiento con capturas. Prepararé una guía en Markdown y una versión HTML para consultarla cómodamente.</p>
+<h2 id="activity-23">Activity</h2>
+<pre><code>$ ls frontend/scripts; ls docs; sed -n '1,180p' frontend/scripts/check-camera-videos.mjs; rg -n 'function |&lt;h[123]|placeholder=|&lt;label|title=' frontend/src/Tasks.jsx | head -100
+audit-all-event-maps.mjs
+capture-animal-event.mjs
+capture-cowsia.mjs
+check-activity-filters.mjs
+check-animal-events-map.mjs
+check-camera-videos.mjs
+check-farm-incidents-map.mjs
+check-history-map.mjs
+check-main-map-history.mjs
+check-seeded-events.mjs
+check-tasks-map.mjs
+check-tasks.mjs
+document-cowsia.mjs
+inspect-camera-videos.mjs
+filtros-y-dashboard
+gestor-tareas
+guia-cowsia
+incidencias_explotacion_20260929
+sucesos_simulados_20260929
+tareas_desde_registros_20260929
+verificacion-mapas-sucesos
+videos_camaras
+import { chromium } from 'playwright';
+import { readFile } from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const env = Object.fromEntries((await readFile(new URL('../../.env', import.meta.url),'utf8')).split('\n').filter(l=&gt;l &amp;&amp; !l.startsWith('#')).map(l=&gt;{const i=l.indexOf('=');return [l.slice(0,i),l.slice(i+1).replace(/^['&quot;]|['&quot;]$/g,'')];}));
+const browser=await chromium.launch({headless:true});
+try {
+ const context=await browser.newContext({viewport:{width:1440,height:960}});
+ const page=await context.newPage();
+ const base='http://127.0.0.1:8081';
+ assert.equal((await context.request.get(base+'/api/videos-camaras')).status(),401);
+ await page.goto(base);
+ await page.getByLabel('Usuario',{exact:true}).fill(env.COWSIA_USERNAME);
+ await page.getByLabel('Contrasena',{exact:true}).fill(env.COWSIA_PASSWORD);
+ await page.getByRole('button',{name:'Entrar',exact:true}).click();
+ await page.getByRole('button',{name:'videos_camaras',exact:true}).click();
+ await page.locator('.camera-video-card').first().waitFor();
+ assert.equal(await page.locator('video').count(),4);
+ const videos=await (await context.request.get(base+'/api/videos-camaras')).json();
+ for (const v of videos) {
+   const response=await context.request.get(base+v.url,{headers:{Range:'bytes=0-99'}});
+   assert.equal(response.status(),206); assert.equal((await response.body()).length,100);
+ }
+ await page.locator('video').first().evaluate(async v=&gt;{await v.play();});
+ await page.waitForFunction(()=&gt;document.querySelector('video').currentTime&gt;0.1);
+ await page.locator('video').first().evaluate(v=&gt;{v.pause();v.currentTime=3;});
+ await page.waitForFunction(()=&gt;!document.querySelector('video').seeking);
+ await page.screenshot({path:new URL('../../docs/videos_camaras/interfaz.png',import.meta.url).pathname,fullPage:true});
+ await page.getByLabel('Cámara',{exact:true}).selectOption('Pino grand');
+ assert.equal(await page.locator('video').count(),2);
+ await page.getByLabel('Buscar vídeos').fill('bovino');
+ assert.equal(await page.locator('video').count(),1);
+ await page.getByLabel('Buscar vídeos').fill('zzzzzz');
+ await page.getByText('No hay vídeos que coincidan con los filtros.').waitFor();
+ await page.getByLabel('Buscar vídeos').fill(''); await page.getByLabel('Cámara',{exact:true}).selectOption('');
+ await page.setViewportSize({width:390,height:844});
+ assert.ok(await page.evaluate(()=&gt;document.documentElement.scrollWidth&lt;=window.innerWidth));
+ await page.screenshot({path:new URL('../../docs/videos_camaras/movil.png',import.meta.url).pathname,fullPage:true});
+ if(env.COWSIA_DEMO_USERNAME) {
+   const demo=await browser.newContext();
+   assert.equal((await demo.request.post(base+'/api/auth/login',{data:{username:env.COWSIA_DEMO_USERNAME,password:env.COWSIA_DEMO_PASSWORD}})).status(),200);
+   assert.deepEqual(await (await demo.request.get(base+'/api/videos-camaras')).json(),[]);
+   assert.equal((await demo.request.get(base+videos[0].url)).status(),404);
+ }
+ console.log('OK: cuatro vídeos, reproducción, seek, HTTP Range, filtros, móvil, autenticación y aislamiento de explotación.');
+} finally {await browser.close();}
+6:export function TaskButton({ source = {}, children = 'Crear tarea' }) {
+14:export function TaskForm({ source, username, onClose, onSaved }) {
+62:  async function save(e) {
+80:      &lt;header&gt;&lt;h2 id=&quot;task-form-title&quot;&gt;Nueva tarea&lt;/h2&gt;&lt;button type=&quot;button&quot; disabled={busy} onClick={onClose} aria-label=&quot;Cerrar nueva tarea&quot;&gt;Cerrar&lt;/button&gt;&lt;/header&gt;
+81:      &lt;label&gt;Quién pone la tarea&lt;input value={username} readOnly /&gt;&lt;/label&gt;
+82:      &lt;label&gt;Fecha prevista&lt;input type=&quot;date&quot; required value={dueDate} onChange={e =&gt; setDueDate(e.target.value)} /&gt;&lt;/label&gt;
+83:      &lt;label&gt;Asociar a&lt;select aria-label=&quot;Asociar a&quot; value={kind} onChange={e =&gt; { setKind(e.target.value); setError(''); }}&gt;
+87:      {(kind === 'animal' || kind === 'event') &amp;&amp; &lt;label&gt;Animal&lt;select aria-label=&quot;Animal&quot; required value={animalId} onChange={e =&gt; { setAnimalId(e.target.value); setEventId(''); }}&gt;
+90:      {kind === 'event' &amp;&amp; &lt;label&gt;Suceso&lt;select aria-label=&quot;Suceso&quot; required disabled={eventsLoading} value={eventId} onChange={e =&gt; setEventId(e.target.value)}&gt;
+93:      {kind === 'farm' &amp;&amp; &lt;label&gt;Incidencia&lt;select aria-label=&quot;Incidencia&quot; required value={farmId} onChange={e =&gt; setFarmId(e.target.value)}&gt;
+96:      &lt;label&gt;Descripción de la tarea&lt;textarea required maxLength={10000} rows={4} value={description} onChange={e =&gt; setDescription(e.target.value)} placeholder=&quot;Describe lo que hay que hacer&quot; /&gt;&lt;/label&gt;
+97:      &lt;label&gt;Foto opcional (máximo 10 MB)&lt;input type=&quot;file&quot; accept=&quot;image/jpeg,image/png,image/webp,image/gif&quot; onChange={e =&gt; setFile(e.target.files?.[0] || null)} /&gt;&lt;/label&gt;
+106:export function Tasks({ refreshKey }) {
+126:  async function changeStatus(row, status) {
+133:    &lt;div className=&quot;task-page-title&quot;&gt;&lt;h1&gt;Gestor de tareas&lt;/h1&gt;&lt;TaskButton&gt;Nueva tarea&lt;/TaskButton&gt;&lt;/div&gt;
+135:    &lt;section className=&quot;panel activity-filters&quot; aria-label=&quot;Filtros de tareas&quot;&gt;&lt;h2&gt;Filtros de tareas&lt;/h2&gt;&lt;div className=&quot;compact-form&quot;&gt;
+136:      &lt;label&gt;Estado&lt;select aria-label=&quot;Estado&quot; value={filters.status} onChange={e =&gt; setFilters({...filters,status:e.target.value})}&gt;&lt;option value=&quot;&quot;&gt;Todos&lt;/option&gt;{Object.entries(statusLabels).map(([v,l]) =&gt; &lt;option key={v} value={v}&gt;{l}&lt;/option&gt;)}&lt;/select&gt;&lt;/label&gt;
+137:      &lt;label&gt;Desde&lt;input type=&quot;date&quot; value={filters.date_from} onChange={e =&gt; setFilters({...filters,date_from:e.target.value})} /&gt;&lt;/label&gt;
+138:      &lt;label&gt;Hasta&lt;input type=&quot;date&quot; value={filters.date_to} onChange={e =&gt; setFilters({...filters,date_to:e.target.value})} /&gt;&lt;/label&gt;
+153:        &lt;label&gt;Estado de la tarea&lt;select aria-label={`Estado de tarea ${row.id}`} value={row.status} disabled={busyId !== null} onChange={e =&gt; changeStatus(row,e.target.value)}&gt;{Object.entries(statusLabels).map(([v,l]) =&gt; &lt;option key={v} value={v}&gt;{l}&lt;/option&gt;)}&lt;/select&gt;&lt;/label&gt;
+✓ • 66ms
+</code></pre>
+<h2 id="activity-24">Activity</h2>
+<pre><code>$ cat frontend/scripts/document-cowsia.mjs
+import { chromium } from 'playwright';
+import { mkdir, writeFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+const out=resolve('../docs/guia-cowsia');
+await mkdir(`${out}/capturas`,{recursive:true});
+const browser=await chromium.launch({headless:true});
+const context=await browser.newContext({viewport:{width:1440,height:1000},locale:'es-ES',acceptDownloads:true});
+const page=await context.newPage(), records=[];
+page.on('pageerror',e=&gt;records.push({error:e.message}));
+async function shot(name,fullPage=false){await page.waitForTimeout(900);await page.screenshot({path:`${out}/capturas/${name}.png`,fullPage});records.push({capture:name,text:(await page.locator('body').innerText()).slice(0,16000)});console.log(name);}
+async function tab(name){await page.locator('nav').getByRole('button',{name,exact:true}).click();}
+try {
+ await page.goto('http://127.0.0.1:8081');await page.getByLabel('Usuario').waitFor();await shot('01-acceso');
+ await page.getByLabel('Usuario').fill(process.env.COWSIA_USERNAME);await page.getByLabel('Contrasena',{exact:true}).fill(process.env.COWSIA_PASSWORD);await page.getByRole('button',{name:'Entrar',exact:true}).click();
+ await page.locator('.metrics').waitFor();await shot('02-dashboard',true);
+ await tab('Animales');await page.locator('tbody tr').first().waitFor();await shot('03-animales');
+ await page.locator('.toolbar select').nth(0).selectOption('Activo');await page.locator('.toolbar select').nth(1).selectOption('Hembra');await shot('04-filtros');
+ await page.locator('.toolbar select').nth(0).selectOption('');await page.locator('.toolbar select').nth(1).selectOption('');
+ await page.getByPlaceholder('Crotal, madre, procedencia o destino').fill('ES051010111741');await shot('05-busqueda');
+ await page.getByRole('button',{name:'ES051010111741',exact:true}).click();await page.getByRole('heading',{name:'Descendientes (4)',exact:true}).waitFor();await shot('06-descendientes');
+ for(const [title,name] of [['Imagenes','07-imagenes'],['Ubicaciones','08-ubicaciones'],['Sucesos','09-sucesos']]){await page.locator('.detail-section').filter({has:page.getByRole('heading',{name:title,exact:true})}).scrollIntoViewIfNeeded();await shot(name);}
+ await page.getByRole('button',{name:'Cerrar',exact:true}).click();
+ const rp=page.waitForResponse(r=&gt;r.url().includes('/api/export/animals.csv'));
+ await page.getByRole('link',{name:'CSV',exact:true}).click();
+ const response=await rp;records.push({exportStatus:response.status()});
+ await shot('19-exportacion-resultado');
+ await page.goto('http://127.0.0.1:8081');await page.locator('.metrics').waitFor();
+ await tab('Galeria');await page.locator('.gallery-card').first().waitFor();await shot('10-galeria');await page.getByPlaceholder('Buscar crotal o sexo').fill('ES051010111741');await shot('11-galeria-busqueda');await page.locator('.gallery-card').first().click();await page.locator('.detail-content').waitFor();await page.getByRole('button',{name:'Cerrar',exact:true}).click();
+ await tab('Mapa');await page.locator('.animal-map-marker').first().waitFor();await page.waitForTimeout(2000);await shot('12-mapa');await page.locator('.animal-map-marker').first().click({force:true});await page.locator('.map-popup').waitFor();await shot('13-mapa-ficha');await page.getByRole('button',{name:'Abrir ficha',exact:true}).click();await page.locator('.detail-content').waitFor();await page.getByRole('button',{name:'Cerrar',exact:true}).click();
+ await tab('Incidencias');await page.locator('.incident-form').waitFor();await shot('14-incidencias');await page.locator('.incident-form select').selectOption('Puerta abierta o danada');await page.getByPlaceholder('Describe lo sucedido').fill('Ejemplo de documentación: puerta del cercado abierta. Borrador sin guardar.');await shot('15-incidencia-borrador');
+ await tab('Importar');await shot('16-importar');await page.locator('input[type=file]').setInputFiles(resolve('../LibroRegistroAnimaleGanaderoAFechas_10-07-2023_10-07-2026.xml'));await page.getByRole('button',{name:'Analizar archivo',exact:true}).click();await page.locator('.import-preview').waitFor();await shot('17-analisis-xml');
+ if(await page.locator('nav').getByRole('button',{name:'Usuarios',exact:true}).count()){await tab('Usuarios');await page.locator('.user-row').first().waitFor();await shot('18-usuarios');}
+ await page.getByRole('button',{name:'Salir',exact:true}).click();await page.getByRole('heading',{name:'Acceso a CowsIA'}).waitFor();records.push({logout:'verified'});
+}finally{await writeFile(`${out}/recorrido.json`,JSON.stringify(records,null,2));await browser.close();}
+✓ • 0ms
+</code></pre>
+<h2 id="activity-25">Activity</h2>
+<pre><code>$ rg -n '&lt;h[123]|&lt;label|placeholder=|title=|aria-label=' frontend/src/main.jsx | head -145; ls -lh docs/guia-cowsia
+155:        &lt;h1&gt;Acceso a CowsIA&lt;/h1&gt;
+157:        &lt;label&gt;
+167:        &lt;label&gt;
+219:          &lt;span title={username}&gt;{username}&lt;/span&gt;
+220:          &lt;small title={farmName}&gt;{farmName}&lt;/small&gt;
+351:      &lt;PageTitle title=&quot;Incidencias de la explotacion&quot; /&gt;
+352:      &lt;section className=&quot;panel activity-filters&quot; aria-label=&quot;Filtros de incidencias&quot;&gt;
+353:        &lt;label&gt;Tipo de incidencia&lt;select aria-label=&quot;Tipo de incidencia&quot; value={filters.category} onChange={(event) =&gt; changeFilter(&quot;category&quot;, event.target.value)}&gt;
+357:        &lt;label&gt;Desde&lt;input type=&quot;date&quot; value={filters.date_from} onChange={(event) =&gt; changeFilter(&quot;date_from&quot;, event.target.value)} /&gt;&lt;/label&gt;
+358:        &lt;label&gt;Hasta&lt;input type=&quot;date&quot; value={filters.date_to} onChange={(event) =&gt; changeFilter(&quot;date_to&quot;, event.target.value)} /&gt;&lt;/label&gt;
+363:        &lt;h2&gt;&lt;MapPin size={20} /&gt; Mapa de incidencias&lt;/h2&gt;
+368:          &lt;h2&gt;Nueva incidencia&lt;/h2&gt;
+370:          &lt;label&gt;
+376:          &lt;label&gt;
+378:            &lt;textarea required placeholder=&quot;Describe lo sucedido&quot; value={form.text} onChange={(event) =&gt; setForm({ ...form, text: event.target.value })} /&gt;
+380:          &lt;label&gt;
+385:            &lt;input aria-label=&quot;Latitud&quot; type=&quot;number&quot; step=&quot;0.000001&quot; placeholder=&quot;Latitud&quot; value={form.latitude} onChange={(event) =&gt; setForm({ ...form, latitude: event.target.value })} /&gt;
+386:            &lt;input aria-label=&quot;Longitud&quot; type=&quot;number&quot; step=&quot;0.000001&quot; placeholder=&quot;Longitud&quot; value={form.longitude} onChange={(event) =&gt; setForm({ ...form, longitude: event.target.value })} /&gt;
+389:          &lt;label&gt;
+401:              &lt;header&gt;&lt;div&gt;&lt;span className=&quot;pill warning&quot;&gt;{row.category}&lt;/span&gt;&lt;h3&gt;{row.text}&lt;/h3&gt;&lt;/div&gt;&lt;button className=&quot;icon&quot; type=&quot;button&quot; onClick={() =&gt; remove(row)} title=&quot;Eliminar&quot;&gt;&lt;Trash2 size={15} /&gt;&lt;/button&gt;&lt;/header&gt;
+446:  return rows.map((row) =&gt; &lt;Marker key={row.id} position={[row.latitude, row.longitude]} title={`${row.category} · ${formatDateTime(row.occurred_at)}`} icon={L.divIcon({ className: 'farm-incident-marker', html: '&lt;span&gt;&lt;/span&gt;', iconSize: [18, 18], iconAnchor: [9, 9] })}&gt;
+494:      &lt;PageTitle title=&quot;Usuarios&quot; /&gt;
+497:          &lt;h2&gt;Crear usuario&lt;/h2&gt;
+498:          &lt;label&gt;
+502:          &lt;label&gt;
+506:          &lt;label&gt;
+508:            &lt;input value={form.farm_name} onChange={(event) =&gt; setForm({ ...form, farm_name: event.target.value })} placeholder=&quot;Una existente o un nombre nuevo&quot; required /&gt;
+516:          &lt;h2&gt;Usuarios existentes&lt;/h2&gt;
+573:      &lt;PageTitle title=&quot;Mapa&quot; /&gt;
+645:      &lt;PageTitle title=&quot;Galeria&quot; /&gt;
+647:        &lt;label&gt;
+649:          &lt;input placeholder=&quot;Buscar crotal o sexo&quot; value={q} onChange={(event) =&gt; setQ(event.target.value)} /&gt;
+702:      &lt;PageTitle title=&quot;Dashboard&quot; action={&lt;ExportButtons /&gt;} /&gt;
+710:        &lt;ChartPanel title=&quot;Nacimientos por ano&quot;&gt;
+721:        &lt;ChartPanel title=&quot;Bajas por causa&quot;&gt;
+734:        &lt;PiePanel title=&quot;Estado&quot; rows={data.status} /&gt;
+735:        &lt;PiePanel title=&quot;Sexo&quot; rows={data.sex} /&gt;
+736:        &lt;ListPanel title=&quot;Razas&quot; rows={data.breeds} /&gt;
+774:  return &lt;section className=&quot;activity-dashboard&quot; aria-label={title} data-activity-kind={kind}&gt;
+775:    &lt;h2&gt;{title}&lt;/h2&gt;
+777:      &lt;label&gt;Desde&lt;input type=&quot;date&quot; value={filters.date_from} onChange={(event) =&gt; change(&quot;date_from&quot;, event.target.value)} /&gt;&lt;/label&gt;
+778:      &lt;label&gt;Hasta&lt;input type=&quot;date&quot; value={filters.date_to} onChange={(event) =&gt; change(&quot;date_to&quot;, event.target.value)} /&gt;&lt;/label&gt;
+779:      &lt;label&gt;Informante&lt;select aria-label=&quot;Informante&quot; value={filters.reporter} onChange={(event) =&gt; change(&quot;reporter&quot;, event.target.value)}&gt;
+784:        &lt;label&gt;Crotal&lt;input placeholder=&quot;Buscar crotal&quot; value={filters.crotal} onChange={(event) =&gt; change(&quot;crotal&quot;, event.target.value)} /&gt;&lt;/label&gt;
+785:        &lt;label&gt;Sexo&lt;select aria-label=&quot;Sexo&quot; value={filters.sexo} onChange={(event) =&gt; change(&quot;sexo&quot;, event.target.value)}&gt;
+788:      &lt;/&gt; : &lt;label&gt;Tipo de incidencia&lt;select aria-label=&quot;Tipo de incidencia&quot; value={filters.category} onChange={(event) =&gt; change(&quot;category&quot;, event.target.value)}&gt;
+792:      &lt;label&gt;Registros&lt;select aria-label=&quot;Registros&quot; value={filters.origin} onChange={(event) =&gt; change(&quot;origin&quot;, event.target.value)}&gt;
+809:            &lt;ChartPanel title=&quot;Evolución mensual&quot;&gt;
+821:            &lt;ChartPanel title={animalEvents ? &quot;Sucesos por informante&quot; : &quot;Incidencias por tipo&quot;}&gt;
+873:      &lt;PageTitle title=&quot;Animales&quot; action={&lt;ExportButtons /&gt;} /&gt;
+875:        &lt;label&gt;
+877:          &lt;input placeholder=&quot;Crotal, madre, procedencia o destino&quot; value={filters.q} onChange={(event) =&gt; setFilter(&quot;q&quot;, event.target.value)} /&gt;
+1056:            &lt;h2&gt;{animal.crotal}&lt;/h2&gt;
+1058:          &lt;button className=&quot;icon&quot; onClick={onClose} title=&quot;Cerrar&quot;&gt;&lt;X size={18} /&gt;&lt;/button&gt;
+1072:                &lt;h3&gt;Descendientes ({detail.offspring.length})&lt;/h3&gt;
+1097:              &lt;h3&gt;&lt;Image size={16} /&gt; Imagenes&lt;/h3&gt;
+1109:                        &lt;button className=&quot;icon&quot; onClick={() =&gt; setPrimary(row.id)} disabled={row.is_primary} title=&quot;Imagen principal&quot;&gt;
+1112:                        &lt;button className=&quot;icon&quot; onClick={() =&gt; remove(`/api/animal-images/${row.id}`)} title=&quot;Eliminar&quot;&gt;&lt;Trash2 size={15} /&gt;&lt;/button&gt;
+1122:              &lt;h3&gt;&lt;MapPin size={16} /&gt; Ubicaciones&lt;/h3&gt;
+1125:                &lt;input required type=&quot;number&quot; step=&quot;0.000001&quot; placeholder=&quot;Latitud&quot; value={locationForm.latitude} onChange={(event) =&gt; setLocationForm({ ...locationForm, latitude: event.target.value })} /&gt;
+1126:                &lt;input required type=&quot;number&quot; step=&quot;0.000001&quot; placeholder=&quot;Longitud&quot; value={locationForm.longitude} onChange={(event) =&gt; setLocationForm({ ...locationForm, longitude: event.target.value })} /&gt;
+1128:                &lt;input placeholder=&quot;Origen&quot; value={locationForm.source} onChange={(event) =&gt; setLocationForm({ ...locationForm, source: event.target.value })} /&gt;
+1136:                    &lt;a className=&quot;icon&quot; href={`https://www.google.com/maps?q=${row.latitude},${row.longitude}`} target=&quot;_blank&quot; rel=&quot;noreferrer&quot; title=&quot;Abrir mapa&quot;&gt;&lt;ExternalLink size={15} /&gt;&lt;/a&gt;
+1137:                    &lt;button className=&quot;icon&quot; onClick={() =&gt; remove(`/api/animal-locations/${row.id}`)} title=&quot;Eliminar&quot;&gt;&lt;Trash2 size={15} /&gt;&lt;/button&gt;
+1144:              &lt;h3&gt;&lt;MapIcon size={16} /&gt; Histórico de ubicaciones&lt;/h3&gt;
+1159:              &lt;h3&gt;&lt;MapPin size={16} /&gt; Mapa de sucesos&lt;/h3&gt;
+1163:              &lt;h3&gt;&lt;CalendarPlus size={16} /&gt; Sucesos&lt;/h3&gt;
+1165:                &lt;textarea required placeholder=&quot;Texto del suceso&quot; value={eventForm.text} onChange={(event) =&gt; setEventForm({ ...eventForm, text: event.target.value })} /&gt;
+1168:                  &lt;input placeholder=&quot;Usuario informante&quot; value={eventForm.reporter} onChange={(event) =&gt; setEventForm({ ...eventForm, reporter: event.target.value })} /&gt;
+1179:                      &lt;button className=&quot;icon&quot; onClick={() =&gt; remove(`/api/animal-events/${row.id}`)} title=&quot;Eliminar&quot;&gt;&lt;Trash2 size={15} /&gt;&lt;/button&gt;
+1257:            &lt;Marker key={event.id} position={positions[index]} title={`Suceso ${index + 1} · ${formatDate(event.event_date) || &quot;Sin fecha&quot;}`}
+1373:      &lt;PageTitle title=&quot;Importar XML&quot; /&gt;
+1420:    &lt;ChartPanel title={title}&gt;
+1438:      &lt;h2&gt;{title}&lt;/h2&gt;
+1453:      &lt;h1&gt;{title}&lt;/h1&gt;
+1471:      &lt;h2&gt;{title}&lt;/h2&gt;
+total 5.7M
+drwxr-xr-x 2 root root 4.0K Sep 29 07:31 capturas
+-rw-r--r-- 1 root root  14K Sep 29 07:31 generar_guia.py
+-rw-r--r-- 1 root root 5.4M Sep 29 07:32 guia-cowsia.html
+-rw-r--r-- 1 root root 133K Sep 29 07:31 recorrido.json
+-rw-r--r-- 1 root root 130K Sep 29 07:36 vista-previa-guia.png
+✓ • 0ms
+</code></pre>
+<h2 id="activity-26">Activity</h2>
+<pre><code>$ sed -n '565,640p' frontend/src/main.jsx; sed -n '870,955p' frontend/src/main.jsx; sed -n '130,170p' frontend/src/Tasks.jsx; sed -n '1365,1408p' frontend/src/main.jsx; cat frontend/src/TasksMap.jsx | head -95; head -55 docs/guia-cowsia/generar_guia.py
+    if (rows.length === 0) return [39.96, -6.48];
+    const lat = rows.reduce((sum, row) =&gt; sum + row.latitude, 0) / rows.length;
+    const lng = rows.reduce((sum, row) =&gt; sum + row.longitude, 0) / rows.length;
+    return [lat, lng];
+  }, [rows]);
+
+  return (
+    &lt;section className=&quot;page map-page&quot;&gt;
+      &lt;PageTitle title=&quot;Mapa&quot; /&gt;
+      &lt;div className=&quot;map-summary&quot;&gt;
+        &lt;span&gt;{rows.length} animales con ubicacion&lt;/span&gt;
+      &lt;/div&gt;
+      {routeAnimal &amp;&amp; (
+        &lt;div className=&quot;map-route-summary&quot; aria-live=&quot;polite&quot;&gt;
+          &lt;strong&gt;Histórico de {routeAnimal.crotal}&lt;/strong&gt;
+          {routeError ? &lt;span className=&quot;error&quot;&gt;{routeError}&lt;/span&gt; : route === null ? &lt;span&gt;Cargando recorrido...&lt;/span&gt; : (
+            &lt;span&gt;{route.length === 0 ? &quot;Sin histórico de ubicaciones&quot; : `${route.length} puntos · ${route.some((point) =&gt; point.simulated) ? &quot;Recorrido simulado&quot; : &quot;Ubicaciones registradas&quot;} · Verde: inicio · Rojo: final`}&lt;/span&gt;
+          )}
+          &lt;button type=&quot;button&quot; onClick={() =&gt; setRouteAnimal(null)}&gt;Ocultar recorrido&lt;/button&gt;
+        &lt;/div&gt;
+      )}
+      &lt;div className=&quot;map-panel&quot;&gt;
+        &lt;MapContainer key={`${center[0]}-${center[1]}-${rows.length}`} center={center} zoom={15} scrollWheelZoom className=&quot;animal-map&quot;&gt;
+          &lt;TileLayer
+            attribution='&amp;copy; &lt;a href=&quot;https://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;'
+            url=&quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;
+          /&gt;
+          {rows.map((row) =&gt; (
+            &lt;Marker key={`${row.animal_id}-${row.latitude}-${row.longitude}`} position={[row.latitude, row.longitude]} icon={animalMarkerIcon} eventHandlers={{ popupopen: () =&gt; setRouteAnimal(row) }}&gt;
+              &lt;Popup&gt;
+                &lt;div className=&quot;map-popup&quot;&gt;
+                  {row.image_url &amp;&amp; &lt;img src={api.url(row.image_url)} alt={row.crotal} /&gt;}
+                  &lt;strong&gt;{row.crotal}&lt;/strong&gt;
+                  &lt;span&gt;{row.sexo || &quot;Sin sexo&quot;} · {row.age_years === null ? &quot;Sin edad&quot; : `${row.age_years} anos`}&lt;/span&gt;
+                  &lt;button
+                    type=&quot;button&quot;
+                    onClick={() =&gt;
+                      setSelectedAnimal({
+                        crotal: row.crotal,
+                        sexo: row.sexo,
+                        fecha_nacimiento: row.fecha_nacimiento,
+                      })
+                    }
+                  &gt;
+                    Abrir ficha
+                  &lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/Popup&gt;
+            &lt;/Marker&gt;
+          ))}
+          {routeAnimal &amp;&amp; route?.length &gt; 0 &amp;&amp; (
+            &lt;&gt;
+              &lt;HistoryRoute points={route} /&gt;
+              &lt;FitHistoryRoute points={route} origin={[routeAnimal.latitude, routeAnimal.longitude]} /&gt;
+            &lt;/&gt;
+          )}
+        &lt;/MapContainer&gt;
+      &lt;/div&gt;
+      {selectedAnimal &amp;&amp; &lt;AnimalDetail animal={selectedAnimal} onClose={() =&gt; setSelectedAnimal(null)} onChanged={() =&gt; api.get(&quot;/api/map/locations&quot;).then(setRows)} /&gt;}
+    &lt;/section&gt;
+  );
+}
+
+function Gallery({ refreshKey }) {
+  const [rows, setRows] = useState([]);
+  const [q, setQ] = useState(&quot;&quot;);
+  const [selectedAnimal, setSelectedAnimal] = useState(null);
+
+  useEffect(() =&gt; {
+    api.get(&quot;/api/gallery&quot;).then(setRows);
+  }, [refreshKey]);
+
+  const filteredRows = useMemo(() =&gt; {
+    const term = q.trim().toLowerCase();
+    if (!term) return rows;
+    return rows.filter((row) =&gt; row.crotal.toLowerCase().includes(term) || (row.sexo || &quot;&quot;).toLowerCase().includes(term));
+
+  return (
+    &lt;section className=&quot;page&quot;&gt;
+      &lt;PageTitle title=&quot;Animales&quot; action={&lt;ExportButtons /&gt;} /&gt;
+      &lt;div className=&quot;toolbar&quot;&gt;
+        &lt;label&gt;
+          &lt;Search size={16} /&gt;
+          &lt;input placeholder=&quot;Crotal, madre, procedencia o destino&quot; value={filters.q} onChange={(event) =&gt; setFilter(&quot;q&quot;, event.target.value)} /&gt;
+        &lt;/label&gt;
+        &lt;select value={filters.status} onChange={(event) =&gt; setFilter(&quot;status&quot;, event.target.value)}&gt;
+          &lt;option value=&quot;&quot;&gt;Todos los estados&lt;/option&gt;
+          &lt;option value=&quot;Activo&quot;&gt;Activos&lt;/option&gt;
+          &lt;option value=&quot;Baja&quot;&gt;Bajas&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;select value={filters.sexo} onChange={(event) =&gt; setFilter(&quot;sexo&quot;, event.target.value)}&gt;
+          &lt;option value=&quot;&quot;&gt;Todos los sexos&lt;/option&gt;
+          {options.sexos.map((item) =&gt; (
+            &lt;option key={item} value={item}&gt;{item}&lt;/option&gt;
+          ))}
+        &lt;/select&gt;
+        &lt;select value={filters.raza} onChange={(event) =&gt; setFilter(&quot;raza&quot;, event.target.value)}&gt;
+          &lt;option value=&quot;&quot;&gt;Todas las razas&lt;/option&gt;
+          {options.razas.map((item) =&gt; (
+            &lt;option key={item} value={item}&gt;{item}&lt;/option&gt;
+          ))}
+        &lt;/select&gt;
+        &lt;select value={filters.causa_baja} onChange={(event) =&gt; setFilter(&quot;causa_baja&quot;, event.target.value)}&gt;
+          &lt;option value=&quot;&quot;&gt;Todas las causas&lt;/option&gt;
+          {options.causas_baja.map((item) =&gt; (
+            &lt;option key={item} value={item}&gt;{item}&lt;/option&gt;
+          ))}
+        &lt;/select&gt;
+        &lt;select value={filters.explotacion} onChange={(event) =&gt; setFilter(&quot;explotacion&quot;, event.target.value)}&gt;
+          &lt;option value=&quot;&quot;&gt;Todas las explotaciones&lt;/option&gt;
+          {options.explotaciones.map((item) =&gt; (
+            &lt;option key={item} value={item}&gt;{item}&lt;/option&gt;
+          ))}
+        &lt;/select&gt;
+        &lt;input type=&quot;date&quot; value={filters.born_from} onChange={(event) =&gt; setFilter(&quot;born_from&quot;, event.target.value)} /&gt;
+        &lt;input type=&quot;date&quot; value={filters.born_to} onChange={(event) =&gt; setFilter(&quot;born_to&quot;, event.target.value)} /&gt;
+      &lt;/div&gt;
+      &lt;div className=&quot;result-strip&quot;&gt;
+        &lt;ClipboardList size={18} /&gt;
+        &lt;strong&gt;{rows.length}&lt;/strong&gt;
+        &lt;span&gt;registros&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div className=&quot;table-wrap&quot;&gt;
+        &lt;table&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Crotal&lt;/th&gt;
+              &lt;th&gt;Estado&lt;/th&gt;
+              &lt;th&gt;Nacimiento&lt;/th&gt;
+              &lt;th&gt;Edad&lt;/th&gt;
+              &lt;th&gt;Sexo&lt;/th&gt;
+              &lt;th&gt;Raza&lt;/th&gt;
+              &lt;th&gt;Madre&lt;/th&gt;
+              &lt;th&gt;Alta&lt;/th&gt;
+              &lt;th&gt;Entrada&lt;/th&gt;
+              &lt;th&gt;Baja&lt;/th&gt;
+              &lt;th&gt;Destino&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            {rows.map((row) =&gt; (
+              &lt;tr key={row.id}&gt;
+                &lt;td&gt;
+                  &lt;button className=&quot;link-button&quot; onClick={() =&gt; setSelectedAnimal(row)}&gt;
+                    &lt;strong&gt;{row.crotal}&lt;/strong&gt;
+                  &lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td&gt;&lt;span className={`pill ${row.fecha_baja || row.causa_baja ? &quot;bad&quot; : &quot;good&quot;}`}&gt;{row.fecha_baja || row.causa_baja ? &quot;Baja&quot; : &quot;Activo&quot;}&lt;/span&gt;&lt;/td&gt;
+                &lt;td&gt;{formatDate(row.fecha_nacimiento)}&lt;/td&gt;
+                &lt;td&gt;{years(row.fecha_nacimiento)}&lt;/td&gt;
+                &lt;td&gt;{row.sexo || &quot;&quot;}&lt;/td&gt;
+                &lt;td&gt;{row.raza || &quot;&quot;}&lt;/td&gt;
+                &lt;td&gt;{row.crotal_madre || &quot;&quot;}&lt;/td&gt;
+                &lt;td&gt;{row.causa_alta || &quot;&quot;} {formatDate(row.fecha_alta)}&lt;/td&gt;
+                &lt;td&gt;{row.procedencia || row.codigo_local_entrada || &quot;&quot;}&lt;/td&gt;
+                &lt;td&gt;{row.causa_baja || &quot;&quot;} {formatDate(row.fecha_baja)}&lt;/td&gt;
+                &lt;td&gt;{row.destino || row.codigo_local_salida || &quot;&quot;}&lt;/td&gt;
+              &lt;/tr&gt;
+            ))}
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    finally { setBusyId(null); }
+  }
+  return &lt;section className=&quot;tasks-page&quot;&gt;
+    &lt;div className=&quot;task-page-title&quot;&gt;&lt;h1&gt;Gestor de tareas&lt;/h1&gt;&lt;TaskButton&gt;Nueva tarea&lt;/TaskButton&gt;&lt;/div&gt;
+    &lt;p className=&quot;muted&quot;&gt;Tareas de tu explotación, ordenadas por fecha prevista. Todos los usuarios de la explotación pueden crear tareas y actualizar su estado.&lt;/p&gt;
+    &lt;section className=&quot;panel activity-filters&quot; aria-label=&quot;Filtros de tareas&quot;&gt;&lt;h2&gt;Filtros de tareas&lt;/h2&gt;&lt;div className=&quot;compact-form&quot;&gt;
+      &lt;label&gt;Estado&lt;select aria-label=&quot;Estado&quot; value={filters.status} onChange={e =&gt; setFilters({...filters,status:e.target.value})}&gt;&lt;option value=&quot;&quot;&gt;Todos&lt;/option&gt;{Object.entries(statusLabels).map(([v,l]) =&gt; &lt;option key={v} value={v}&gt;{l}&lt;/option&gt;)}&lt;/select&gt;&lt;/label&gt;
+      &lt;label&gt;Desde&lt;input type=&quot;date&quot; value={filters.date_from} onChange={e =&gt; setFilters({...filters,date_from:e.target.value})} /&gt;&lt;/label&gt;
+      &lt;label&gt;Hasta&lt;input type=&quot;date&quot; value={filters.date_to} onChange={e =&gt; setFilters({...filters,date_to:e.target.value})} /&gt;&lt;/label&gt;
+      &lt;button type=&quot;button&quot; onClick={() =&gt; setFilters({status:'',date_from:'',date_to:''})}&gt;Limpiar filtros&lt;/button&gt;
+    &lt;/div&gt;{invalid &amp;&amp; &lt;p role=&quot;alert&quot; className=&quot;error&quot;&gt;La fecha inicial no puede ser posterior a la final.&lt;/p&gt;}&lt;/section&gt;
+    {error &amp;&amp; &lt;p role=&quot;alert&quot; className=&quot;error&quot;&gt;{error}&lt;/p&gt;}
+    {loading ? &lt;p role=&quot;status&quot;&gt;Cargando tareas…&lt;/p&gt; : &lt;&gt;&lt;p aria-live=&quot;polite&quot;&gt;{rows.length} tareas&lt;/p&gt;
+      {!invalid &amp;&amp; !error &amp;&amp; &lt;TasksMap rows={rows} /&gt;}
+      {!rows.length &amp;&amp; !invalid &amp;&amp; !error &amp;&amp; &lt;p className=&quot;panel&quot;&gt;No hay tareas que coincidan con los filtros. Puedes crear una con «Nueva tarea».&lt;/p&gt;}
+      &lt;div className=&quot;task-list&quot;&gt;{rows.slice(0,limit).map(row =&gt; &lt;article className=&quot;panel task-card&quot; key={row.id}&gt;
+        &lt;header&gt;&lt;strong&gt;Tarea #{row.id} · {dateLabel(row.due_date)}&lt;/strong&gt;&lt;span className=&quot;pill&quot;&gt;{statusLabels[row.status]}&lt;/span&gt;&lt;/header&gt;
+        {row.status !== 'completed' &amp;&amp; row.due_date &lt; today() &amp;&amp; &lt;p className=&quot;error&quot;&gt;Fecha prevista vencida&lt;/p&gt;}
+        &lt;p className=&quot;task-description&quot;&gt;{row.description}&lt;/p&gt;
+        &lt;p className=&quot;muted&quot;&gt;Creada por {row.creator} · {dateLabel(row.created_at)}&lt;/p&gt;
+        {row.association_label ? &lt;details&gt;&lt;summary&gt;Animal o registro asociado&lt;/summary&gt;&lt;p className=&quot;task-description&quot;&gt;{row.association_label}&lt;/p&gt;{!row.farm_event_id &amp;&amp; !row.animal_event_id &amp;&amp; row.association_label.includes(' · ') &amp;&amp; &lt;small&gt;El registro de origen se eliminó; se conserva esta referencia histórica.&lt;/small&gt;}&lt;/details&gt; : &lt;p className=&quot;muted&quot;&gt;Sin asociación&lt;/p&gt;}
+        {row.image_url &amp;&amp; &lt;a href={api.url(row.image_url)} target=&quot;_blank&quot; rel=&quot;noreferrer&quot; aria-label={`Abrir foto de tarea ${row.id}`}&gt;&lt;img loading=&quot;lazy&quot; className=&quot;task-photo&quot; src={api.url(row.image_url)} alt={`Foto de la tarea ${row.id}`} /&gt;&lt;/a&gt;}
+        &lt;TaskImageCredit row={row} /&gt;
+        &lt;label&gt;Estado de la tarea&lt;select aria-label={`Estado de tarea ${row.id}`} value={row.status} disabled={busyId !== null} onChange={e =&gt; changeStatus(row,e.target.value)}&gt;{Object.entries(statusLabels).map(([v,l]) =&gt; &lt;option key={v} value={v}&gt;{l}&lt;/option&gt;)}&lt;/select&gt;&lt;/label&gt;
+        {row.completed_at &amp;&amp; &lt;small&gt;Completada el {dateLabel(row.completed_at)}&lt;/small&gt;}
+      &lt;/article&gt;)}&lt;/div&gt;
+      {rows.length &gt; limit &amp;&amp; &lt;button type=&quot;button&quot; onClick={() =&gt; setLimit(n=&gt;n+30)}&gt;Mostrar más tareas&lt;/button&gt;}
+    &lt;/&gt;}
+  &lt;/section&gt;;
+}
+      setError(exc.message);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  return (
+    &lt;section className=&quot;page&quot;&gt;
+      &lt;PageTitle title=&quot;Importar XML&quot; /&gt;
+      &lt;div className=&quot;import-panel&quot;&gt;
+        &lt;div className=&quot;local-file&quot;&gt;
+          &lt;strong&gt;XML local fijo&lt;/strong&gt;
+          &lt;span className=&quot;muted&quot;&gt;{status?.path || &quot;Comprobando ruta...&quot;}&lt;/span&gt;
+          &lt;span className={status?.exists ? &quot;positive&quot; : &quot;negative&quot;}&gt;{status?.exists ? &quot;Archivo encontrado&quot; : &quot;Archivo no encontrado&quot;}&lt;/span&gt;
+          &lt;button disabled={loading || !status?.exists} onClick={importLocal}&gt;
+            &lt;RefreshCcw size={16} /&gt;
+            Importar XML local
+          &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;FileUp size={34} /&gt;
+        &lt;input type=&quot;file&quot; accept=&quot;.xml&quot; onChange={(event) =&gt; setFile(event.target.files?.[0] || null)} /&gt;
+        &lt;button disabled={!file || loading} onClick={analyze}&gt;
+          &lt;FileUp size={16} /&gt;
+          {loading ? &quot;Analizando...&quot; : &quot;Analizar archivo&quot;}
+        &lt;/button&gt;
+        {file &amp;&amp; &lt;p className=&quot;muted&quot;&gt;Seleccionado: {file.name}&lt;/p&gt;}
+        {preview &amp;&amp; (
+          &lt;div className={`import-preview ${preview.already_uploaded ? &quot;warning&quot; : &quot;&quot;}`}&gt;
+            &lt;strong&gt;{preview.already_uploaded ? &quot;Este fichero ya estaba cargado&quot; : &quot;Fichero listo&quot;}&lt;/strong&gt;
+            &lt;span&gt;Animales en el XML: {preview.incoming_animals}&lt;/span&gt;
+            &lt;span&gt;Nuevos animales: {preview.new_animals}&lt;/span&gt;
+            &lt;span&gt;Ya existentes: {preview.unchanged_animals}&lt;/span&gt;
+            &lt;button disabled={loading} onClick={upload}&gt;Confirmar importacion&lt;/button&gt;
+          &lt;/div&gt;
+        )}
+        {message &amp;&amp; &lt;p className=&quot;positive&quot;&gt;{message}&lt;/p&gt;}
+        {error &amp;&amp; &lt;p className=&quot;error&quot;&gt;{error}&lt;/p&gt;}
+      &lt;/div&gt;
+    &lt;/section&gt;
+  );
+}
+
+function ExportButtons() {
+  return (
+import React, { useEffect, useRef, useState } from 'react';
+import L from 'leaflet';
+import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
+import { api } from './api/client';
+
+const states = {
+  pending: { label: 'Pendiente', symbol: '!', color: '#dc2626' },
+  in_progress: { label: 'En curso', symbol: '…', color: '#facc15' },
+  completed: { label: 'Completada', symbol: '✓', color: '#16a34a' },
+};
+const icons = Object.fromEntries(Object.entries(states).map(([key, value]) =&gt; [key, L.divIcon({
+  className: `task-map-marker task-map-marker-${key}`,
+  html: `&lt;span style=&quot;background:${value.color};color:${key === 'in_progress' ? '#422006' : '#fff'}&quot;&gt;${value.symbol}&lt;/span&gt;`,
+  iconSize: [28, 28], iconAnchor: [14, 14], popupAnchor: [0, -14],
+})]));
+
+export function TaskImageCredit({ row, onToggle }) {
+  if (!row.image_credit) return null;
+  return &lt;details className=&quot;farm-image-credit&quot; onToggle={onToggle}&gt;&lt;summary&gt;Autor y licencia de la imagen&lt;/summary&gt;
+    &lt;small&gt;{row.image_credit}&lt;/small&gt;
+    {row.image_source &amp;&amp; &lt;a href={row.image_source} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;Fuente original&lt;/a&gt;}
+    {row.image_license_url &amp;&amp; &lt;&gt; · &lt;a href={row.image_license_url} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;Licencia&lt;/a&gt;&lt;/&gt;}
+  &lt;/details&gt;;
+}
+
+function TaskPopup({ row, width }) {
+  const popup = useRef(null);
+  const update = () =&gt; popup.current?.update();
+  return &lt;Popup ref={popup} minWidth={width} maxWidth={width} maxHeight={290} keepInView autoPanPadding={[15, 15]}&gt;
+    &lt;div className=&quot;event-map-popup task-map-popup&quot; data-task-id={row.id}&gt;
+      &lt;strong&gt;Tarea #{row.id} · {states[row.status]?.label}&lt;/strong&gt;
+      {row.image_url ? &lt;img src={api.url(row.image_url)} alt={`Foto de la tarea ${row.id}`} onLoad={update} /&gt; : &lt;span&gt;Sin fotografía&lt;/span&gt;}
+      &lt;span&gt;Fecha: {new Date(`${row.due_date}T12:00:00`).toLocaleDateString('es-ES')}&lt;/span&gt;
+      &lt;p&gt;{row.description}&lt;/p&gt;
+      &lt;TaskImageCredit row={row} onToggle={update} /&gt;
+    &lt;/div&gt;
+  &lt;/Popup&gt;;
+}
+
+function TaskMarkers({ rows }) {
+  const map = useMap();
+  const [width, setWidth] = useState(() =&gt; map.getSize().x);
+  useEffect(() =&gt; {
+    const resize = () =&gt; setWidth(map.getSize().x);
+    map.on('resize', resize);
+    return () =&gt; map.off('resize', resize);
+  }, [map]);
+  return rows.map(row =&gt; &lt;Marker key={row.id} position={[row.latitude, row.longitude]} icon={icons[row.status] || icons.pending}
+    title={`Tarea #${row.id} · ${states[row.status]?.label}`} alt={`Tarea #${row.id} · ${states[row.status]?.label}`}&gt;
+    &lt;TaskPopup key={width} row={row} width={Math.max(140, Math.min(300, width - 90))} /&gt;
+  &lt;/Marker&gt;);
+}
+
+export default function TasksMap({ rows }) {
+  const located = rows.filter(row =&gt; Number.isFinite(row.latitude) &amp;&amp; Number.isFinite(row.longitude) &amp;&amp; Math.abs(row.latitude) &lt;= 90 &amp;&amp; Math.abs(row.longitude) &lt;= 180);
+  return &lt;section className=&quot;panel tasks-map-panel&quot; aria-label=&quot;Mapa de tareas&quot;&gt;
+    &lt;h2&gt;Mapa de tareas&lt;/h2&gt;
+    &lt;div className=&quot;task-map-legend&quot; aria-label=&quot;Colores por estado&quot;&gt;{Object.entries(states).map(([key, value]) =&gt;
+      &lt;span key={key}&gt;&lt;i style={{ background: value.color }} aria-hidden=&quot;true&quot; /&gt;{value.label}&lt;/span&gt;)}&lt;/div&gt;
+    &lt;p className=&quot;muted&quot;&gt;{located.length} tareas con ubicación. Pulsa un marcador para ver su foto, fecha y descripción.&lt;/p&gt;
+    {located.length ? &lt;MapContainer className=&quot;tasks-map&quot; bounds={located.map(row =&gt; [row.latitude, row.longitude])} boundsOptions={{ padding: [30, 30], maxZoom: 16 }} scrollWheelZoom={false}&gt;
+      &lt;TileLayer attribution='&amp;copy; &lt;a href=&quot;https://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;' url=&quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot; /&gt;
+      &lt;TaskMarkers rows={located} /&gt;
+    &lt;/MapContainer&gt; : &lt;p&gt;No hay tareas con ubicación para los filtros seleccionados.&lt;/p&gt;}
+    {rows.length &gt; located.length &amp;&amp; &lt;p className=&quot;muted&quot;&gt;{rows.length - located.length} tareas sin ubicación están disponibles en el listado.&lt;/p&gt;}
+  &lt;/section&gt;;
+}
+from pathlib import Path
+import base64, html
+root=Path(__file__).resolve().parent
+sections=[]
+def add(id,title,body,pics): sections.append((id,title,body,pics))
+add('acceso','1. Acceso y navegación','''&lt;ol&gt;&lt;li&gt;Abre la dirección habitual de CowsIA en el navegador.&lt;/li&gt;&lt;li&gt;Introduce tu usuario y contraseña y pulsa &lt;b&gt;Entrar&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;Utiliza el menú lateral para cambiar de apartado. La parte inferior identifica el usuario y su explotación.&lt;/li&gt;&lt;li&gt;Pulsa &lt;b&gt;Salir&lt;/b&gt; para cerrar la sesión.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;Los datos consultados corresponden a la explotación del usuario. El apartado Usuarios se muestra a quienes tienen permiso de administración.&lt;/p&gt;''',['01-acceso'])
+add('dashboard','2. Dashboard: situación de la explotación','''&lt;p&gt;Presenta el número total de animales, los activos, las bajas y la edad media de los activos. Los gráficos agrupan nacimientos por año, bajas por causa, estado, sexo y razas. Puedes pasar el puntero por los gráficos para consultar sus valores.&lt;/p&gt;&lt;p&gt;En la sesión documentada se mostraron &lt;b&gt;328 animales, 125 activos y 203 bajas&lt;/b&gt;. Son cifras de la captura, no valores fijos de la aplicación. El botón CSV aparece en la esquina superior derecha; consulta el resultado de su comprobación en el apartado de exportación.&lt;/p&gt;''',['02-dashboard'])
+add('animales','3. Animales: búsqueda y filtros','''&lt;ol&gt;&lt;li&gt;Entra en &lt;b&gt;Animales&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;Escribe en el buscador un crotal, el crotal de una madre, una procedencia o un destino. Los resultados se actualizan al escribir.&lt;/li&gt;&lt;li&gt;Combina los filtros de estado, sexo, raza, causa de baja y explotación. Los dos campos de fecha acotan el nacimiento desde y hasta una fecha.&lt;/li&gt;&lt;li&gt;Consulta el contador de registros y la tabla. Si faltan columnas en pantalla, desplaza horizontalmente la tabla.&lt;/li&gt;&lt;li&gt;Pulsa el crotal azul para abrir la ficha.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;La tabla muestra crotal, estado, nacimiento, edad, sexo, raza, madre, alta, entrada, baja y destino. Para quitar un filtro, selecciona su opción «Todos/Todas» o vacía el campo correspondiente.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Ejemplo comprobado:&lt;/b&gt; al buscar ES051010111741 aparecen cinco registros: la madre y sus cuatro descendientes, porque el buscador también consulta el campo Madre. Se probó además la combinación de animales activos y hembras.&lt;/p&gt;''',['03-animales','04-filtros','05-busqueda'])
+add('descendientes','4. Ficha del animal y descendientes','''&lt;p&gt;La ficha se abre como un panel a la derecha desde Animales, Galería o el mapa. Incluye crotal y resumen del animal. Desplázate dentro del panel para consultar sus secciones y pulsa &lt;b&gt;×&lt;/b&gt; para cerrarlo.&lt;/p&gt;&lt;p&gt;En las hembras aparece &lt;b&gt;Descendientes&lt;/b&gt;, con el número de hijos registrados. Se relaciona el campo Madre de cada animal con el crotal de la hembra, ignorando mayúsculas/minúsculas y espacios al principio o al final. Los dígitos deben coincidir; no se aproximan números distintos.&lt;/p&gt;&lt;p&gt;Se incluyen descendientes activos y dados de baja de la misma explotación, ordenados del nacimiento más reciente al más antiguo. Cada fila muestra foto principal, crotal, fecha de nacimiento y sexo. Si falta información se indica «Sin foto», «Sin fecha» o «Sin sexo». Una hembra sin coincidencias muestra «Sin descendientes registrados».&lt;/p&gt;&lt;p&gt;Se comprobó visualmente que &lt;b&gt;ES051010111741 tiene cuatro descendientes&lt;/b&gt;, con sus cuatro fotografías.&lt;/p&gt;''',['06-descendientes'])
+add('imagenes','5. Fotografías del animal','''&lt;ol&gt;&lt;li&gt;Abre la sección &lt;b&gt;Imagenes&lt;/b&gt; de la ficha.&lt;/li&gt;&lt;li&gt;Selecciona una imagen del dispositivo y pulsa &lt;b&gt;Anadir&lt;/b&gt; para subirla. El selector admite PNG, JPEG, WebP y GIF.&lt;/li&gt;&lt;li&gt;En una foto, el botón con icono de imagen permite marcarla como principal; la foto seleccionada lleva la etiqueta &lt;b&gt;Principal&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;El icono de papelera elimina esa fotografía.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;La foto principal identifica al animal en las vistas que muestran miniaturas, incluida la lista de descendientes. En este recorrido se visualizaron las fotos y sus controles; no se subieron, cambiaron ni eliminaron imágenes.&lt;/p&gt;''',['07-imagenes'])
+add('ubicaciones','6. Ubicaciones y sucesos en la ficha','''&lt;p&gt;&lt;b&gt;Ubicaciones:&lt;/b&gt; muestra un pequeño mapa cuando hay posiciones registradas. Para añadir una, introduce latitud y longitud; puedes completar fecha/hora y origen, y pulsar Anadir. Las filas muestran las coordenadas, un enlace para abrir Google Maps y una papelera para eliminar el registro.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Sucesos:&lt;/b&gt; permite registrar un hecho vinculado a ese animal. Introduce el texto, revisa la fecha, completa el usuario informante si procede y adjunta una imagen opcional. Pulsa Anadir para guardarlo. El historial muestra fecha, informante, descripción e imagen, cuando existe.&lt;/p&gt;&lt;p&gt;Los sucesos pertenecen a un animal concreto; las incidencias del menú lateral corresponden a la explotación. Se inspeccionaron ambas secciones y sus formularios sin guardar ni borrar registros. Los enlaces externos a Google Maps se identificaron, pero no se recorrió el servicio externo.&lt;/p&gt;''',['08-ubicaciones','09-sucesos'])
+add('galeria','7. Galería: acceso por fotografía','''&lt;ol&gt;&lt;li&gt;Entra en &lt;b&gt;Galeria&lt;/b&gt; para ver las tarjetas con fotografía, crotal, sexo y edad.&lt;/li&gt;&lt;li&gt;Utiliza «Buscar crotal o sexo» para reducir las tarjetas.&lt;/li&gt;&lt;li&gt;Pulsa una tarjeta para abrir la misma ficha del animal.&lt;/li&gt;&lt;li&gt;Cierra la ficha con × para volver a la galería.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;Se comprobó la búsqueda de ES051010111741 y la apertura de su ficha desde la tarjeta.&lt;/p&gt;''',['10-galeria','11-galeria-busqueda'])
+add('mapa','8. Mapa: localizar y abrir animales','''&lt;p&gt;El mapa representa la última ubicación registrada de los animales activos que tienen coordenadas. El contador indica cuántos animales tienen ubicación en esta vista; no equivale al total del censo.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Entra en &lt;b&gt;Mapa&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;Desplaza el mapa arrastrando y ajusta el nivel de zoom con los controles +/− o la rueda.&lt;/li&gt;&lt;li&gt;Pulsa un marcador para consultar foto, crotal, sexo y edad.&lt;/li&gt;&lt;li&gt;Pulsa &lt;b&gt;Abrir ficha&lt;/b&gt; para acceder al detalle del animal.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;Se comprobó la apertura de un marcador y de su ficha. El fondo cartográfico procede de OpenStreetMap y necesita conexión para cargar sus mapas.&lt;/p&gt;''',['12-mapa','13-mapa-ficha'])
+add('incidencias','9. Incidencias de la explotación','''&lt;ol&gt;&lt;li&gt;Entra en &lt;b&gt;Incidencias&lt;/b&gt; y elige el tipo: cerramientos, puertas, fauna, bebederos, instalaciones u otra incidencia.&lt;/li&gt;&lt;li&gt;Describe lo sucedido y revisa la fecha y hora.&lt;/li&gt;&lt;li&gt;Si quieres situarla, introduce latitud y longitud o utiliza &lt;b&gt;Usar mi ubicacion&lt;/b&gt;. Esta opción requiere que el navegador pueda obtener la posición y que se conceda permiso.&lt;/li&gt;&lt;li&gt;Adjunta una fotografía opcional y pulsa &lt;b&gt;Guardar incidencia&lt;/b&gt;.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;El usuario que inicia sesión se registra automáticamente como informante. El historial presenta el tipo, descripción, fecha, informante y, cuando existen, fotografía y enlace a las coordenadas. La papelera permite eliminar una incidencia.&lt;/p&gt;&lt;p&gt;Durante el recorrido se seleccionó «Puerta abierta o danada» y se escribió un ejemplo &lt;b&gt;sin guardarlo&lt;/b&gt;. La captura del borrador no representa una incidencia real nueva. No se solicitó geolocalización ni se eliminaron incidencias.&lt;/p&gt;''',['14-incidencias','15-incidencia-borrador'])
+add('importar','10. Importación del registro XML','''&lt;p&gt;La pantalla ofrece dos vías:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;XML local fijo:&lt;/b&gt; indica la ruta y si el archivo está disponible. «Importar XML local» inicia la importación directamente.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Archivo del dispositivo:&lt;/b&gt; selecciona un XML y pulsa «Analizar archivo». La vista previa indica si ya estaba cargado, el número de animales, los nuevos y los ya existentes. «Confirmar importacion» ejecuta la carga.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;La importación puede incorporar animales y actualizar registros existentes. Comprueba que estás en la explotación correcta y revisa el análisis antes de confirmar.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Comprobado:&lt;/b&gt; se seleccionó el XML disponible del libro de registro y se ejecutó Analizar archivo. Se capturó su vista previa. No se pulsó Confirmar importacion ni Importar XML local.&lt;/p&gt;''',['16-importar','17-analisis-xml'])
+add('usuarios','11. Usuarios: administración de accesos','''&lt;p&gt;El apartado &lt;b&gt;Usuarios&lt;/b&gt; permite consultar las cuentas y crear una nueva, si la sesión tiene permisos de administración.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Introduce un nombre de usuario de al menos tres caracteres.&lt;/li&gt;&lt;li&gt;Introduce una contraseña inicial de al menos diez caracteres.&lt;/li&gt;&lt;li&gt;Escribe la explotación. Usa exactamente el mismo nombre de una existente para que sus usuarios compartan los animales, o un nombre nuevo para otra explotación.&lt;/li&gt;&lt;li&gt;Pulsa &lt;b&gt;Crear usuario&lt;/b&gt;.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;La lista muestra usuario, explotación, estado y condición de administrador. Se consultó esta pantalla con una cuenta administradora; no se crearon cuentas ni se modificaron permisos.&lt;/p&gt;''',['18-usuarios'])
+add('exportar','12. Exportación CSV: incidencia detectada','''&lt;p&gt;El enlace &lt;b&gt;CSV&lt;/b&gt; aparece en Dashboard y Animales y está destinado a descargar el registro de animales de la explotación. El enlace actual no incorpora los filtros de la tabla.&lt;/p&gt;&lt;p class=&quot;notice&quot;&gt;&lt;b&gt;Resultado del recorrido:&lt;/b&gt; al pulsarlo, el servidor devolvió un error HTTP 500 y no se obtuvo el CSV. Esta función queda documentada como incidencia pendiente; no se presenta como descarga verificada.&lt;/p&gt;&lt;p&gt;Si te ocurre, vuelve a abrir CowsIA en su dirección habitual para continuar navegando. Esta documentación no incluye una corrección del problema de exportación.&lt;/p&gt;''',['19-exportacion-resultado'])
+style='''*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f0f4f8;color:#193045;font:17px/1.65 system-ui,sans-serif}header{background:#10283b;color:white;padding:56px max(24px,calc((100% - 1080px)/2))}header h1{font-size:42px;line-height:1.2;margin:10px 0}header p{color:#d8e6ef}.tag{color:#83ded0;font-weight:700;letter-spacing:.12em;font-size:13px}main{max-width:1128px;margin:auto;padding:30px 24px}nav,section{background:white;border:1px solid #dce5ec;border-radius:14px;padding:28px;margin:0 0 26px}nav ol{columns:2;padding-left:22px}a{color:#086a9c}h2{font-size:27px;line-height:1.3;margin-top:0}h3{font-size:21px}figure{margin:26px 0}img{width:100%;height:auto;border:1px solid #d8e2eb;border-radius:8px}figcaption{font-size:14px;color:#536e81;margin-top:7px}.notice{background:#fff4d8;border-left:4px solid #d3951d;padding:16px}table{border-collapse:collapse;width:100%;font-size:15px}td,th{text-align:left;border-bottom:1px solid #dce5ec;padding:10px}footer{color:#536e81;padding:20px;text-align:center}@media(max-width:700px){nav ol{columns:1}header h1{font-size:32px}section{padding:18px}main{padding:16px}}@media print{body{background:white;font-size:11pt}header{padding:20px;background:white;color:#10283b}header p{color:#193045}main{max-width:none;padding:0}nav,section{border:0;padding:12px 0}figure{break-inside:avoid}a{color:inherit}img{max-height:650px;object-fit:contain}h2{break-after:avoid}}'''
+parts=['&lt;!doctype html&gt;&lt;html lang=&quot;es&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;CowsIA · Guía visual de uso&lt;/title&gt;&lt;style&gt;'+style+'&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;header&gt;&lt;div class=&quot;tag&quot;&gt;COWSIA · GUÍA VISUAL&lt;/div&gt;&lt;h1&gt;Del registro a la ficha del animal&lt;/h1&gt;&lt;p&gt;Manual de navegación con capturas reales de la aplicación&lt;br&gt;Recorrido realizado el 29 de septiembre de 2026&lt;/p&gt;&lt;/header&gt;&lt;main&gt;&lt;nav aria-label=&quot;Índice&quot;&gt;&lt;b&gt;Contenido&lt;/b&gt;&lt;ol&gt;']
+parts += [f'&lt;li&gt;&lt;a href=&quot;#{id}&quot;&gt;{html.escape(title.split(&quot;. &quot;,1)[1])}&lt;/a&gt;&lt;/li&gt;' for id,title,_,_ in sections]
+parts.append('&lt;/ol&gt;&lt;/nav&gt;&lt;section&gt;&lt;h2&gt;Cómo se preparó esta guía&lt;/h2&gt;&lt;p&gt;Se navegó por la interfaz real con un navegador de escritorio de 1440 × 1000 píxeles. Las imágenes corresponden a esa sesión y se incluyen dentro de este HTML: puedes copiarlo y abrirlo sin una carpeta de imágenes adicional.&lt;/p&gt;&lt;p&gt;Se probaron el inicio y cierre de sesión, búsquedas, filtros, apertura de fichas desde tres apartados, marcadores del mapa, análisis previo de XML y el enlace CSV. Los formularios de escritura se inspeccionaron sin guardar cambios. Los pasos de guardado descritos reflejan los controles disponibles, no una prueba de alta o borrado completada.&lt;/p&gt;&lt;/section&gt;')
+for id,title,body,pics in sections:
+ parts.append(f'&lt;section id=&quot;{id}&quot;&gt;&lt;h2&gt;{title}&lt;/h2&gt;{body}')
+ for name in pics:
+  p=root/'capturas'/f'{name}.png'
+  if not p.exists(): raise RuntimeError(f'Falta captura: {p}')
+  encoded=base64.b64encode(p.read_bytes()).decode()
+  parts.append(f'&lt;figure&gt;&lt;img src=&quot;data:image/png;base64,{encoded}&quot; alt=&quot;{html.escape(title)} — captura {name}&quot; loading=&quot;lazy&quot;&gt;&lt;figcaption&gt;Captura {name}: interfaz observada durante el recorrido.&lt;/figcaption&gt;&lt;/figure&gt;')
+ parts.append('&lt;p&gt;&lt;a href=&quot;#&quot;&gt;Volver al índice ↑&lt;/a&gt;&lt;/p&gt;&lt;/section&gt;')
+parts.append('&lt;section&gt;&lt;h2&gt;Resultado de las comprobaciones&lt;/h2&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Acción&lt;/th&gt;&lt;th&gt;Resultado&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Acceso y cierre de sesión&lt;/td&gt;&lt;td&gt;Comprobados en navegador.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Búsquedas, filtros y fichas&lt;/td&gt;&lt;td&gt;Comprobados. La hembra de ejemplo muestra cuatro descendientes con foto.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Galería y mapa&lt;/td&gt;&lt;td&gt;Comprobadas las aperturas de ficha desde ambas vistas.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Análisis de XML&lt;/td&gt;&lt;td&gt;Vista previa obtenida; importación no ejecutada.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Exportación CSV&lt;/td&gt;&lt;td&gt;Error HTTP 500; pendiente de corrección.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Guardar, eliminar, cambiar foto principal y crear usuarios&lt;/td&gt;&lt;td&gt;Controles inspeccionados; operaciones no ejecutadas.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Geolocalización y navegación por servicios externos&lt;/td&gt;&lt;td&gt;No probadas.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/section&gt;&lt;/main&gt;&lt;footer&gt;CowsIA · Documentación de la versión observada el 29/09/2026&lt;/footer&gt;&lt;/body&gt;&lt;/html&gt;')
+(root/'guia-cowsia.html').write_text(''.join(parts),encoding='utf-8')
+print('Guía HTML creada:',len(sections),'apartados')
+✓ • 0ms
+</code></pre>
+<h2 id="assistant-8">Assistant</h2>
+<p>Ya existe una guía anterior, pero faltan funciones incorporadas después, como tareas, recorridos históricos y vídeos. Haré un recorrido nuevo y distinguiré las acciones comprobadas de los formularios inspeccionados sin guardar, para no introducir registros de prueba en la explotación.</p>
+<h2 id="activity-27">Activity</h2>
+<pre><code>$ sed -n '1370,1410p' frontend/src/main.jsx; sed -n '1,110p' frontend/src/TasksMap.jsx; sed -n '1,55p' frontend/src/Tasks.jsx; sed -n '1140,1167p' frontend/src/main.jsx; sed -n '775,805p' frontend/src/main.jsx
+
+  return (
+    &lt;section className=&quot;page&quot;&gt;
+      &lt;PageTitle title=&quot;Importar XML&quot; /&gt;
+      &lt;div className=&quot;import-panel&quot;&gt;
+        &lt;div className=&quot;local-file&quot;&gt;
+          &lt;strong&gt;XML local fijo&lt;/strong&gt;
+          &lt;span className=&quot;muted&quot;&gt;{status?.path || &quot;Comprobando ruta...&quot;}&lt;/span&gt;
+          &lt;span className={status?.exists ? &quot;positive&quot; : &quot;negative&quot;}&gt;{status?.exists ? &quot;Archivo encontrado&quot; : &quot;Archivo no encontrado&quot;}&lt;/span&gt;
+          &lt;button disabled={loading || !status?.exists} onClick={importLocal}&gt;
+            &lt;RefreshCcw size={16} /&gt;
+            Importar XML local
+          &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;FileUp size={34} /&gt;
+        &lt;input type=&quot;file&quot; accept=&quot;.xml&quot; onChange={(event) =&gt; setFile(event.target.files?.[0] || null)} /&gt;
+        &lt;button disabled={!file || loading} onClick={analyze}&gt;
+          &lt;FileUp size={16} /&gt;
+          {loading ? &quot;Analizando...&quot; : &quot;Analizar archivo&quot;}
+        &lt;/button&gt;
+        {file &amp;&amp; &lt;p className=&quot;muted&quot;&gt;Seleccionado: {file.name}&lt;/p&gt;}
+        {preview &amp;&amp; (
+          &lt;div className={`import-preview ${preview.already_uploaded ? &quot;warning&quot; : &quot;&quot;}`}&gt;
+            &lt;strong&gt;{preview.already_uploaded ? &quot;Este fichero ya estaba cargado&quot; : &quot;Fichero listo&quot;}&lt;/strong&gt;
+            &lt;span&gt;Animales en el XML: {preview.incoming_animals}&lt;/span&gt;
+            &lt;span&gt;Nuevos animales: {preview.new_animals}&lt;/span&gt;
+            &lt;span&gt;Ya existentes: {preview.unchanged_animals}&lt;/span&gt;
+            &lt;button disabled={loading} onClick={upload}&gt;Confirmar importacion&lt;/button&gt;
+          &lt;/div&gt;
+        )}
+        {message &amp;&amp; &lt;p className=&quot;positive&quot;&gt;{message}&lt;/p&gt;}
+        {error &amp;&amp; &lt;p className=&quot;error&quot;&gt;{error}&lt;/p&gt;}
+      &lt;/div&gt;
+    &lt;/section&gt;
+  );
+}
+
+function ExportButtons() {
+  return (
+    &lt;div className=&quot;actions&quot;&gt;
+      &lt;a className=&quot;button&quot; href={api.url(&quot;/api/export/animals.csv&quot;)}&gt;
+import React, { useEffect, useRef, useState } from 'react';
+import L from 'leaflet';
+import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
+import { api } from './api/client';
+
+const states = {
+  pending: { label: 'Pendiente', symbol: '!', color: '#dc2626' },
+  in_progress: { label: 'En curso', symbol: '…', color: '#facc15' },
+  completed: { label: 'Completada', symbol: '✓', color: '#16a34a' },
+};
+const icons = Object.fromEntries(Object.entries(states).map(([key, value]) =&gt; [key, L.divIcon({
+  className: `task-map-marker task-map-marker-${key}`,
+  html: `&lt;span style=&quot;background:${value.color};color:${key === 'in_progress' ? '#422006' : '#fff'}&quot;&gt;${value.symbol}&lt;/span&gt;`,
+  iconSize: [28, 28], iconAnchor: [14, 14], popupAnchor: [0, -14],
+})]));
+
+export function TaskImageCredit({ row, onToggle }) {
+  if (!row.image_credit) return null;
+  return &lt;details className=&quot;farm-image-credit&quot; onToggle={onToggle}&gt;&lt;summary&gt;Autor y licencia de la imagen&lt;/summary&gt;
+    &lt;small&gt;{row.image_credit}&lt;/small&gt;
+    {row.image_source &amp;&amp; &lt;a href={row.image_source} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;Fuente original&lt;/a&gt;}
+    {row.image_license_url &amp;&amp; &lt;&gt; · &lt;a href={row.image_license_url} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;Licencia&lt;/a&gt;&lt;/&gt;}
+  &lt;/details&gt;;
+}
+
+function TaskPopup({ row, width }) {
+  const popup = useRef(null);
+  const update = () =&gt; popup.current?.update();
+  return &lt;Popup ref={popup} minWidth={width} maxWidth={width} maxHeight={290} keepInView autoPanPadding={[15, 15]}&gt;
+    &lt;div className=&quot;event-map-popup task-map-popup&quot; data-task-id={row.id}&gt;
+      &lt;strong&gt;Tarea #{row.id} · {states[row.status]?.label}&lt;/strong&gt;
+      {row.image_url ? &lt;img src={api.url(row.image_url)} alt={`Foto de la tarea ${row.id}`} onLoad={update} /&gt; : &lt;span&gt;Sin fotografía&lt;/span&gt;}
+      &lt;span&gt;Fecha: {new Date(`${row.due_date}T12:00:00`).toLocaleDateString('es-ES')}&lt;/span&gt;
+      &lt;p&gt;{row.description}&lt;/p&gt;
+      &lt;TaskImageCredit row={row} onToggle={update} /&gt;
+    &lt;/div&gt;
+  &lt;/Popup&gt;;
+}
+
+function TaskMarkers({ rows }) {
+  const map = useMap();
+  const [width, setWidth] = useState(() =&gt; map.getSize().x);
+  useEffect(() =&gt; {
+    const resize = () =&gt; setWidth(map.getSize().x);
+    map.on('resize', resize);
+    return () =&gt; map.off('resize', resize);
+  }, [map]);
+  return rows.map(row =&gt; &lt;Marker key={row.id} position={[row.latitude, row.longitude]} icon={icons[row.status] || icons.pending}
+    title={`Tarea #${row.id} · ${states[row.status]?.label}`} alt={`Tarea #${row.id} · ${states[row.status]?.label}`}&gt;
+    &lt;TaskPopup key={width} row={row} width={Math.max(140, Math.min(300, width - 90))} /&gt;
+  &lt;/Marker&gt;);
+}
+
+export default function TasksMap({ rows }) {
+  const located = rows.filter(row =&gt; Number.isFinite(row.latitude) &amp;&amp; Number.isFinite(row.longitude) &amp;&amp; Math.abs(row.latitude) &lt;= 90 &amp;&amp; Math.abs(row.longitude) &lt;= 180);
+  return &lt;section className=&quot;panel tasks-map-panel&quot; aria-label=&quot;Mapa de tareas&quot;&gt;
+    &lt;h2&gt;Mapa de tareas&lt;/h2&gt;
+    &lt;div className=&quot;task-map-legend&quot; aria-label=&quot;Colores por estado&quot;&gt;{Object.entries(states).map(([key, value]) =&gt;
+      &lt;span key={key}&gt;&lt;i style={{ background: value.color }} aria-hidden=&quot;true&quot; /&gt;{value.label}&lt;/span&gt;)}&lt;/div&gt;
+    &lt;p className=&quot;muted&quot;&gt;{located.length} tareas con ubicación. Pulsa un marcador para ver su foto, fecha y descripción.&lt;/p&gt;
+    {located.length ? &lt;MapContainer className=&quot;tasks-map&quot; bounds={located.map(row =&gt; [row.latitude, row.longitude])} boundsOptions={{ padding: [30, 30], maxZoom: 16 }} scrollWheelZoom={false}&gt;
+      &lt;TileLayer attribution='&amp;copy; &lt;a href=&quot;https://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;' url=&quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot; /&gt;
+      &lt;TaskMarkers rows={located} /&gt;
+    &lt;/MapContainer&gt; : &lt;p&gt;No hay tareas con ubicación para los filtros seleccionados.&lt;/p&gt;}
+    {rows.length &gt; located.length &amp;&amp; &lt;p className=&quot;muted&quot;&gt;{rows.length - located.length} tareas sin ubicación están disponibles en el listado.&lt;/p&gt;}
+  &lt;/section&gt;;
+}
+import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
+import { api } from './api/client';
+import TasksMap, { TaskImageCredit } from './TasksMap';
+
+export const TaskContext = createContext(null);
+export function TaskButton({ source = {}, children = 'Crear tarea' }) {
+  const open = useContext(TaskContext);
+  return &lt;button type=&quot;button&quot; onClick={() =&gt; open(source)}&gt;{children}&lt;/button&gt;;
+}
+const statusLabels = { pending: 'Pendiente', in_progress: 'En curso', completed: 'Completada' };
+const today = () =&gt; { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; };
+const dateLabel = value =&gt; value ? new Date(`${value.slice(0,10)}T12:00:00`).toLocaleDateString('es-ES') : 'Sin fecha';
+
+export function TaskForm({ source, username, onClose, onSaved }) {
+  const [kind, setKind] = useState(source.farm_event_id ? 'farm' : source.animal_event_id ? 'event' : source.animal_id ? 'animal' : 'none');
+  const [animalId, setAnimalId] = useState(String(source.animal_id || ''));
+  const [eventId, setEventId] = useState(String(source.animal_event_id || ''));
+  const [farmId, setFarmId] = useState(String(source.farm_event_id || ''));
+  const [animals, setAnimals] = useState([]);
+  const [incidents, setIncidents] = useState([]);
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [eventsLoading, setEventsLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [busy, setBusy] = useState(false);
+  const [dueDate, setDueDate] = useState(today());
+  const [description, setDescription] = useState('');
+  const [file, setFile] = useState(null);
+  const [preview, setPreview] = useState('');
+  const dialog = useRef(null);
+  const saving = useRef(false);
+  useEffect(() =&gt; {
+    const previous = document.activeElement;
+    dialog.current.showModal();
+    return () =&gt; { if (previous?.isConnected) previous.focus(); };
+  }, []);
+  useEffect(() =&gt; {
+    let alive = true;
+    Promise.all([api.get('/api/animals'), api.get('/api/farm-events')])
+      .then(([a, f]) =&gt; { if(alive) { setAnimals(a); setIncidents(f); } })
+      .catch(e =&gt; { if(alive) setError(e.message); })
+      .finally(() =&gt; { if(alive) setLoading(false); });
+    return () =&gt; { alive = false; };
+  }, []);
+  useEffect(() =&gt; {
+    let alive = true;
+    setEvents([]);
+    const animal = animals.find(a =&gt; String(a.id) === animalId);
+    if (kind !== 'event' || !animal) { setEventsLoading(false); return; }
+    setEventsLoading(true);
+    api.get(`/api/animals/${encodeURIComponent(animal.crotal)}/details`)
+      .then(d =&gt; { if(alive) setEvents(d.events); })
+      .catch(e =&gt; { if(alive) setError(e.message); })
+      .finally(() =&gt; { if(alive) setEventsLoading(false); });
+    return () =&gt; { alive = false; };
+                {detail.locations.length === 0 &amp;&amp; &lt;p className=&quot;muted&quot;&gt;Sin ubicaciones&lt;/p&gt;}
+              &lt;/div&gt;
+            &lt;/section&gt;
+            &lt;section className=&quot;detail-section&quot;&gt;
+              &lt;h3&gt;&lt;MapIcon size={16} /&gt; Histórico de ubicaciones&lt;/h3&gt;
+              {detail.location_history.length &gt; 0 ? (
+                &lt;&gt;
+                  &lt;p className=&quot;muted&quot;&gt;
+                    {detail.location_history.some((point) =&gt; point.simulated)
+                      ? &quot;Recorrido simulado: ubicación de partida y ocho pasos de 200 metros. No representa movimientos reales.&quot;
+                      : &quot;Recorrido de las ubicaciones registradas, de la más antigua a la más reciente.&quot;}
+                  &lt;/p&gt;
+                  &lt;AnimalHistoryMap points={detail.location_history} /&gt;
+                  &lt;p className=&quot;muted&quot;&gt;{detail.location_history.length} puntos · Verde: inicio · Azul: intermedios · Rojo: final. Pulsa un punto para ver su detalle.&lt;/p&gt;
+                  {detail.location_history.length === 1 &amp;&amp; &lt;p className=&quot;muted&quot;&gt;Solo hay una ubicación; se necesitan al menos dos para trazar un recorrido.&lt;/p&gt;}
+                &lt;/&gt;
+              ) : &lt;p className=&quot;muted&quot;&gt;Sin histórico de ubicaciones para este animal.&lt;/p&gt;}
+            &lt;/section&gt;
+            &lt;section className=&quot;detail-section&quot;&gt;
+              &lt;h3&gt;&lt;MapPin size={16} /&gt; Mapa de sucesos&lt;/h3&gt;
+              &lt;AnimalEventsMap events={detail.events} /&gt;
+            &lt;/section&gt;
+            &lt;section className=&quot;detail-section&quot;&gt;
+              &lt;h3&gt;&lt;CalendarPlus size={16} /&gt; Sucesos&lt;/h3&gt;
+              &lt;form className=&quot;event-form&quot; onSubmit={saveEvent}&gt;
+                &lt;textarea required placeholder=&quot;Texto del suceso&quot; value={eventForm.text} onChange={(event) =&gt; setEventForm({ ...eventForm, text: event.target.value })} /&gt;
+                &lt;div className=&quot;compact-form&quot;&gt;
+                  &lt;input type=&quot;date&quot; value={eventForm.event_date} onChange={(event) =&gt; setEventForm({ ...eventForm, event_date: event.target.value })} /&gt;
+    &lt;h2&gt;{title}&lt;/h2&gt;
+    &lt;div className=&quot;panel activity-filters&quot;&gt;
+      &lt;label&gt;Desde&lt;input type=&quot;date&quot; value={filters.date_from} onChange={(event) =&gt; change(&quot;date_from&quot;, event.target.value)} /&gt;&lt;/label&gt;
+      &lt;label&gt;Hasta&lt;input type=&quot;date&quot; value={filters.date_to} onChange={(event) =&gt; change(&quot;date_to&quot;, event.target.value)} /&gt;&lt;/label&gt;
+      &lt;label&gt;Informante&lt;select aria-label=&quot;Informante&quot; value={filters.reporter} onChange={(event) =&gt; change(&quot;reporter&quot;, event.target.value)}&gt;
+        &lt;option value=&quot;&quot;&gt;Todos los informantes&lt;/option&gt;
+        {(data?.options.reporters || []).map((name) =&gt; &lt;option key={name}&gt;{name}&lt;/option&gt;)}
+      &lt;/select&gt;&lt;/label&gt;
+      {animalEvents ? &lt;&gt;
+        &lt;label&gt;Crotal&lt;input placeholder=&quot;Buscar crotal&quot; value={filters.crotal} onChange={(event) =&gt; change(&quot;crotal&quot;, event.target.value)} /&gt;&lt;/label&gt;
+        &lt;label&gt;Sexo&lt;select aria-label=&quot;Sexo&quot; value={filters.sexo} onChange={(event) =&gt; change(&quot;sexo&quot;, event.target.value)}&gt;
+          &lt;option value=&quot;&quot;&gt;Todos los sexos&lt;/option&gt;&lt;option&gt;Hembra&lt;/option&gt;&lt;option&gt;Macho&lt;/option&gt;
+        &lt;/select&gt;&lt;/label&gt;
+      &lt;/&gt; : &lt;label&gt;Tipo de incidencia&lt;select aria-label=&quot;Tipo de incidencia&quot; value={filters.category} onChange={(event) =&gt; change(&quot;category&quot;, event.target.value)}&gt;
+        &lt;option value=&quot;&quot;&gt;Todos los tipos&lt;/option&gt;
+        {(data?.options.categories || []).map((name) =&gt; &lt;option key={name}&gt;{name}&lt;/option&gt;)}
+      &lt;/select&gt;&lt;/label&gt;}
+      &lt;label&gt;Registros&lt;select aria-label=&quot;Registros&quot; value={filters.origin} onChange={(event) =&gt; change(&quot;origin&quot;, event.target.value)}&gt;
+        &lt;option value=&quot;all&quot;&gt;Todos&lt;/option&gt;&lt;option value=&quot;real&quot;&gt;Reales&lt;/option&gt;&lt;option value=&quot;simulated&quot;&gt;Simulados&lt;/option&gt;
+      &lt;/select&gt;&lt;/label&gt;
+      &lt;button type=&quot;button&quot; onClick={() =&gt; { setLoading(true); setFilters({ ...emptyActivityFilters }); }}&gt;Limpiar filtros&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div aria-live=&quot;polite&quot; aria-busy={loading}&gt;
+      {invalidDates ? &lt;p className=&quot;error&quot; role=&quot;alert&quot;&gt;La fecha inicial no puede ser posterior a la final.&lt;/p&gt;
+        : error ? &lt;p className=&quot;error&quot; role=&quot;alert&quot;&gt;{error}&lt;/p&gt;
+        : loading ? &lt;p className=&quot;muted&quot;&gt;Cargando gráficas...&lt;/p&gt;
+        : data &amp;&amp; &lt;&gt;
+          &lt;div className=&quot;metrics activity-metrics&quot;&gt;
+            &lt;Metric label={animalEvents ? &quot;Sucesos&quot; : &quot;Incidencias&quot;} value={data.total} /&gt;
+            &lt;Metric label={animalEvents ? &quot;Animales con sucesos&quot; : &quot;Sin ubicación&quot;} value={animalEvents ? data.animals_affected : data.total - data.with_location} /&gt;
+            &lt;Metric label=&quot;Con ubicación&quot; value={data.with_location} /&gt;
+✓ • 0ms
+</code></pre>
+<h2 id="user-3">User</h2>
+<p>exit</p>
+<h2 id="assistant-9">Assistant</h2>
+<p>De acuerdo, detengo el trabajo.</p>
+<h2 id="user-4">User</h2>
+<p>exit</p>
+<h2 id="user-5">User</h2>
+<p>exit</p>
+<h2 id="assistant-10">Assistant</h2>
+<p>De acuerdo.</p>
+</div>
+    </article>
+  </main>
+  <footer class="site-footer">Documentación de CowsIA · Generada a partir de la conversación original en Markdown</footer>
+  <script>
+  (() => {
+    const input = document.querySelector('#page-search');
+    const content = document.querySelector('#document-content');
+    const empty = document.querySelector('#no-results');
+    const blocks = [...content.children];
+    input.addEventListener('input', () => {
+      const query = input.value.trim().toLocaleLowerCase('es');
+      let visible = 0;
+      blocks.forEach(block => {
+        const show = !query || block.textContent.toLocaleLowerCase('es').includes(query);
+        block.classList.toggle('search-hidden', !show);
+        if (show) visible++;
+      });
+      empty.style.display = visible ? 'none' : 'block';
+    });
+    const headings = [...content.querySelectorAll('h1[id],h2[id],h3[id]')];
+    const tocLinks = [...document.querySelectorAll('.toc a')];
+    const update = () => {
+      let current = headings[0]?.id;
+      for (const heading of headings) { if (heading.getBoundingClientRect().top <= 110) current = heading.id; else break; }
+      tocLinks.forEach(link => link.classList.toggle('active', link.hash === '#' + current));
+    };
+    document.addEventListener('scroll', update, {passive:true}); update();
+  })();
+  </script>
+</body>
+</html>
