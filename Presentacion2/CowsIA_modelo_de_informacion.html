@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Documentación de CowsIA: producto, expansión y modelo de negocio.">
+<title>Oficial, Particular y Calculada · CowsIA</title><link rel="stylesheet" href="assets/estilos.css"><link rel="stylesheet" href="assets/chat.css">
+<script defer src="assets/mermaid.min.js"></script><script defer src="assets/navegacion.js"></script></head>
+<body><a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="topbar"><a class="brand" href="index.html">Cows<span>IA</span><small>La tecnología se adapta al ganadero</small></a>
+<div class="actions"><button type="button" id="menu" aria-expanded="false" aria-controls="sidebar">Documentos</button><button type="button" id="print">Imprimir / PDF</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="index-link" href="index.html">Índice de documentos</a><nav aria-label="Documentos"><a href="CowsIA_one_pager_ejecutivo.html" ><span>01</span>Resumen ejecutivo</a><a href="CowsIA_modelo_de_informacion.html" aria-current="page"><span>02</span>Oficial, Particular y Calculada</a><a href="CowsIA_presentacion_inversores.html" ><span>03</span>Presentación para inversores</a><a href="CowsIA_incidencias_y_tareas.html" ><span>04</span>Incidencias y gestor de tareas</a><a href="CowsIA_asistente_IA_contextual.html" ><span>05</span>Asistente IA y chat móvil</a><a href="CowsIA_documentacion_burocratica.html" ><span>06</span>Documentación burocrática futura</a><a href="CowsIA_negocio_hardware_LoRaWAN_RFID.html" ><span>07</span>Negocio LoRaWAN y RFID</a><a href="CowsIA_guion_demo.html" ><span>08</span>Guion de demostración</a><a href="diagrama_funcional_cowsia.html" ><span>09</span>Diagrama funcional</a><a href="diagrama_incidencias_tareas_cowsia.html" ><span>10</span>Diagrama de incidencias y tareas</a><a href="diagrama_modelo_negocio_cowsia.html" ><span>11</span>Diagrama del modelo de negocio</a><a href="diagrama_hardware_cowsia.html" ><span>12</span>Diagrama de hardware</a><a href="diagrama_asistente_IA_cowsia.html" ><span>13</span>Diagrama del asistente IA</a><a href="diagrama_informacion_cowsia.html" ><span>14</span>Diagrama de información y decisiones</a><a href="diagrama_documentacion_burocratica_cowsia.html" ><span>15</span>Diagrama de elaboración documental</a><a href="hoja_ruta_cowsia.html" ><span>16</span>Hoja de ruta</a><a href="README.html" ><span>17</span>Guía de los materiales</a><a href="CowsIA_revision_aplicacion_desplegada.html" ><span>18</span>Revisión de la aplicación desplegada</a><a href="NotaPdmFuncionalidadesLoraRFIDCowsIA.html" ><span>19</span>Nota de referencia LoRa y RFID</a><a href="NotaPdmLaIAenCowsIA.html" ><span>20</span>Nota de referencia sobre IA</a></nav><p class="sidebar-note">Software, hardware e IA al servicio del ganadero.</p></aside>
+<main id="contenido"><div class="reading-grid"><article><div class="document-meta"><span>Modelo de información</span><a href="../CowsIA_modelo_de_informacion.md" download>Descargar original</a></div><h1 id="cowsia-tres-tipos-de-informacion-para-trabajar-decidir-y-documentar">CowsIA: tres tipos de informacion para trabajar, decidir y documentar</h1>
+<p><strong>La tecnología se adapta al ganadero, no el ganadero a la tecnología.</strong></p>
+<p>Este principio incluye software, hardware e IA: aprovechar la informacion disponible y las formas de trabajo de la explotacion para facilitar el registro, la consulta, las actuaciones y la documentacion. El ganadero aporta conocimiento y criterio; la tecnologia reduce pasos y ayuda a recuperar y relacionar datos.</p>
+<h2 id="1-informacion-oficial">1. Informacion Oficial</h2>
+<p>Es la informacion procedente de los diferentes organismos que se importa a CowsIA: registros administrativos, identificacion y datos del ganado, movimientos u otros datos disponibles segun las fuentes y formatos habilitados.</p>
+<p>La importacion XML forma parte de la base documentada. Ampliar la entrada a otros organismos y formatos pertenece a la evolucion propuesta; no se presupone que existan conexiones automaticas con todos ellos. Cada importacion deberia conservar organismo, documento o fichero de origen, fecha y alcance.</p>
+<p>La explotacion puede aprovechar estos datos sin volver a introducirlos. Su procedencia oficial no implica que cubran todos los hechos recientes de campo ni que nunca haya que revisar discrepancias.</p>
+<h2 id="2-informacion-particular">2. Informacion Particular</h2>
+<p>Es la informacion que se añade sobre animales y explotacion: fotos, ubicaciones, sucesos, incidencias, observaciones, tareas y actuaciones de manejo. Puede proceder de entrada manual desde el movil o, conforme se incorporen las integraciones, de sensores, camaras, lectores RFID y otros equipos.</p>
+<p>El ambito puede ser la finca o un animal concreto. Una alambrada rota corresponde a la explotacion; una herida, un crotal perdido o una cojera se vinculan al animal. Fecha, lugar, informante y evidencia aportan contexto a lo registrado.</p>
+<p>La captura manual y los registros existentes forman parte de la base actual. La alimentacion automatica desde hardware se mantiene como expansion cuando no este verificada. Una lectura de sensor registra una observacion; no sustituye por si sola una interpretacion profesional o una decision de manejo.</p>
+<h2 id="3-informacion-calculada">3. Informacion Calculada</h2>
+<p>Es la informacion elaborada a partir de informacion Oficial y/o Particular: recuentos, indicadores, cruces, comparativas, tendencias, alertas, estimaciones y propuestas que ayudan a tomar decisiones. Puede reutilizar resultados calculados anteriores conservando su trazabilidad hasta los datos de origen.</p>
+<p>Los indicadores del Dashboard ilustran calculos actuales sobre datos almacenados. Los analisis avanzados con IA y el aprendizaje a partir del historial se presentan como evolucion propuesta, no como capacidades ya verificadas.</p>
+<p>Un calculo debe identificar criterio, periodo, datos utilizados y fecha de elaboracion. Las estimaciones o interpretaciones IA deben distinguirse de los hechos registrados. Si faltan datos, el sistema deberia indicarlo y evitar convertir una ausencia de registro en un hecho confirmado.</p>
+<h2 id="4-como-se-relacionan">4. Como se relacionan</h2>
+<figure class="diagram"><div class="diagram-tools"><span>Diagrama · desplázate para explorar</span><button type="button" data-zoom="out" aria-label="Reducir diagrama">−</button><button type="button" data-zoom="reset">Ajustar</button><button type="button" data-zoom="in" aria-label="Ampliar diagrama">+</button></div><div class="diagram-scroll"><pre class="mermaid">flowchart TB
+    O[&quot;Informacion Oficial: importaciones de organismos&quot;] --&gt; B[&quot;Base CowsIA: origen, fecha y contexto&quot;]
+    P[&quot;Informacion Particular: registro manual y futuras capturas de equipos&quot;] --&gt; B
+    B --&gt; C[&quot;Informacion Calculada: reglas, indicadores y futuros analisis IA&quot;]
+    H[&quot;Decisiones y sucesos pasados registrados&quot;] --&gt; C
+    C --&gt; D[&quot;Apoyo a decisiones: criterios y evidencias&quot;]
+    D --&gt; U[&quot;El ganadero decide y actua&quot;]
+    U --&gt; R[&quot;Registrar decision, actuacion y resultado cuando se disponga de ellos&quot;]
+    R --&gt; P
+    B --&gt; E[&quot;Futuro: preparar documentacion burocratica&quot;]
+    C --&gt; E
+    E --&gt; V[&quot;Revision de datos, campos faltantes y documento&quot;]
+    V --&gt; F[&quot;Documento preparado para su uso en el tramite correspondiente&quot;]</pre></div><details><summary>Ver definición del diagrama</summary><pre>flowchart TB
+    O[&quot;Informacion Oficial: importaciones de organismos&quot;] --&gt; B[&quot;Base CowsIA: origen, fecha y contexto&quot;]
+    P[&quot;Informacion Particular: registro manual y futuras capturas de equipos&quot;] --&gt; B
+    B --&gt; C[&quot;Informacion Calculada: reglas, indicadores y futuros analisis IA&quot;]
+    H[&quot;Decisiones y sucesos pasados registrados&quot;] --&gt; C
+    C --&gt; D[&quot;Apoyo a decisiones: criterios y evidencias&quot;]
+    D --&gt; U[&quot;El ganadero decide y actua&quot;]
+    U --&gt; R[&quot;Registrar decision, actuacion y resultado cuando se disponga de ellos&quot;]
+    R --&gt; P
+    B --&gt; E[&quot;Futuro: preparar documentacion burocratica&quot;]
+    C --&gt; E
+    E --&gt; V[&quot;Revision de datos, campos faltantes y documento&quot;]
+    V --&gt; F[&quot;Documento preparado para su uso en el tramite correspondiente&quot;]</pre></details></figure>
+<p>Estos tipos describen procedencia y elaboracion, no tres aplicaciones separadas. Una consulta o documento puede combinar los tres manteniendo reconocible el origen de cada dato.</p>
+<h2 id="5-ejemplos">5. Ejemplos</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">Necesidad</th><th scope="col">Informacion Oficial</th><th scope="col">Informacion Particular</th><th scope="col">Informacion Calculada</th></tr></thead><tbody>
+<tr><td class="">Saber que hembras activas superan un año</td><td class="">Censo, sexo y nacimiento importados</td><td class="">Actualizaciones de campo pertinentes</td><td class="">Recuento con fecha y filtros explicitos</td></tr>
+<tr><td class="">Revisar madres sin parto registrado reciente</td><td class="">Identificacion y parentesco disponibles</td><td class="">Partos o sucesos registrados por la explotacion</td><td class="">Listado con ultimo parto registrado y cobertura del historial</td></tr>
+<tr><td class="">Seguir una incidencia</td><td class="">Datos de identificacion del animal si corresponde</td><td class="">Fotos, fecha, lugar, reportante y actuaciones</td><td class="">Indicadores o analisis de seguimiento cuando existan los datos necesarios</td></tr>
+<tr><td class="">Revisar manejo con datos de equipos</td><td class="">Identificacion y registros disponibles</td><td class="">Medidas, lecturas, observaciones y decisiones registradas</td><td class="">Comparativas antes/despues y propuestas justificadas</td></tr>
+<tr><td class="">Preparar un expediente</td><td class="">Datos oficiales pertinentes</td><td class="">Hechos, fotos y actuaciones relacionadas</td><td class="">Resumen, comprobaciones y campos derivados identificados</td></tr>
+</tbody></table></div>
+<h2 id="6-decisiones-y-sucesos-pasados-como-contexto">6. Decisiones y sucesos pasados como contexto</h2>
+<p>La IA futura puede analizar el historial amplio: que ocurrio, que decision se adopto, que actuacion se registro y que resultado se observo. Esto permitiria recuperar casos parecidos, señalar patrones y comparar escenarios para apoyar al ganadero o al asesor.</p>
+<p>Esta utilidad depende de registrar decisiones y resultados con suficiente contexto. No se presume que exista hoy un modulo dedicado para ello. Las asociaciones del historial no demuestran por si mismas que una decision causara un resultado; el analisis debe explicar alcance y limitaciones.</p>
+<h2 id="7-principios-para-adaptar-la-tecnologia">7. Principios para adaptar la tecnologia</h2>
+<ul>
+<li>Reutilizar informacion oficial y registros existentes antes de pedir nuevos datos.</li>
+<li>Facilitar el registro en campo con el movil y ofrecer captura automatica donde aporte valor.</li>
+<li>Permitir consultas en lenguaje cotidiano y resultados con enlaces a la evidencia.</li>
+<li>Mostrar lo que falta o discrepa y pedir aclaraciones concretas.</li>
+<li>Mantener el criterio del ganadero en decisiones y revision de documentos.</li>
+<li>Introducir software, hardware e IA por utilidad demostrada para cada explotacion.</li>
+</ul>
+<h2 id="8-estado-y-presentacion-comercial">8. Estado y presentacion comercial</h2>
+<p>Este modelo organiza la vision de CowsIA comunicada por el promotor. La base actual incluye importacion XML, registros de campo, fichas, Dashboard y tareas observadas. Las conexiones ampliadas con organismos, sensores, camaras, chat IA, analisis del historial de decisiones y elaboracion burocratica constituyen lineas de expansion sujetas a desarrollo y validacion.</p>
+<p>El valor comercial es conectar informacion ya disponible con trabajo util: registrar una vez, consultar con contexto, decidir mejor y preparar documentos sin reconstruir la informacion en cada tramite.</p><nav class="pager" aria-label="Anterior y siguiente"><a href="CowsIA_one_pager_ejecutivo.html">← Resumen ejecutivo</a><a href="CowsIA_presentacion_inversores.html">Presentación para inversores →</a></nav></article><details class="toc" open><summary>En este documento</summary><nav aria-label="Apartados"><a class="level-2" href="#1-informacion-oficial">1. Informacion Oficial</a><a class="level-2" href="#2-informacion-particular">2. Informacion Particular</a><a class="level-2" href="#3-informacion-calculada">3. Informacion Calculada</a><a class="level-2" href="#4-como-se-relacionan">4. Como se relacionan</a><a class="level-2" href="#5-ejemplos">5. Ejemplos</a><a class="level-2" href="#6-decisiones-y-sucesos-pasados-como-contexto">6. Decisiones y sucesos pasados como contexto</a><a class="level-2" href="#7-principios-para-adaptar-la-tecnologia">7. Principios para adaptar la tecnologia</a><a class="level-2" href="#8-estado-y-presentacion-comercial">8. Estado y presentacion comercial</a></nav></details></div>
+<footer>CowsIA · Materiales preparados el 6 de octubre de 2026 · <a href="index.html">Volver al índice</a></footer></main></div></body></html>

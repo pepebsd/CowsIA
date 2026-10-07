@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Documentación de CowsIA: producto, expansión y modelo de negocio.">
+<title>Documentación burocrática futura · CowsIA</title><link rel="stylesheet" href="assets/estilos.css"><link rel="stylesheet" href="assets/chat.css">
+<script defer src="assets/mermaid.min.js"></script><script defer src="assets/navegacion.js"></script></head>
+<body><a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="topbar"><a class="brand" href="index.html">Cows<span>IA</span><small>La tecnología se adapta al ganadero</small></a>
+<div class="actions"><button type="button" id="menu" aria-expanded="false" aria-controls="sidebar">Documentos</button><button type="button" id="print">Imprimir / PDF</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="index-link" href="index.html">Índice de documentos</a><nav aria-label="Documentos"><a href="CowsIA_one_pager_ejecutivo.html" ><span>01</span>Resumen ejecutivo</a><a href="CowsIA_modelo_de_informacion.html" ><span>02</span>Oficial, Particular y Calculada</a><a href="CowsIA_presentacion_inversores.html" ><span>03</span>Presentación para inversores</a><a href="CowsIA_incidencias_y_tareas.html" ><span>04</span>Incidencias y gestor de tareas</a><a href="CowsIA_asistente_IA_contextual.html" ><span>05</span>Asistente IA y chat móvil</a><a href="CowsIA_documentacion_burocratica.html" aria-current="page"><span>06</span>Documentación burocrática futura</a><a href="CowsIA_negocio_hardware_LoRaWAN_RFID.html" ><span>07</span>Negocio LoRaWAN y RFID</a><a href="CowsIA_guion_demo.html" ><span>08</span>Guion de demostración</a><a href="diagrama_funcional_cowsia.html" ><span>09</span>Diagrama funcional</a><a href="diagrama_incidencias_tareas_cowsia.html" ><span>10</span>Diagrama de incidencias y tareas</a><a href="diagrama_modelo_negocio_cowsia.html" ><span>11</span>Diagrama del modelo de negocio</a><a href="diagrama_hardware_cowsia.html" ><span>12</span>Diagrama de hardware</a><a href="diagrama_asistente_IA_cowsia.html" ><span>13</span>Diagrama del asistente IA</a><a href="diagrama_informacion_cowsia.html" ><span>14</span>Diagrama de información y decisiones</a><a href="diagrama_documentacion_burocratica_cowsia.html" ><span>15</span>Diagrama de elaboración documental</a><a href="hoja_ruta_cowsia.html" ><span>16</span>Hoja de ruta</a><a href="README.html" ><span>17</span>Guía de los materiales</a><a href="CowsIA_revision_aplicacion_desplegada.html" ><span>18</span>Revisión de la aplicación desplegada</a><a href="NotaPdmFuncionalidadesLoraRFIDCowsIA.html" ><span>19</span>Nota de referencia LoRa y RFID</a><a href="NotaPdmLaIAenCowsIA.html" ><span>20</span>Nota de referencia sobre IA</a></nav><p class="sidebar-note">Software, hardware e IA al servicio del ganadero.</p></aside>
+<main id="contenido"><div class="reading-grid"><article><div class="document-meta"><span>Expansión propuesta</span><a href="../CowsIA_documentacion_burocratica.md" download>Descargar original</a></div><h1 id="cowsia-preparacion-futura-de-documentacion-burocratica">CowsIA: preparacion futura de documentacion burocratica</h1>
+<p><strong>La tecnología se adapta al ganadero, no el ganadero a la tecnología.</strong></p>
+<h2 id="1-propuesta">1. Propuesta</h2>
+<p>Añadir la elaboracion de documentacion burocratica a partir de la informacion almacenada en CowsIA. El objetivo es reducir transcripcion, busquedas y preparacion repetida de datos que la explotacion ya conserva, y facilitar el trabajo compartido con asesores.</p>
+<p>Esta capacidad se presenta como funcionalidad futura. La exportacion CSV actual no equivale a generar formularios oficiales, presentar expedientes ni integrar todos los organismos.</p>
+<h2 id="2-las-tres-fuentes-de-informacion">2. Las tres fuentes de informacion</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">Tipo</th><th scope="col">Aportacion a un documento</th><th scope="col">Tratamiento propuesto</th></tr></thead><tbody>
+<tr><td class="">Informacion Oficial</td><td class="">Datos importados de los organismos, identificacion y registros pertinentes</td><td class="">Conservar fuente, fecha y version de la importacion</td></tr>
+<tr><td class="">Informacion Particular</td><td class="">Hechos de finca o animal, fotos, ubicaciones, informantes, actuaciones y registros de equipos integrados</td><td class="">Seleccionar los hechos y evidencias relevantes para el documento</td></tr>
+<tr><td class="">Informacion Calculada</td><td class="">Recuentos, periodos, comprobaciones, resumenes e indicadores derivados</td><td class="">Mostrar criterio y origen; separar estimaciones de datos declarables</td></tr>
+</tbody></table></div>
+<p>Un documento puede combinar estos tipos. Las discrepancias entre una importacion y un registro particular deben señalarse para revision, no ocultarse ni resolverse alterando silenciosamente el dato de origen.</p>
+<h2 id="3-familias-de-documentos-posibles">3. Familias de documentos posibles</h2>
+<p>Las siguientes son opciones de producto, no afirmaciones de validez para un tramite concreto. Las primeras plantillas se elegiran con ganaderos y asesores segun los procedimientos realmente utilizados.</p>
+<div class="table-scroll"><table><thead><tr><th scope="col">Familia propuesta</th><th scope="col">Datos aprovechables</th><th scope="col">Resultado esperado</th></tr></thead><tbody>
+<tr><td class="">Relaciones e informes de animales</td><td class="">Censo, fechas, estado y movimientos disponibles</td><td class="">Listado filtrado o anexo con datos contrastables</td></tr>
+<tr><td class="">Formularios o solicitudes seleccionados</td><td class="">Campos oficiales y particulares exigidos por la plantilla</td><td class="">Borrador cumplimentado y lista de campos pendientes</td></tr>
+<tr><td class="">Expedientes de incidencias de finca o animal</td><td class="">Descripcion, fecha, lugar, informante, fotos y actuaciones</td><td class="">Relacion de hechos y anexos de evidencia</td></tr>
+<tr><td class="">Informes para asesores o revisiones</td><td class="">Historico y calculos pertinentes</td><td class="">Resumen con criterios, periodo y fuentes</td></tr>
+<tr><td class="">Justificacion de actuaciones</td><td class="">Tareas y acciones efectivamente documentadas</td><td class="">Relacion de actuaciones y evidencias disponibles</td></tr>
+</tbody></table></div>
+<p>El sistema solo incorporaria datos que existan y sean pertinentes. No inventaria tratamientos, partos, movimientos, firmas o actuaciones ausentes.</p>
+<h2 id="4-flujo-propuesto">4. Flujo propuesto</h2>
+<figure class="diagram"><div class="diagram-tools"><span>Diagrama · desplázate para explorar</span><button type="button" data-zoom="out" aria-label="Reducir diagrama">−</button><button type="button" data-zoom="reset">Ajustar</button><button type="button" data-zoom="in" aria-label="Ampliar diagrama">+</button></div><div class="diagram-scroll"><pre class="mermaid">flowchart TB
+    T[&quot;Elegir documento, plantilla y periodo&quot;] --&gt; O[&quot;Seleccionar informacion Oficial&quot;]
+    T --&gt; P[&quot;Seleccionar informacion Particular&quot;]
+    O --&gt; C[&quot;Comprobaciones y campos Calculados&quot;]
+    P --&gt; C
+    C --&gt; Q[&quot;Detectar datos faltantes, discrepancias y campos estimados&quot;]
+    Q --&gt; B[&quot;Preparar borrador y anexos con fuentes&quot;]
+    B --&gt; R[&quot;Ganadero y/o asesor revisan y completan&quot;]
+    R --&gt; E[&quot;Exportar documento revisado&quot;]
+    E --&gt; A[&quot;Archivar version, datos utilizados y revision&quot;]
+    E --&gt; S[&quot;Presentacion posterior por el canal correspondiente&quot;]</pre></div><details><summary>Ver definición del diagrama</summary><pre>flowchart TB
+    T[&quot;Elegir documento, plantilla y periodo&quot;] --&gt; O[&quot;Seleccionar informacion Oficial&quot;]
+    T --&gt; P[&quot;Seleccionar informacion Particular&quot;]
+    O --&gt; C[&quot;Comprobaciones y campos Calculados&quot;]
+    P --&gt; C
+    C --&gt; Q[&quot;Detectar datos faltantes, discrepancias y campos estimados&quot;]
+    Q --&gt; B[&quot;Preparar borrador y anexos con fuentes&quot;]
+    B --&gt; R[&quot;Ganadero y/o asesor revisan y completan&quot;]
+    R --&gt; E[&quot;Exportar documento revisado&quot;]
+    E --&gt; A[&quot;Archivar version, datos utilizados y revision&quot;]
+    E --&gt; S[&quot;Presentacion posterior por el canal correspondiente&quot;]</pre></details></figure>
+<p>Preparar y exportar un documento es distinto de presentarlo. La integracion futura con un canal oficial necesitaria requisitos propios de formato, acceso, firma y envio; no se presume que CowsIA la tenga actualmente.</p>
+<h2 id="5-papel-de-la-ia">5. Papel de la IA</h2>
+<p>La IA puede ayudar a elegir una plantilla, localizar los registros pertinentes, redactar resumenes de hechos y explicar campos pendientes. Los valores numericos y las comprobaciones deben proceder de calculos verificables; las instrucciones del tramite y las versiones de plantillas deben quedar identificadas.</p>
+<p>El asistente conversacional podria recibir «Prepara un informe de estas incidencias para mi asesor» y devolver un borrador revisable con anexos. El ganadero veria que datos se han usado y que informacion falta antes de aprobar su uso.</p>
+<p>Las propuestas basadas en decisiones y sucesos pasados pueden orientar la preparacion, pero no sustituyen datos que deba confirmar el usuario. Las fotografias sirven como evidencias seleccionadas; una interpretacion IA no convierte una hipotesis en un hecho administrativo.</p>
+<h2 id="6-modelo-de-negocio-y-clientes">6. Modelo de negocio y clientes</h2>
+<p>Se propone un modulo documental por explotacion, paquetes de plantillas y configuracion para asesores o cooperativas. Pueden añadirse servicios de implantacion y adaptacion de formatos, y consumo IA cuando se utilice para elaboracion. No se fijan precios ni ingresos acreditados.</p>
+<p>El ganadero obtiene menor esfuerzo de preparacion; el asesor recibe informacion organizada; la cooperativa puede definir procesos comunes para explotaciones autorizadas. Las revisiones, configuracion y mantenimiento de plantillas deben costearse dentro del servicio.</p>
+<p>La conectividad LoRaWAN/RFID aporta informacion Particular cuando este integrada; el chat facilita consultas y preparacion; el modulo documental transforma informacion disponible en borradores. Las tres lineas se complementan sin depender de que todos los modulos se desarrollen a la vez.</p>
+<h2 id="7-primer-piloto">7. Primer piloto</h2>
+<p>Elegir con un asesor una o dos familias documentales concretas y trabajar con ejemplos de referencia. Definir campos, datos requeridos, periodo, anexos y criterios de revision antes de automatizar.</p>
+<div class="table-scroll"><table><thead><tr><th scope="col">Etapa</th><th scope="col">Entregable</th><th scope="col">Comprobacion</th></tr></thead><tbody>
+<tr><td class="">Seleccion de plantilla</td><td class="">Documento objetivo y requisitos identificados</td><td class="">El asesor confirma campos y formato de referencia</td></tr>
+<tr><td class="">Mapeo de informacion</td><td class="">Relacion de campos y fuentes Oficial/Particular/Calculada</td><td class="">Cada valor tiene origen y tratamiento definidos</td></tr>
+<tr><td class="">Elaboracion</td><td class="">Borrador y lista de ausencias o discrepancias</td><td class="">Coincide con un ejemplo preparado manualmente</td></tr>
+<tr><td class="">Revision</td><td class="">Documento corregido y revisado</td><td class="">No incorpora hechos o valores inventados</td></tr>
+<tr><td class="">Exportacion y archivo</td><td class="">Version revisada y referencia a datos usados</td><td class="">Puede reconstruirse que se preparo y con que informacion</td></tr>
+</tbody></table></div>
+<p>Indicadores: tiempo de preparacion, campos completados correctamente, datos que el usuario debe volver a introducir, correcciones, ausencia de valores inventados y utilidad para el asesor. La aceptacion por un organismo solo puede afirmarse si se comprueba para el procedimiento correspondiente.</p>
+<h2 id="8-mensaje-para-inversores-y-promotores">8. Mensaje para inversores y promotores</h2>
+<p>CowsIA propone reutilizar la informacion que ya importa, registra y calcula para reducir carga burocratica. Esta expansion amplía el valor para el ganadero y el asesor, y abre un modulo comercial recurrente. Su viabilidad se demostrara con plantillas concretas, calidad de datos, ahorro de tiempo y costes de mantenimiento.</p><nav class="pager" aria-label="Anterior y siguiente"><a href="CowsIA_asistente_IA_contextual.html">← Asistente IA y chat móvil</a><a href="CowsIA_negocio_hardware_LoRaWAN_RFID.html">Negocio LoRaWAN y RFID →</a></nav></article><details class="toc" open><summary>En este documento</summary><nav aria-label="Apartados"><a class="level-2" href="#1-propuesta">1. Propuesta</a><a class="level-2" href="#2-las-tres-fuentes-de-informacion">2. Las tres fuentes de informacion</a><a class="level-2" href="#3-familias-de-documentos-posibles">3. Familias de documentos posibles</a><a class="level-2" href="#4-flujo-propuesto">4. Flujo propuesto</a><a class="level-2" href="#5-papel-de-la-ia">5. Papel de la IA</a><a class="level-2" href="#6-modelo-de-negocio-y-clientes">6. Modelo de negocio y clientes</a><a class="level-2" href="#7-primer-piloto">7. Primer piloto</a><a class="level-2" href="#8-mensaje-para-inversores-y-promotores">8. Mensaje para inversores y promotores</a></nav></details></div>
+<footer>CowsIA · Materiales preparados el 6 de octubre de 2026 · <a href="index.html">Volver al índice</a></footer></main></div></body></html>

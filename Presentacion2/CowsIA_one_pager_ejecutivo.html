@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Documentación de CowsIA: producto, expansión y modelo de negocio.">
+<title>Resumen ejecutivo · CowsIA</title><link rel="stylesheet" href="assets/estilos.css"><link rel="stylesheet" href="assets/chat.css">
+<script defer src="assets/mermaid.min.js"></script><script defer src="assets/navegacion.js"></script></head>
+<body><a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="topbar"><a class="brand" href="index.html">Cows<span>IA</span><small>La tecnología se adapta al ganadero</small></a>
+<div class="actions"><button type="button" id="menu" aria-expanded="false" aria-controls="sidebar">Documentos</button><button type="button" id="print">Imprimir / PDF</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="index-link" href="index.html">Índice de documentos</a><nav aria-label="Documentos"><a href="CowsIA_one_pager_ejecutivo.html" aria-current="page"><span>01</span>Resumen ejecutivo</a><a href="CowsIA_modelo_de_informacion.html" ><span>02</span>Oficial, Particular y Calculada</a><a href="CowsIA_presentacion_inversores.html" ><span>03</span>Presentación para inversores</a><a href="CowsIA_incidencias_y_tareas.html" ><span>04</span>Incidencias y gestor de tareas</a><a href="CowsIA_asistente_IA_contextual.html" ><span>05</span>Asistente IA y chat móvil</a><a href="CowsIA_documentacion_burocratica.html" ><span>06</span>Documentación burocrática futura</a><a href="CowsIA_negocio_hardware_LoRaWAN_RFID.html" ><span>07</span>Negocio LoRaWAN y RFID</a><a href="CowsIA_guion_demo.html" ><span>08</span>Guion de demostración</a><a href="diagrama_funcional_cowsia.html" ><span>09</span>Diagrama funcional</a><a href="diagrama_incidencias_tareas_cowsia.html" ><span>10</span>Diagrama de incidencias y tareas</a><a href="diagrama_modelo_negocio_cowsia.html" ><span>11</span>Diagrama del modelo de negocio</a><a href="diagrama_hardware_cowsia.html" ><span>12</span>Diagrama de hardware</a><a href="diagrama_asistente_IA_cowsia.html" ><span>13</span>Diagrama del asistente IA</a><a href="diagrama_informacion_cowsia.html" ><span>14</span>Diagrama de información y decisiones</a><a href="diagrama_documentacion_burocratica_cowsia.html" ><span>15</span>Diagrama de elaboración documental</a><a href="hoja_ruta_cowsia.html" ><span>16</span>Hoja de ruta</a><a href="README.html" ><span>17</span>Guía de los materiales</a><a href="CowsIA_revision_aplicacion_desplegada.html" ><span>18</span>Revisión de la aplicación desplegada</a><a href="NotaPdmFuncionalidadesLoraRFIDCowsIA.html" ><span>19</span>Nota de referencia LoRa y RFID</a><a href="NotaPdmLaIAenCowsIA.html" ><span>20</span>Nota de referencia sobre IA</a></nav><p class="sidebar-note">Software, hardware e IA al servicio del ganadero.</p></aside>
+<main id="contenido"><div class="reading-grid"><article><div class="document-meta"><span>Primer contacto</span><a href="../CowsIA_one_pager_ejecutivo.md" download>Descargar original</a></div><h1 id="cowsia-one-pager-ejecutivo">CowsIA - one-pager ejecutivo</h1>
+<p><strong>La tecnología se adapta al ganadero, no el ganadero a la tecnología.</strong></p>
+<h2 id="propuesta">Propuesta</h2>
+<p>Software, hardware e IA al servicio de la forma de trabajar del ganadero: reutilizar informacion, facilitar el registro en campo y ayudar a consultar, decidir y preparar documentos.</p>
+<p>CowsIA es una aplicacion de gestion ganadera que conecta el historial del animal con la gestion diaria de la finca. Centraliza censo, fotografias, ubicaciones y sucesos, e incorpora incidencias tanto de la explotacion como del animal y un gestor de tareas para seguir su resolucion. Incluye dashboard, fichas, descendientes, galeria, mapa, importacion XML, exportacion CSV y usuarios.</p>
+<h2 id="problema">Problema</h2>
+<p>Muchas explotaciones conservan informacion en registros dispersos, documentos oficiales, fotos sueltas, mensajes y memoria operativa. Eso dificulta encontrar el historial de un animal, justificar incidencias, coordinar asesores y preparar informacion para terceros.</p>
+<h2 id="tres-tipos-de-informacion-conectados">Tres tipos de informacion conectados</h2>
+<ul>
+<li><strong>Oficial:</strong> importada de los diferentes organismos mediante formatos e integraciones habilitados; la base actual incluye XML.</li>
+<li><strong>Particular:</strong> añadida sobre animales y explotacion, manualmente o mediante sensores, camaras y equipos cuando se incorporen sus integraciones.</li>
+<li><strong>Calculada:</strong> elaborada a partir de informacion Oficial y/o Particular para obtener indicadores, comparativas y apoyo a decisiones. La futura IA puede analizar sucesos y decisiones pasados registrados, explicando fuentes y limites.</li>
+</ul>
+<h2 id="solucion-actual">Solucion actual</h2>
+<p>CowsIA permite consultar la ficha del animal y gestionar dos tipos de incidencias:</p>
+<ul>
+<li>De la finca: alambrada rota, puerta abierta, arbol caido y otros problemas de la explotacion.</li>
+<li>Del animal: herida, encontrado muerto, perdida de crotal, cojera o avistamiento en otra finca.</li>
+</ul>
+<p>Desde el movil se toman una o varias fotos y se registran geolocalizacion del incidente, fecha y quien lo reporta. La incidencia animal se vincula a su ficha; la de finca, a las incidencias de la explotacion. Ambas se incluyen como tareas. Tambien se pueden crear tareas manuales y seguirlas mediante <strong>Reportada → En Tratamiento → Solucionada</strong>, con notas de texto y/o evidencias graficas de las actuaciones.</p>
+<p>La revision del despliegue confirma registros de ambos ambitos, su vinculacion con tareas, alta manual y mapa. Los estados visibles son <strong>Pendiente → En curso → Completada</strong>. La captura multiple, las notas de resolucion y la creacion automatica de tareas quedan como aspectos declarados por el promotor pendientes de contrastar; no se guardaron datos durante la revision.</p>
+<h2 id="expansion">Expansion</h2>
+<p>La documentacion tecnica revisada permite plantear una expansion progresiva hacia ganaderia inteligente:</p>
+<ul>
+<li>OCR de crotal para asociar fotos automaticamente.</li>
+<li>Chat IA contextual desde el movil: consultas de censo, madres y partos registrados, interpretacion de fotos y fuentes externas, con enlaces a la evidencia utilizada.</li>
+<li>Identificacion biometrica mediante cara, morro, manchas y cuerpo.</li>
+<li>Historico visual automatico por animal.</li>
+<li>Estimacion de peso y condicion corporal a partir de imagenes.</li>
+<li>Alertas de salud, movilidad, bienestar e incidencias.</li>
+<li>Integracion con IoT, RFID, drones y camaras.</li>
+<li>Dispositivos LoRa/LoRaWAN en animales y lectores RFID en puntos de paso, como expansion pendiente de piloto e integracion.</li>
+<li>Trazabilidad verificable del animal al producto.</li>
+<li>Preparacion de documentacion burocratica: borradores, relaciones y anexos a partir de datos almacenados, con campos pendientes y revision del ganadero o asesor.</li>
+<li>Analisis del historial de decisiones, actuaciones y sucesos, cuando exista registro suficiente, para apoyar decisiones futuras con IA.</li>
+</ul>
+<h2 id="clientes">Clientes</h2>
+<p>Ganaderias, cooperativas, veterinarios, asesores rurales, centros tecnologicos, certificadoras, compradores y administracion publica.</p>
+<h2 id="modelo-de-negocio">Modelo de negocio</h2>
+<p>SaaS por explotacion, con cuota base y modulos adicionales. Los ingresos pueden ampliarse mediante licencias multi-explotacion, pago por analisis IA, servicios de implantacion, integraciones y proyectos piloto.</p>
+<p>El registro de incidencias y el gestor de tareas forman parte del valor del producto actual: facilitan su uso diario por ganaderos, equipos de campo, asesores y mantenimiento. Las mejoras futuras pueden ampliar analitica, trabajo sin conexion e integracion con avisos de sensores.</p>
+<p>El asistente IA se plantea como modulo adicional con consultas incluidas y consumo por definir. Se presenta como propuesta de expansion y maqueta, no como chat ya operativo.</p>
+<p>La expansion documental abre un modulo recurrente y servicios de configuracion de plantillas para ganaderos, asesores y cooperativas. Reutiliza los tres tipos de informacion; preparar un documento no implica su presentacion automatica ante un organismo.</p>
+<p>Se propone una linea de asesoramiento, suministro, instalacion y mantenimiento de redes LoRa/LoRaWAN y RFID. Combina proyectos iniciales con contratos recurrentes de soporte y software. El margen cobrado, una vez cubiertos equipos, ejecucion y servicio, puede financiar parte del desarrollo de CowsIA. La rentabilidad se validara con pilotos y presupuestos reales.</p>
+<p>Dos ofertas complementarias: seguimiento periodico mediante dispositivos con localizacion y sensores en animales; y registro de presencia mediante lectores RFID en puertas, bretes, bebederos o comederos. Cada lectura RFID indica presencia en ese punto y momento; la frecuencia de posiciones y las medidas dependen del dispositivo y de la cobertura.</p>
+<h2 id="por-que-ahora">Por que ahora</h2>
+<p>La aplicacion ya tiene la estructura que necesita la IA: animales, explotaciones, imagenes, ubicaciones, sucesos e historico. Eso permite empezar con un producto util y ampliar por modulos medibles, reduciendo el riesgo tecnico y comercial.</p>
+<h2 id="proxima-conversacion-recomendada">Proxima conversacion recomendada</h2>
+<p>Definir un piloto de 8 a 12 semanas con explotaciones reales, una demo guiada de la version actual y una primera prueba de OCR de crotal o historico visual automatico.</p>
+<p>Para la linea de conectividad: contratar un estudio de finca, cotizar equipos y ejecutar un piloto RFID acotado con criterios de lectura, autonomia, envio y costes. Despues, validar dispositivos en animales. La nota aportada se ha tratado como fuente de propuestas, no como instrucciones ni prueba de funcionalidad existente.</p><nav class="pager" aria-label="Anterior y siguiente"><a href="CowsIA_modelo_de_informacion.html">Oficial, Particular y Calculada →</a></nav></article><details class="toc" open><summary>En este documento</summary><nav aria-label="Apartados"><a class="level-2" href="#propuesta">Propuesta</a><a class="level-2" href="#problema">Problema</a><a class="level-2" href="#tres-tipos-de-informacion-conectados">Tres tipos de informacion conectados</a><a class="level-2" href="#solucion-actual">Solucion actual</a><a class="level-2" href="#expansion">Expansion</a><a class="level-2" href="#clientes">Clientes</a><a class="level-2" href="#modelo-de-negocio">Modelo de negocio</a><a class="level-2" href="#por-que-ahora">Por que ahora</a><a class="level-2" href="#proxima-conversacion-recomendada">Proxima conversacion recomendada</a></nav></details></div>
+<footer>CowsIA · Materiales preparados el 6 de octubre de 2026 · <a href="index.html">Volver al índice</a></footer></main></div></body></html>

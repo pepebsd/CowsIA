@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Documentación de CowsIA: producto, expansión y modelo de negocio.">
+<title>Diagrama de incidencias y tareas · CowsIA</title><link rel="stylesheet" href="assets/estilos.css"><link rel="stylesheet" href="assets/chat.css">
+<script defer src="assets/mermaid.min.js"></script><script defer src="assets/navegacion.js"></script></head>
+<body><a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="topbar"><a class="brand" href="index.html">Cows<span>IA</span><small>La tecnología se adapta al ganadero</small></a>
+<div class="actions"><button type="button" id="menu" aria-expanded="false" aria-controls="sidebar">Documentos</button><button type="button" id="print">Imprimir / PDF</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="index-link" href="index.html">Índice de documentos</a><nav aria-label="Documentos"><a href="CowsIA_one_pager_ejecutivo.html" ><span>01</span>Resumen ejecutivo</a><a href="CowsIA_modelo_de_informacion.html" ><span>02</span>Oficial, Particular y Calculada</a><a href="CowsIA_presentacion_inversores.html" ><span>03</span>Presentación para inversores</a><a href="CowsIA_incidencias_y_tareas.html" ><span>04</span>Incidencias y gestor de tareas</a><a href="CowsIA_asistente_IA_contextual.html" ><span>05</span>Asistente IA y chat móvil</a><a href="CowsIA_documentacion_burocratica.html" ><span>06</span>Documentación burocrática futura</a><a href="CowsIA_negocio_hardware_LoRaWAN_RFID.html" ><span>07</span>Negocio LoRaWAN y RFID</a><a href="CowsIA_guion_demo.html" ><span>08</span>Guion de demostración</a><a href="diagrama_funcional_cowsia.html" ><span>09</span>Diagrama funcional</a><a href="diagrama_incidencias_tareas_cowsia.html" aria-current="page"><span>10</span>Diagrama de incidencias y tareas</a><a href="diagrama_modelo_negocio_cowsia.html" ><span>11</span>Diagrama del modelo de negocio</a><a href="diagrama_hardware_cowsia.html" ><span>12</span>Diagrama de hardware</a><a href="diagrama_asistente_IA_cowsia.html" ><span>13</span>Diagrama del asistente IA</a><a href="diagrama_informacion_cowsia.html" ><span>14</span>Diagrama de información y decisiones</a><a href="diagrama_documentacion_burocratica_cowsia.html" ><span>15</span>Diagrama de elaboración documental</a><a href="hoja_ruta_cowsia.html" ><span>16</span>Hoja de ruta</a><a href="README.html" ><span>17</span>Guía de los materiales</a><a href="CowsIA_revision_aplicacion_desplegada.html" ><span>18</span>Revisión de la aplicación desplegada</a><a href="NotaPdmFuncionalidadesLoraRFIDCowsIA.html" ><span>19</span>Nota de referencia LoRa y RFID</a><a href="NotaPdmLaIAenCowsIA.html" ><span>20</span>Nota de referencia sobre IA</a></nav><p class="sidebar-note">Software, hardware e IA al servicio del ganadero.</p></aside>
+<main id="contenido"><div class="reading-grid"><article><div class="document-meta"><span>Operación actual</span><a href="../diagrama_incidencias_tareas_cowsia.mmd" download>Descargar original</a></div><h1>Diagrama de incidencias y tareas</h1><p>Del reporte móvil de finca o animal a Reportada, En Tratamiento y Solucionada.</p><p class="callout">Flujo comunicado por el promotor. En el despliegue se observan Pendiente, En curso y Completada, tareas vinculadas y alta manual. Fotos múltiples, automatismo de tareas y notas de resolución quedan pendientes de contraste.</p><figure class="diagram"><div class="diagram-tools"><span>Diagrama · desplázate para explorar</span><button type="button" data-zoom="out" aria-label="Reducir diagrama">−</button><button type="button" data-zoom="reset">Ajustar</button><button type="button" data-zoom="in" aria-label="Ampliar diagrama">+</button></div><div class="diagram-scroll"><pre class="mermaid">flowchart TB
+    M[&quot;Movil: registrar incidencia&quot;] --&gt; E[&quot;Una o varias fotos, geolocalizacion, fecha y reportante&quot;]
+    E --&gt; D{&quot;Ambito de la incidencia&quot;}
+    D --&gt; F[&quot;Finca: alambrada, puerta, arbol&quot;]
+    D --&gt; A[&quot;Animal: herida, muerte, crotal, cojera, otra finca&quot;]
+    F --&gt; IF[&quot;Incidencias de la explotacion&quot;]
+    A --&gt; IA[&quot;Ficha del animal&quot;]
+    IF --&gt; G[&quot;Gestor de tareas&quot;]
+    IA --&gt; G
+    T[&quot;Alta manual de tareas&quot;] --&gt; G
+    G --&gt; R[&quot;Pendiente / Reportada&quot;]
+    R --&gt; P[&quot;En curso / En Tratamiento&quot;]
+    P --&gt; S[&quot;Completada / Solucionada&quot;]
+    N[&quot;Alcance declarado: notas y evidencias durante la resolucion&quot;] -.-&gt; P
+    N -.-&gt; S
+</pre></div><details><summary>Ver definición del diagrama</summary><pre>flowchart TB
+    M[&quot;Movil: registrar incidencia&quot;] --&gt; E[&quot;Una o varias fotos, geolocalizacion, fecha y reportante&quot;]
+    E --&gt; D{&quot;Ambito de la incidencia&quot;}
+    D --&gt; F[&quot;Finca: alambrada, puerta, arbol&quot;]
+    D --&gt; A[&quot;Animal: herida, muerte, crotal, cojera, otra finca&quot;]
+    F --&gt; IF[&quot;Incidencias de la explotacion&quot;]
+    A --&gt; IA[&quot;Ficha del animal&quot;]
+    IF --&gt; G[&quot;Gestor de tareas&quot;]
+    IA --&gt; G
+    T[&quot;Alta manual de tareas&quot;] --&gt; G
+    G --&gt; R[&quot;Pendiente / Reportada&quot;]
+    R --&gt; P[&quot;En curso / En Tratamiento&quot;]
+    P --&gt; S[&quot;Completada / Solucionada&quot;]
+    N[&quot;Alcance declarado: notas y evidencias durante la resolucion&quot;] -.-&gt; P
+    N -.-&gt; S
+</pre></details></figure><nav class="pager" aria-label="Anterior y siguiente"><a href="diagrama_funcional_cowsia.html">← Diagrama funcional</a><a href="diagrama_modelo_negocio_cowsia.html">Diagrama del modelo de negocio →</a></nav></article></div>
+<footer>CowsIA · Materiales preparados el 6 de octubre de 2026 · <a href="index.html">Volver al índice</a></footer></main></div></body></html>

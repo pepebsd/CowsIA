@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Documentación de CowsIA: producto, expansión y modelo de negocio.">
+<title>Diagrama del asistente IA · CowsIA</title><link rel="stylesheet" href="assets/estilos.css"><link rel="stylesheet" href="assets/chat.css">
+<script defer src="assets/mermaid.min.js"></script><script defer src="assets/navegacion.js"></script></head>
+<body><a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="topbar"><a class="brand" href="index.html">Cows<span>IA</span><small>La tecnología se adapta al ganadero</small></a>
+<div class="actions"><button type="button" id="menu" aria-expanded="false" aria-controls="sidebar">Documentos</button><button type="button" id="print">Imprimir / PDF</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="index-link" href="index.html">Índice de documentos</a><nav aria-label="Documentos"><a href="CowsIA_one_pager_ejecutivo.html" ><span>01</span>Resumen ejecutivo</a><a href="CowsIA_modelo_de_informacion.html" ><span>02</span>Oficial, Particular y Calculada</a><a href="CowsIA_presentacion_inversores.html" ><span>03</span>Presentación para inversores</a><a href="CowsIA_incidencias_y_tareas.html" ><span>04</span>Incidencias y gestor de tareas</a><a href="CowsIA_asistente_IA_contextual.html" ><span>05</span>Asistente IA y chat móvil</a><a href="CowsIA_documentacion_burocratica.html" ><span>06</span>Documentación burocrática futura</a><a href="CowsIA_negocio_hardware_LoRaWAN_RFID.html" ><span>07</span>Negocio LoRaWAN y RFID</a><a href="CowsIA_guion_demo.html" ><span>08</span>Guion de demostración</a><a href="diagrama_funcional_cowsia.html" ><span>09</span>Diagrama funcional</a><a href="diagrama_incidencias_tareas_cowsia.html" ><span>10</span>Diagrama de incidencias y tareas</a><a href="diagrama_modelo_negocio_cowsia.html" ><span>11</span>Diagrama del modelo de negocio</a><a href="diagrama_hardware_cowsia.html" ><span>12</span>Diagrama de hardware</a><a href="diagrama_asistente_IA_cowsia.html" aria-current="page"><span>13</span>Diagrama del asistente IA</a><a href="diagrama_informacion_cowsia.html" ><span>14</span>Diagrama de información y decisiones</a><a href="diagrama_documentacion_burocratica_cowsia.html" ><span>15</span>Diagrama de elaboración documental</a><a href="hoja_ruta_cowsia.html" ><span>16</span>Hoja de ruta</a><a href="README.html" ><span>17</span>Guía de los materiales</a><a href="CowsIA_revision_aplicacion_desplegada.html" ><span>18</span>Revisión de la aplicación desplegada</a><a href="NotaPdmFuncionalidadesLoraRFIDCowsIA.html" ><span>19</span>Nota de referencia LoRa y RFID</a><a href="NotaPdmLaIAenCowsIA.html" ><span>20</span>Nota de referencia sobre IA</a></nav><p class="sidebar-note">Software, hardware e IA al servicio del ganadero.</p></aside>
+<main id="contenido"><div class="reading-grid"><article><div class="document-meta"><span>Expansión propuesta</span><a href="../diagrama_asistente_IA_cowsia.mmd" download>Descargar original</a></div><h1>Diagrama del asistente IA</h1><p>Contexto de la explotación, fuentes y respuestas verificables del chat propuesto.</p><p class="callout">Propuesta de expansión. Las fechas y las integraciones deben validarse mediante presupuesto y pilotos.</p><figure class="diagram"><div class="diagram-tools"><span>Diagrama · desplázate para explorar</span><button type="button" data-zoom="out" aria-label="Reducir diagrama">−</button><button type="button" data-zoom="reset">Ajustar</button><button type="button" data-zoom="in" aria-label="Ampliar diagrama">+</button></div><div class="diagram-scroll"><pre class="mermaid">flowchart TB
+    U[&quot;Usuario: pregunta y/o fotografia desde el movil&quot;] --&gt; C[&quot;Chat IA propuesto&quot;]
+    C --&gt; P[&quot;Permisos y contexto de la explotacion&quot;]
+    P --&gt; D[&quot;Censo, fichas, sucesos, incidencias y tareas&quot;]
+    C --&gt; X[&quot;Fuentes externas cuando sean pertinentes&quot;]
+    D --&gt; R[&quot;Respuesta con criterios, registros y limitaciones&quot;]
+    X --&gt; R
+    R --&gt; F[&quot;Abrir fichas y contrastar evidencias&quot;]
+    R --&gt; A[&quot;Propuesta de anotacion o tarea&quot;]
+    A --&gt; V[&quot;Revision y confirmacion del usuario&quot;]
+    V --&gt; G[&quot;Guardar mediante funciones autorizadas de CowsIA&quot;]
+    D --&gt; I[&quot;Oficial, Particular y Calculada con origen identificable&quot;]
+    I --&gt; R
+    R --&gt; B[&quot;Futuro: preparar borradores burocraticos&quot;]
+    B --&gt; V
+    H[&quot;Decisiones y sucesos historicos registrados&quot;] --&gt; R
+</pre></div><details><summary>Ver definición del diagrama</summary><pre>flowchart TB
+    U[&quot;Usuario: pregunta y/o fotografia desde el movil&quot;] --&gt; C[&quot;Chat IA propuesto&quot;]
+    C --&gt; P[&quot;Permisos y contexto de la explotacion&quot;]
+    P --&gt; D[&quot;Censo, fichas, sucesos, incidencias y tareas&quot;]
+    C --&gt; X[&quot;Fuentes externas cuando sean pertinentes&quot;]
+    D --&gt; R[&quot;Respuesta con criterios, registros y limitaciones&quot;]
+    X --&gt; R
+    R --&gt; F[&quot;Abrir fichas y contrastar evidencias&quot;]
+    R --&gt; A[&quot;Propuesta de anotacion o tarea&quot;]
+    A --&gt; V[&quot;Revision y confirmacion del usuario&quot;]
+    V --&gt; G[&quot;Guardar mediante funciones autorizadas de CowsIA&quot;]
+    D --&gt; I[&quot;Oficial, Particular y Calculada con origen identificable&quot;]
+    I --&gt; R
+    R --&gt; B[&quot;Futuro: preparar borradores burocraticos&quot;]
+    B --&gt; V
+    H[&quot;Decisiones y sucesos historicos registrados&quot;] --&gt; R
+</pre></details></figure><nav class="pager" aria-label="Anterior y siguiente"><a href="diagrama_hardware_cowsia.html">← Diagrama de hardware</a><a href="diagrama_informacion_cowsia.html">Diagrama de información y decisiones →</a></nav></article></div>
+<footer>CowsIA · Materiales preparados el 6 de octubre de 2026 · <a href="index.html">Volver al índice</a></footer></main></div></body></html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Documentación de CowsIA: producto, expansión y modelo de negocio.">
+<title>Diagrama del modelo de negocio · CowsIA</title><link rel="stylesheet" href="assets/estilos.css"><link rel="stylesheet" href="assets/chat.css">
+<script defer src="assets/mermaid.min.js"></script><script defer src="assets/navegacion.js"></script></head>
+<body><a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="topbar"><a class="brand" href="index.html">Cows<span>IA</span><small>La tecnología se adapta al ganadero</small></a>
+<div class="actions"><button type="button" id="menu" aria-expanded="false" aria-controls="sidebar">Documentos</button><button type="button" id="print">Imprimir / PDF</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="index-link" href="index.html">Índice de documentos</a><nav aria-label="Documentos"><a href="CowsIA_one_pager_ejecutivo.html" ><span>01</span>Resumen ejecutivo</a><a href="CowsIA_modelo_de_informacion.html" ><span>02</span>Oficial, Particular y Calculada</a><a href="CowsIA_presentacion_inversores.html" ><span>03</span>Presentación para inversores</a><a href="CowsIA_incidencias_y_tareas.html" ><span>04</span>Incidencias y gestor de tareas</a><a href="CowsIA_asistente_IA_contextual.html" ><span>05</span>Asistente IA y chat móvil</a><a href="CowsIA_documentacion_burocratica.html" ><span>06</span>Documentación burocrática futura</a><a href="CowsIA_negocio_hardware_LoRaWAN_RFID.html" ><span>07</span>Negocio LoRaWAN y RFID</a><a href="CowsIA_guion_demo.html" ><span>08</span>Guion de demostración</a><a href="diagrama_funcional_cowsia.html" ><span>09</span>Diagrama funcional</a><a href="diagrama_incidencias_tareas_cowsia.html" ><span>10</span>Diagrama de incidencias y tareas</a><a href="diagrama_modelo_negocio_cowsia.html" aria-current="page"><span>11</span>Diagrama del modelo de negocio</a><a href="diagrama_hardware_cowsia.html" ><span>12</span>Diagrama de hardware</a><a href="diagrama_asistente_IA_cowsia.html" ><span>13</span>Diagrama del asistente IA</a><a href="diagrama_informacion_cowsia.html" ><span>14</span>Diagrama de información y decisiones</a><a href="diagrama_documentacion_burocratica_cowsia.html" ><span>15</span>Diagrama de elaboración documental</a><a href="hoja_ruta_cowsia.html" ><span>16</span>Hoja de ruta</a><a href="README.html" ><span>17</span>Guía de los materiales</a><a href="CowsIA_revision_aplicacion_desplegada.html" ><span>18</span>Revisión de la aplicación desplegada</a><a href="NotaPdmFuncionalidadesLoraRFIDCowsIA.html" ><span>19</span>Nota de referencia LoRa y RFID</a><a href="NotaPdmLaIAenCowsIA.html" ><span>20</span>Nota de referencia sobre IA</a></nav><p class="sidebar-note">Software, hardware e IA al servicio del ganadero.</p></aside>
+<main id="contenido"><div class="reading-grid"><article><div class="document-meta"><span>Diagrama</span><a href="../diagrama_modelo_negocio_cowsia.mmd" download>Descargar original</a></div><h1>Diagrama del modelo de negocio</h1><p>Clientes, valor, ingresos y reinversión en desarrollo.</p><p class="callout">La gestión de incidencias y tareas forma parte del valor actual. Los módulos futuros, los servicios y la reinversión son propuestas comerciales por validar.</p><figure class="diagram"><div class="diagram-tools"><span>Diagrama · desplázate para explorar</span><button type="button" data-zoom="out" aria-label="Reducir diagrama">−</button><button type="button" data-zoom="reset">Ajustar</button><button type="button" data-zoom="in" aria-label="Ampliar diagrama">+</button></div><div class="diagram-scroll"><pre class="mermaid">flowchart TB
+    P[&quot;CowsIA&quot;]
+    L[&quot;La tecnologia se adapta al ganadero&quot;] --&gt; P
+
+    subgraph CLIENTES[&quot;Clientes&quot;]
+        C1[&quot;Ganaderias&quot;]
+        C2[&quot;Cooperativas&quot;]
+        C3[&quot;Veterinarios y asesores&quot;]
+        C4[&quot;Centros tecnologicos&quot;]
+        C5[&quot;Certificadoras y compradores&quot;]
+        C6[&quot;Administracion publica&quot;]
+        C7[&quot;Instaladores y distribuidores: socios de canal&quot;]
+        C8[&quot;Equipos de campo y mantenimiento de fincas&quot;]
+    end
+
+    subgraph VALOR[&quot;Valor entregado&quot;]
+        V1[&quot;Registro visual por animal&quot;]
+        V2[&quot;Incidencias de finca y animal: evidencia movil&quot;]
+        V7[&quot;Gestor de tareas: estados, notas y resolucion&quot;]
+        V8[&quot;Propuesta: chat IA con contexto de la explotacion&quot;]
+        V9[&quot;Oficial, Particular y Calculada: apoyo a decisiones&quot;]
+        V10[&quot;Futuro: documentacion burocratica desde datos almacenados&quot;]
+        V3[&quot;Mapas e informes&quot;]
+        V4[&quot;IA sobre imagenes&quot;]
+        V5[&quot;Trazabilidad verificable&quot;]
+        V6[&quot;Red de finca, sensores y puntos RFID: propuesta&quot;]
+    end
+
+    subgraph INGRESOS[&quot;Ingresos&quot;]
+        I1[&quot;SaaS por explotacion&quot;]
+        I2[&quot;Tramos por animal activo&quot;]
+        I3[&quot;Modulos IA&quot;]
+        I4[&quot;Licencia multi-explotacion&quot;]
+        I5[&quot;Implantacion e integraciones&quot;]
+        I6[&quot;Pilotos tecnologicos&quot;]
+        I7[&quot;Estudio y asesoramiento de hardware&quot;]
+        I8[&quot;Suministro e instalacion&quot;]
+        I9[&quot;Mantenimiento y supervision recurrentes&quot;]
+        I10[&quot;Propuesta: suscripcion y consumo de asistente IA&quot;]
+        I11[&quot;Propuesta: modulo documental y configuracion de plantillas&quot;]
+    end
+
+    CLIENTES --&gt; P
+    P --&gt; VALOR
+    VALOR --&gt; INGRESOS
+    INGRESOS --&gt; COSTES[&quot;Cubrir equipos, ejecucion y soporte&quot;]
+    COSTES --&gt; CAJA[&quot;Margen cobrado y caja libre&quot;]
+    CAJA --&gt; DESARROLLO[&quot;Reinversion parcial en desarrollo CowsIA&quot;]
+    DESARROLLO --&gt; P
+
+</pre></div><details><summary>Ver definición del diagrama</summary><pre>flowchart TB
+    P[&quot;CowsIA&quot;]
+    L[&quot;La tecnologia se adapta al ganadero&quot;] --&gt; P
+
+    subgraph CLIENTES[&quot;Clientes&quot;]
+        C1[&quot;Ganaderias&quot;]
+        C2[&quot;Cooperativas&quot;]
+        C3[&quot;Veterinarios y asesores&quot;]
+        C4[&quot;Centros tecnologicos&quot;]
+        C5[&quot;Certificadoras y compradores&quot;]
+        C6[&quot;Administracion publica&quot;]
+        C7[&quot;Instaladores y distribuidores: socios de canal&quot;]
+        C8[&quot;Equipos de campo y mantenimiento de fincas&quot;]
+    end
+
+    subgraph VALOR[&quot;Valor entregado&quot;]
+        V1[&quot;Registro visual por animal&quot;]
+        V2[&quot;Incidencias de finca y animal: evidencia movil&quot;]
+        V7[&quot;Gestor de tareas: estados, notas y resolucion&quot;]
+        V8[&quot;Propuesta: chat IA con contexto de la explotacion&quot;]
+        V9[&quot;Oficial, Particular y Calculada: apoyo a decisiones&quot;]
+        V10[&quot;Futuro: documentacion burocratica desde datos almacenados&quot;]
+        V3[&quot;Mapas e informes&quot;]
+        V4[&quot;IA sobre imagenes&quot;]
+        V5[&quot;Trazabilidad verificable&quot;]
+        V6[&quot;Red de finca, sensores y puntos RFID: propuesta&quot;]
+    end
+
+    subgraph INGRESOS[&quot;Ingresos&quot;]
+        I1[&quot;SaaS por explotacion&quot;]
+        I2[&quot;Tramos por animal activo&quot;]
+        I3[&quot;Modulos IA&quot;]
+        I4[&quot;Licencia multi-explotacion&quot;]
+        I5[&quot;Implantacion e integraciones&quot;]
+        I6[&quot;Pilotos tecnologicos&quot;]
+        I7[&quot;Estudio y asesoramiento de hardware&quot;]
+        I8[&quot;Suministro e instalacion&quot;]
+        I9[&quot;Mantenimiento y supervision recurrentes&quot;]
+        I10[&quot;Propuesta: suscripcion y consumo de asistente IA&quot;]
+        I11[&quot;Propuesta: modulo documental y configuracion de plantillas&quot;]
+    end
+
+    CLIENTES --&gt; P
+    P --&gt; VALOR
+    VALOR --&gt; INGRESOS
+    INGRESOS --&gt; COSTES[&quot;Cubrir equipos, ejecucion y soporte&quot;]
+    COSTES --&gt; CAJA[&quot;Margen cobrado y caja libre&quot;]
+    CAJA --&gt; DESARROLLO[&quot;Reinversion parcial en desarrollo CowsIA&quot;]
+    DESARROLLO --&gt; P
+
+</pre></details></figure><nav class="pager" aria-label="Anterior y siguiente"><a href="diagrama_incidencias_tareas_cowsia.html">← Diagrama de incidencias y tareas</a><a href="diagrama_hardware_cowsia.html">Diagrama de hardware →</a></nav></article></div>
+<footer>CowsIA · Materiales preparados el 6 de octubre de 2026 · <a href="index.html">Volver al índice</a></footer></main></div></body></html>

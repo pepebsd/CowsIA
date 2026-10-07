@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Documentación de CowsIA: producto, expansión y modelo de negocio.">
+<title>Diagrama funcional · CowsIA</title><link rel="stylesheet" href="assets/estilos.css"><link rel="stylesheet" href="assets/chat.css">
+<script defer src="assets/mermaid.min.js"></script><script defer src="assets/navegacion.js"></script></head>
+<body><a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="topbar"><a class="brand" href="index.html">Cows<span>IA</span><small>La tecnología se adapta al ganadero</small></a>
+<div class="actions"><button type="button" id="menu" aria-expanded="false" aria-controls="sidebar">Documentos</button><button type="button" id="print">Imprimir / PDF</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="index-link" href="index.html">Índice de documentos</a><nav aria-label="Documentos"><a href="CowsIA_one_pager_ejecutivo.html" ><span>01</span>Resumen ejecutivo</a><a href="CowsIA_modelo_de_informacion.html" ><span>02</span>Oficial, Particular y Calculada</a><a href="CowsIA_presentacion_inversores.html" ><span>03</span>Presentación para inversores</a><a href="CowsIA_incidencias_y_tareas.html" ><span>04</span>Incidencias y gestor de tareas</a><a href="CowsIA_asistente_IA_contextual.html" ><span>05</span>Asistente IA y chat móvil</a><a href="CowsIA_documentacion_burocratica.html" ><span>06</span>Documentación burocrática futura</a><a href="CowsIA_negocio_hardware_LoRaWAN_RFID.html" ><span>07</span>Negocio LoRaWAN y RFID</a><a href="CowsIA_guion_demo.html" ><span>08</span>Guion de demostración</a><a href="diagrama_funcional_cowsia.html" aria-current="page"><span>09</span>Diagrama funcional</a><a href="diagrama_incidencias_tareas_cowsia.html" ><span>10</span>Diagrama de incidencias y tareas</a><a href="diagrama_modelo_negocio_cowsia.html" ><span>11</span>Diagrama del modelo de negocio</a><a href="diagrama_hardware_cowsia.html" ><span>12</span>Diagrama de hardware</a><a href="diagrama_asistente_IA_cowsia.html" ><span>13</span>Diagrama del asistente IA</a><a href="diagrama_informacion_cowsia.html" ><span>14</span>Diagrama de información y decisiones</a><a href="diagrama_documentacion_burocratica_cowsia.html" ><span>15</span>Diagrama de elaboración documental</a><a href="hoja_ruta_cowsia.html" ><span>16</span>Hoja de ruta</a><a href="README.html" ><span>17</span>Guía de los materiales</a><a href="CowsIA_revision_aplicacion_desplegada.html" ><span>18</span>Revisión de la aplicación desplegada</a><a href="NotaPdmFuncionalidadesLoraRFIDCowsIA.html" ><span>19</span>Nota de referencia LoRa y RFID</a><a href="NotaPdmLaIAenCowsIA.html" ><span>20</span>Nota de referencia sobre IA</a></nav><p class="sidebar-note">Software, hardware e IA al servicio del ganadero.</p></aside>
+<main id="contenido"><div class="reading-grid"><article><div class="document-meta"><span>Diagrama</span><a href="../diagrama_funcional_cowsia.mmd" download>Descargar original</a></div><h1>Diagrama funcional</h1><p>Funcionalidad actual y posibles ampliaciones de CowsIA.</p><p class="callout">El diagrama distingue el producto actual y el alcance comunicado por el promotor de la expansión propuesta. La revisión del despliegue recoge diferencias de etiquetas y capacidades pendientes de contraste.</p><figure class="diagram"><div class="diagram-tools"><span>Diagrama · desplázate para explorar</span><button type="button" data-zoom="out" aria-label="Reducir diagrama">−</button><button type="button" data-zoom="reset">Ajustar</button><button type="button" data-zoom="in" aria-label="Ampliar diagrama">+</button></div><div class="diagram-scroll"><pre class="mermaid">flowchart LR
+    subgraph ACTUAL[&quot;CowsIA actual&quot;]
+        A1[&quot;Usuarios y explotaciones&quot;]
+        A2[&quot;Importacion XML&quot;]
+        A3[&quot;Censo de animales&quot;]
+        A4[&quot;Ficha individual&quot;]
+        A5[&quot;Fotografias&quot;]
+        A6[&quot;Ubicaciones&quot;]
+        A7[&quot;Sucesos del animal&quot;]
+        A8[&quot;Incidencias de finca: fotos, lugar, fecha y reportante&quot;]
+        A11[&quot;Incidencias del animal: fotos, lugar, fecha y reportante&quot;]
+        A12[&quot;Gestor de tareas y alta manual&quot;]
+        A13[&quot;Pendiente → En curso → Completada&quot;]
+        A14[&quot;Alcance declarado: notas y evidencias de resolucion&quot;]
+        A9[&quot;Dashboard&quot;]
+        A10[&quot;CSV&quot;]
+    end
+
+    A1 --&gt; A3
+    A2 --&gt; A3
+    A3 --&gt; A4
+    A4 --&gt; A5
+    A4 --&gt; A6
+    A4 --&gt; A7
+    A3 --&gt; A9
+    A8 --&gt; A9
+    A4 --&gt; A11
+    A8 --&gt; A12
+    A11 --&gt; A12
+    A12 --&gt; A13
+    A13 --&gt; A14
+    A3 --&gt; A10
+
+    subgraph EXPANSION[&quot;Expansion propuesta&quot;]
+        B1[&quot;OCR de crotal&quot;]
+        B2[&quot;Identificacion biometrica&quot;]
+        B3[&quot;Historico visual automatico&quot;]
+        B4[&quot;Peso estimado&quot;]
+        B5[&quot;Condicion corporal&quot;]
+        B6[&quot;Alertas de salud y bienestar&quot;]
+        B7[&quot;LoRaWAN: dispositivos en animales y lectores RFID&quot;]
+        B8[&quot;Drones y camaras fijas&quot;]
+        B9[&quot;Trazabilidad blockchain&quot;]
+        B10[&quot;Informes para terceros&quot;]
+        B11[&quot;Chat IA contextual: datos, fotos y fuentes externas&quot;]
+        B12[&quot;Documentacion burocratica desde datos almacenados&quot;]
+        B13[&quot;Analisis IA de decisiones y sucesos pasados&quot;]
+    end
+
+    A5 --&gt; B1
+    A5 --&gt; B2
+    A5 --&gt; B3
+    B3 --&gt; B4
+    B3 --&gt; B5
+    B5 --&gt; B6
+    A6 --&gt; B7
+    B7 --&gt; A7
+    B7 --&gt; B6
+    A8 --&gt; B8
+    A4 --&gt; B9
+    A9 --&gt; B10
+    A4 --&gt; B11
+    A5 --&gt; B11
+    A8 --&gt; B11
+    A12 --&gt; B11
+    A2 --&gt; B12
+    A4 --&gt; B12
+    A8 --&gt; B12
+    A9 --&gt; B12
+    A7 --&gt; B13
+    A12 --&gt; B13
+    B13 --&gt; B11
+
+</pre></div><details><summary>Ver definición del diagrama</summary><pre>flowchart LR
+    subgraph ACTUAL[&quot;CowsIA actual&quot;]
+        A1[&quot;Usuarios y explotaciones&quot;]
+        A2[&quot;Importacion XML&quot;]
+        A3[&quot;Censo de animales&quot;]
+        A4[&quot;Ficha individual&quot;]
+        A5[&quot;Fotografias&quot;]
+        A6[&quot;Ubicaciones&quot;]
+        A7[&quot;Sucesos del animal&quot;]
+        A8[&quot;Incidencias de finca: fotos, lugar, fecha y reportante&quot;]
+        A11[&quot;Incidencias del animal: fotos, lugar, fecha y reportante&quot;]
+        A12[&quot;Gestor de tareas y alta manual&quot;]
+        A13[&quot;Pendiente → En curso → Completada&quot;]
+        A14[&quot;Alcance declarado: notas y evidencias de resolucion&quot;]
+        A9[&quot;Dashboard&quot;]
+        A10[&quot;CSV&quot;]
+    end
+
+    A1 --&gt; A3
+    A2 --&gt; A3
+    A3 --&gt; A4
+    A4 --&gt; A5
+    A4 --&gt; A6
+    A4 --&gt; A7
+    A3 --&gt; A9
+    A8 --&gt; A9
+    A4 --&gt; A11
+    A8 --&gt; A12
+    A11 --&gt; A12
+    A12 --&gt; A13
+    A13 --&gt; A14
+    A3 --&gt; A10
+
+    subgraph EXPANSION[&quot;Expansion propuesta&quot;]
+        B1[&quot;OCR de crotal&quot;]
+        B2[&quot;Identificacion biometrica&quot;]
+        B3[&quot;Historico visual automatico&quot;]
+        B4[&quot;Peso estimado&quot;]
+        B5[&quot;Condicion corporal&quot;]
+        B6[&quot;Alertas de salud y bienestar&quot;]
+        B7[&quot;LoRaWAN: dispositivos en animales y lectores RFID&quot;]
+        B8[&quot;Drones y camaras fijas&quot;]
+        B9[&quot;Trazabilidad blockchain&quot;]
+        B10[&quot;Informes para terceros&quot;]
+        B11[&quot;Chat IA contextual: datos, fotos y fuentes externas&quot;]
+        B12[&quot;Documentacion burocratica desde datos almacenados&quot;]
+        B13[&quot;Analisis IA de decisiones y sucesos pasados&quot;]
+    end
+
+    A5 --&gt; B1
+    A5 --&gt; B2
+    A5 --&gt; B3
+    B3 --&gt; B4
+    B3 --&gt; B5
+    B5 --&gt; B6
+    A6 --&gt; B7
+    B7 --&gt; A7
+    B7 --&gt; B6
+    A8 --&gt; B8
+    A4 --&gt; B9
+    A9 --&gt; B10
+    A4 --&gt; B11
+    A5 --&gt; B11
+    A8 --&gt; B11
+    A12 --&gt; B11
+    A2 --&gt; B12
+    A4 --&gt; B12
+    A8 --&gt; B12
+    A9 --&gt; B12
+    A7 --&gt; B13
+    A12 --&gt; B13
+    B13 --&gt; B11
+
+</pre></details></figure><nav class="pager" aria-label="Anterior y siguiente"><a href="CowsIA_guion_demo.html">← Guion de demostración</a><a href="diagrama_incidencias_tareas_cowsia.html">Diagrama de incidencias y tareas →</a></nav></article></div>
+<footer>CowsIA · Materiales preparados el 6 de octubre de 2026 · <a href="index.html">Volver al índice</a></footer></main></div></body></html>

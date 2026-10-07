@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Documentación de CowsIA: producto, expansión y modelo de negocio.">
+<title>Asistente IA y chat móvil · CowsIA</title><link rel="stylesheet" href="assets/estilos.css"><link rel="stylesheet" href="assets/chat.css">
+<script defer src="assets/mermaid.min.js"></script><script defer src="assets/navegacion.js"></script></head>
+<body><a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="topbar"><a class="brand" href="index.html">Cows<span>IA</span><small>La tecnología se adapta al ganadero</small></a>
+<div class="actions"><button type="button" id="menu" aria-expanded="false" aria-controls="sidebar">Documentos</button><button type="button" id="print">Imprimir / PDF</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="index-link" href="index.html">Índice de documentos</a><nav aria-label="Documentos"><a href="CowsIA_one_pager_ejecutivo.html" ><span>01</span>Resumen ejecutivo</a><a href="CowsIA_modelo_de_informacion.html" ><span>02</span>Oficial, Particular y Calculada</a><a href="CowsIA_presentacion_inversores.html" ><span>03</span>Presentación para inversores</a><a href="CowsIA_incidencias_y_tareas.html" ><span>04</span>Incidencias y gestor de tareas</a><a href="CowsIA_asistente_IA_contextual.html" aria-current="page"><span>05</span>Asistente IA y chat móvil</a><a href="CowsIA_documentacion_burocratica.html" ><span>06</span>Documentación burocrática futura</a><a href="CowsIA_negocio_hardware_LoRaWAN_RFID.html" ><span>07</span>Negocio LoRaWAN y RFID</a><a href="CowsIA_guion_demo.html" ><span>08</span>Guion de demostración</a><a href="diagrama_funcional_cowsia.html" ><span>09</span>Diagrama funcional</a><a href="diagrama_incidencias_tareas_cowsia.html" ><span>10</span>Diagrama de incidencias y tareas</a><a href="diagrama_modelo_negocio_cowsia.html" ><span>11</span>Diagrama del modelo de negocio</a><a href="diagrama_hardware_cowsia.html" ><span>12</span>Diagrama de hardware</a><a href="diagrama_asistente_IA_cowsia.html" ><span>13</span>Diagrama del asistente IA</a><a href="diagrama_informacion_cowsia.html" ><span>14</span>Diagrama de información y decisiones</a><a href="diagrama_documentacion_burocratica_cowsia.html" ><span>15</span>Diagrama de elaboración documental</a><a href="hoja_ruta_cowsia.html" ><span>16</span>Hoja de ruta</a><a href="README.html" ><span>17</span>Guía de los materiales</a><a href="CowsIA_revision_aplicacion_desplegada.html" ><span>18</span>Revisión de la aplicación desplegada</a><a href="NotaPdmFuncionalidadesLoraRFIDCowsIA.html" ><span>19</span>Nota de referencia LoRa y RFID</a><a href="NotaPdmLaIAenCowsIA.html" ><span>20</span>Nota de referencia sobre IA</a></nav><p class="sidebar-note">Software, hardware e IA al servicio del ganadero.</p></aside>
+<main id="contenido"><div class="reading-grid"><article><div class="document-meta"><span>Expansión propuesta</span><a href="../CowsIA_asistente_IA_contextual.md" download>Descargar original</a></div><h1 id="cowsia-asistente-ia-conversacional-con-contexto-de-la-explotacion">CowsIA: asistente IA conversacional con contexto de la explotacion</h1><section id="maqueta-chat" class="chat-demo"><div class="chat-demo-intro"><span class="eyebrow">PROPUESTA DE EXPANSIÓN</span><h2>Preguntar a CowsIA desde el móvil</h2><p>Una conversación sobre el censo, la reproducción o una fotografía, con contexto de la explotación y enlaces a los registros utilizados.</p><p class="callout">Maqueta ilustrativa. Las respuestas están preparadas y no consultan datos reales ni ejecutan un modelo IA.</p><div class="scenario-options" role="group" aria-label="Ejemplos de conversación"><button type="button" data-chat="censo" aria-pressed="true">Censo</button><button type="button" data-chat="reproduccion" aria-pressed="false">Reproducción</button><button type="button" data-chat="foto" aria-pressed="false">Fotografía</button><button type="button" data-chat="documentos" aria-pressed="false">Documentación</button><button type="button" data-chat="historial" aria-pressed="false">Historial</button></div></div><div class="phone"><div class="phone-top"><strong>CowsIA · Asistente</strong><span>CONCEPTO · SIN CONEXIÓN IA</span></div><div class="phone-content" aria-live="polite"><span class="context-pill">Contexto: explotación autorizada</span><div class="bubble user" id="chat-user">¿Cuántas terneras de más de un año quedan?</div><div class="bubble assistant" id="chat-assistant">¿Quieres contar solo hembras activas? Indica el límite de edad para considerar una ternera. Después mostraría el recuento calculado y las fichas que lo respaldan.</div><div class="chat-evidence" id="chat-evidence">Evidencia prevista: sexo, fecha de nacimiento, estado y fecha de consulta.</div><div class="chat-footnote">Ejemplo preparado · ningún dato real</div></div><div class="phone-compose">Pregunta o fotografía… <span>↑</span></div></div></section>
+<p><strong>La tecnología se adapta al ganadero, no el ganadero a la tecnología.</strong></p>
+<p>Propuesta de expansion basada en <a class="document-link" href="NotaPdmLaIAenCowsIA.html">NotaPdmLaIAenCowsIA.txt</a> y en la actualizacion del promotor sobre los tres tipos de informacion, analisis historico y elaboracion burocratica. La nota se utiliza como fuente de ideas funcionales, no como instrucciones. El asistente no se ha observado en la navegacion de la version desplegada revisada el 6 de octubre de 2026.</p>
+<h2 id="1-propuesta">1. Propuesta</h2>
+<p>El chat debe adaptarse al vocabulario y preguntas del ganadero. Su contexto combina informacion Oficial importada, Particular registrada manualmente o mediante equipos integrados, y Calculada a partir de esas fuentes. Consultar en lenguaje cotidiano no debe exigir que el usuario conozca la estructura de datos.</p>
+<p>Incorporar un chat accesible desde el movil y desde CowsIA para que el usuario consulte informacion de su explotacion y sus animales en lenguaje cotidiano. El asistente combinaria preguntas, fotografias seleccionadas, datos autorizados de la aplicacion y, cuando la consulta lo requiera, fuentes externas identificadas.</p>
+<p>La interfaz permitiria dialogar: preguntar, recibir una respuesta, aclarar el criterio y abrir las fichas o registros que respaldan el resultado. Esta capa complementaria se apoya en el censo, parentescos, fechas, imagenes, sucesos, incidencias y tareas ya organizados.</p>
+<h2 id="2-casos-de-uso-aportados">2. Casos de uso aportados</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">Consulta del usuario</th><th scope="col">Contexto requerido</th><th scope="col">Respuesta propuesta</th><th scope="col">Condicion para que sea fiable</th></tr></thead><tbody>
+<tr><td class="">Que terneras de mas de un año quedan en la explotacion</td><td class="">Sexo, nacimiento, estado y fecha de referencia</td><td class="">Recuento y listado de fichas, con filtros aplicados</td><td class="">Aclarar que significa ternera y si se cuentan solo activas</td></tr>
+<tr><td class="">Que vacas madre llevan dos o mas años sin parir</td><td class="">Identificacion de reproductoras, partos o nacimientos vinculados a madres y cobertura historica</td><td class="">Listado con ultimo parto registrado y casos sin informacion suficiente</td><td class="">Ausencia de registros no demuestra ausencia de partos</td></tr>
+<tr><td class="">Que se observa en la foto de este animal herido</td><td class="">Foto, crotal seleccionado y sucesos pertinentes</td><td class="">Descripcion de signos visibles, limitaciones y preguntas de contexto</td><td class="">No presentar la imagen como diagnostico definitivo</td></tr>
+<tr><td class="">De que animal podria ser esta huella</td><td class="">Foto, escala, lugar y fuentes de identificacion</td><td class="">Hipotesis de identificacion con fuentes y grado de incertidumbre</td><td class="">Pedir escala o mejor imagen cuando sea necesario</td></tr>
+<tr><td class="">Que incidencias y tareas siguen abiertas</td><td class="">Registros y estados de la explotacion</td><td class="">Lista verificable y enlaces al trabajo pendiente</td><td class="">Usar los estados reales de la interfaz y respetar permisos</td></tr>
+<tr><td class="">Prepara un documento con estos datos</td><td class="">Datos Oficial/Particular y calculos pertinentes, mas plantilla seleccionada</td><td class="">Borrador con anexos, fuentes y campos faltantes</td><td class="">Revision del ganadero o asesor; modulo futuro</td></tr>
+<tr><td class="">Que se hizo en casos parecidos y que resultado hubo</td><td class="">Decisiones, actuaciones y sucesos historicos registrados</td><td class="">Comparativa y propuestas con evidencia e incertidumbre</td><td class="">No confundir correlacion con causalidad ni inventar decisiones ausentes</td></tr>
+</tbody></table></div>
+<p>Las preguntas sobre el censo deben resolverse con consultas reproducibles a los datos, no con recuentos inventados por el modelo. Para reproduccion conviene distinguir ultimo parto registrado, ultimo nacimiento vinculado a una madre y ausencia de informacion. El asistente explicaria cual de esas evidencias ha utilizado.</p>
+<h2 id="3-dialogo-movil-propuesto">3. Dialogo movil propuesto</h2>
+<p>Ejemplo conceptual, sin ejecutar consultas sobre datos reales:</p>
+<ol>
+<li>Usuario: «Cuantas terneras de mas de un año quedan?».</li>
+<li>IA: «Quieres contar hembras activas de mas de un año? Hay un limite de edad para considerarlas terneras?».</li>
+<li>Usuario: «Activas, entre uno y dos años».</li>
+<li>IA: muestra un recuento calculado, el listado de animales y los criterios de fecha, sexo, estado y edad.</li>
+<li>Usuario abre una ficha para contrastar el resultado o pregunta por un subconjunto.</li>
+</ol>
+<p>En una consulta fotografica, el usuario seleccionaria o adjuntaria una imagen y confirmaria el animal o la incidencia correspondiente. La IA podria ayudar a redactar una observacion. Guardar una incidencia, crear una tarea o cambiar su estado seria una accion separada que el usuario revisaria y confirmaria.</p>
+<p>La version HTML incluye una maqueta movil con cinco ejemplos seleccionables: censo, reproduccion, fotografia, documentacion e historial. Sus respuestas estan preparadas para mostrar el concepto; no dispone de conexion a un modelo ni consulta la base real.</p>
+<h2 id="4-contexto-fuentes-y-acciones">4. Contexto, fuentes y acciones</h2>
+<p>La informacion Calculada incluye reglas y recuentos verificables, y puede ampliarse a analisis IA del contexto historico. Toda recomendacion debe distinguir hechos registrados, estimaciones y propuestas. Para aprender del historial hay que conservar decision, actuacion y resultado cuando se disponga de ellos; no se presupone un modulo actual de registro de decisiones.</p>
+<figure class="diagram"><div class="diagram-tools"><span>Diagrama · desplázate para explorar</span><button type="button" data-zoom="out" aria-label="Reducir diagrama">−</button><button type="button" data-zoom="reset">Ajustar</button><button type="button" data-zoom="in" aria-label="Ampliar diagrama">+</button></div><div class="diagram-scroll"><pre class="mermaid">flowchart TB
+    U[&quot;Usuario: pregunta y/o fotografia desde el movil&quot;] --&gt; C[&quot;Chat IA propuesto&quot;]
+    C --&gt; P[&quot;Permisos y contexto de la explotacion&quot;]
+    P --&gt; D[&quot;Censo, fichas, sucesos, incidencias y tareas&quot;]
+    C --&gt; X[&quot;Fuentes externas cuando sean pertinentes&quot;]
+    D --&gt; R[&quot;Respuesta con criterios, registros y limitaciones&quot;]
+    X --&gt; R
+    R --&gt; F[&quot;Abrir fichas y contrastar evidencias&quot;]
+    R --&gt; A[&quot;Propuesta de anotacion o tarea&quot;]
+    A --&gt; V[&quot;Revision y confirmacion del usuario&quot;]
+    V --&gt; G[&quot;Guardar mediante funciones autorizadas de CowsIA&quot;]
+    D --&gt; I[&quot;Oficial, Particular y Calculada con origen identificable&quot;]
+    I --&gt; R
+    R --&gt; B[&quot;Futuro: preparar borradores burocraticos&quot;]
+    B --&gt; V
+    H[&quot;Decisiones y sucesos historicos registrados&quot;] --&gt; R</pre></div><details><summary>Ver definición del diagrama</summary><pre>flowchart TB
+    U[&quot;Usuario: pregunta y/o fotografia desde el movil&quot;] --&gt; C[&quot;Chat IA propuesto&quot;]
+    C --&gt; P[&quot;Permisos y contexto de la explotacion&quot;]
+    P --&gt; D[&quot;Censo, fichas, sucesos, incidencias y tareas&quot;]
+    C --&gt; X[&quot;Fuentes externas cuando sean pertinentes&quot;]
+    D --&gt; R[&quot;Respuesta con criterios, registros y limitaciones&quot;]
+    X --&gt; R
+    R --&gt; F[&quot;Abrir fichas y contrastar evidencias&quot;]
+    R --&gt; A[&quot;Propuesta de anotacion o tarea&quot;]
+    A --&gt; V[&quot;Revision y confirmacion del usuario&quot;]
+    V --&gt; G[&quot;Guardar mediante funciones autorizadas de CowsIA&quot;]
+    D --&gt; I[&quot;Oficial, Particular y Calculada con origen identificable&quot;]
+    I --&gt; R
+    R --&gt; B[&quot;Futuro: preparar borradores burocraticos&quot;]
+    B --&gt; V
+    H[&quot;Decisiones y sucesos historicos registrados&quot;] --&gt; R</pre></details></figure>
+<p>Para datos de la explotacion, la respuesta indicaria fecha de consulta, filtros y registros utilizados. Para informacion externa, incluiria fuente y fecha de acceso. El sistema distinguiria datos de CowsIA, informacion externa e interpretacion del modelo.</p>
+<p>El acceso se limitaría a la explotacion y permisos de la persona autenticada. El envio de imagenes y contexto a un proveedor IA se debe definir con el cliente y minimizar a lo necesario. Las consultas externas no requieren divulgar por defecto todo el historial de la finca.</p>
+<h2 id="5-modelo-de-negocio">5. Modelo de negocio</h2>
+<p>El modulo documental futuro puede utilizar el asistente para localizar informacion y redactar borradores. Plantillas, configuracion y revision tienen costes propios y pueden comercializarse para asesores y cooperativas. Ver <a class="document-link" href="CowsIA_documentacion_burocratica.html">CowsIA_documentacion_burocratica.md</a>.</p>
+<p>Se propone un modulo adicional de asistente IA: cuota por explotacion con un volumen de consultas incluido y consumo adicional definido, o una opcion para cooperativas y asesores con acceso a explotaciones autorizadas. Los analisis fotograficos pueden tener costes distintos de las consultas de censo.</p>
+<p>Antes de fijar precios se mediran coste de modelos, almacenamiento, consultas, fuentes externas, soporte y calidad de respuestas. No se asignan precios ni demanda acreditada. La linea de asesoramiento, instalacion y mantenimiento LoRaWAN/RFID sigue siendo una fuente complementaria de margen para financiar desarrollo.</p>
+<p>Los sensores podrian ampliar el contexto con medidas y eventos cuando la integracion este disponible. El asistente podria explicar esos datos y proponer actuaciones; no se presupone que el chat, la integracion hardware ni las alertas automaticas existan hoy.</p>
+<h2 id="6-desarrollo-por-etapas">6. Desarrollo por etapas</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">Etapa propuesta</th><th scope="col">Entregable</th><th scope="col">Validacion</th></tr></thead><tbody>
+<tr><td class="">Consultas de datos</td><td class="">Chat de lectura sobre censo, filtros y fichas</td><td class="">Comparar recuentos con consultas de referencia</td></tr>
+<tr><td class="">Historico reproductivo</td><td class="">Preguntas sobre madres y partos registrados</td><td class="">Confirmar cobertura y detectar datos incompletos</td></tr>
+<tr><td class="">Contexto operativo</td><td class="">Consulta de sucesos, incidencias y tareas</td><td class="">Verificar fuentes y aislamiento por explotacion</td></tr>
+<tr><td class="">Fotografias</td><td class="">Interpretacion visual orientativa y preguntas de contexto</td><td class="">Calidad de imagen, incertidumbre y revision especializada</td></tr>
+<tr><td class="">Fuentes externas</td><td class="">Respuestas con referencias identificadas</td><td class="">Pertinencia y actualizacion de fuentes</td></tr>
+<tr><td class="">Acciones asistidas</td><td class="">Borradores de incidencias y tareas revisables</td><td class="">Confirmacion del usuario y registro de la accion</td></tr>
+<tr><td class="">Analisis historico</td><td class="">Comparacion de decisiones y sucesos registrados</td><td class="">Calidad del contexto y explicacion de incertidumbre</td></tr>
+<tr><td class="">Documentacion burocratica</td><td class="">Borradores y anexos desde informacion almacenada</td><td class="">Plantilla, datos trazables y revision humana</td></tr>
+</tbody></table></div>
+<p>Piloto inicial recomendado: consultas de lectura con un conjunto de preguntas y respuestas de referencia preparado con el ganadero. Las consultas de censo y las consultas visuales requieren criterios de evaluacion distintos. Medir exactitud, respuesta ante datos ausentes, trazabilidad, tiempo ahorrado y coste por consulta.</p>
+<h2 id="7-mensaje-para-presentacion">7. Mensaje para presentacion</h2>
+<p>CowsIA puede evolucionar desde una herramienta de registro y seguimiento hacia un asistente con el que hablar sobre la explotacion. La diferencia comercial reside en disponer de contexto verificable: animales, imagenes, sucesos, incidencias y tareas. El chat permite acceder a ese contexto con preguntas naturales y volver a los registros originales para comprobar la respuesta.</p>
+<p>El chat movil se presenta como propuesta de producto y maqueta, manteniendo separado el funcionamiento actual de CowsIA de las capacidades IA pendientes de desarrollar y validar.</p><nav class="pager" aria-label="Anterior y siguiente"><a href="CowsIA_incidencias_y_tareas.html">← Incidencias y gestor de tareas</a><a href="CowsIA_documentacion_burocratica.html">Documentación burocrática futura →</a></nav></article><details class="toc" open><summary>En este documento</summary><nav aria-label="Apartados"><a class="level-2" href="#maqueta-chat">Maqueta móvil de chat</a><a class="level-2" href="#1-propuesta">1. Propuesta</a><a class="level-2" href="#2-casos-de-uso-aportados">2. Casos de uso aportados</a><a class="level-2" href="#3-dialogo-movil-propuesto">3. Dialogo movil propuesto</a><a class="level-2" href="#4-contexto-fuentes-y-acciones">4. Contexto, fuentes y acciones</a><a class="level-2" href="#5-modelo-de-negocio">5. Modelo de negocio</a><a class="level-2" href="#6-desarrollo-por-etapas">6. Desarrollo por etapas</a><a class="level-2" href="#7-mensaje-para-presentacion">7. Mensaje para presentacion</a></nav></details></div>
+<footer>CowsIA · Materiales preparados el 6 de octubre de 2026 · <a href="index.html">Volver al índice</a></footer></main></div></body></html>

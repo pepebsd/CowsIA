@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Documentación de CowsIA: producto, expansión y modelo de negocio.">
+<title>Incidencias y gestor de tareas · CowsIA</title><link rel="stylesheet" href="assets/estilos.css"><link rel="stylesheet" href="assets/chat.css">
+<script defer src="assets/mermaid.min.js"></script><script defer src="assets/navegacion.js"></script></head>
+<body><a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="topbar"><a class="brand" href="index.html">Cows<span>IA</span><small>La tecnología se adapta al ganadero</small></a>
+<div class="actions"><button type="button" id="menu" aria-expanded="false" aria-controls="sidebar">Documentos</button><button type="button" id="print">Imprimir / PDF</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="index-link" href="index.html">Índice de documentos</a><nav aria-label="Documentos"><a href="CowsIA_one_pager_ejecutivo.html" ><span>01</span>Resumen ejecutivo</a><a href="CowsIA_modelo_de_informacion.html" ><span>02</span>Oficial, Particular y Calculada</a><a href="CowsIA_presentacion_inversores.html" ><span>03</span>Presentación para inversores</a><a href="CowsIA_incidencias_y_tareas.html" aria-current="page"><span>04</span>Incidencias y gestor de tareas</a><a href="CowsIA_asistente_IA_contextual.html" ><span>05</span>Asistente IA y chat móvil</a><a href="CowsIA_documentacion_burocratica.html" ><span>06</span>Documentación burocrática futura</a><a href="CowsIA_negocio_hardware_LoRaWAN_RFID.html" ><span>07</span>Negocio LoRaWAN y RFID</a><a href="CowsIA_guion_demo.html" ><span>08</span>Guion de demostración</a><a href="diagrama_funcional_cowsia.html" ><span>09</span>Diagrama funcional</a><a href="diagrama_incidencias_tareas_cowsia.html" ><span>10</span>Diagrama de incidencias y tareas</a><a href="diagrama_modelo_negocio_cowsia.html" ><span>11</span>Diagrama del modelo de negocio</a><a href="diagrama_hardware_cowsia.html" ><span>12</span>Diagrama de hardware</a><a href="diagrama_asistente_IA_cowsia.html" ><span>13</span>Diagrama del asistente IA</a><a href="diagrama_informacion_cowsia.html" ><span>14</span>Diagrama de información y decisiones</a><a href="diagrama_documentacion_burocratica_cowsia.html" ><span>15</span>Diagrama de elaboración documental</a><a href="hoja_ruta_cowsia.html" ><span>16</span>Hoja de ruta</a><a href="README.html" ><span>17</span>Guía de los materiales</a><a href="CowsIA_revision_aplicacion_desplegada.html" ><span>18</span>Revisión de la aplicación desplegada</a><a href="NotaPdmFuncionalidadesLoraRFIDCowsIA.html" ><span>19</span>Nota de referencia LoRa y RFID</a><a href="NotaPdmLaIAenCowsIA.html" ><span>20</span>Nota de referencia sobre IA</a></nav><p class="sidebar-note">Software, hardware e IA al servicio del ganadero.</p></aside>
+<main id="contenido"><div class="reading-grid"><article><div class="document-meta"><span>Operación actual</span><a href="../CowsIA_incidencias_y_tareas.md" download>Descargar original</a></div><h1 id="cowsia-incidencias-de-finca-incidencias-de-animales-y-gestor-de-tareas">CowsIA: incidencias de finca, incidencias de animales y gestor de tareas</h1>
+<p><strong>La tecnología se adapta al ganadero, no el ganadero a la tecnología.</strong></p>
+<p>Revision documental: 6 de octubre de 2026. Funcionalidades actuales confirmadas por el promotor, incorporadas al dossier comercial y a su version HTML.</p>
+<p>Actualizacion tras revisar el despliegue: se observaron registros de finca y animal con evidencia, tareas vinculadas, alta manual, fecha prevista y mapa. La interfaz usa <strong>Pendiente → En curso → Completada</strong>; Reportada → En Tratamiento → Solucionada describe su equivalencia funcional en el relato del promotor. Los controles revisados seleccionan una foto; el soporte de varias fotos por incidente, las notas/evidencias de resolucion y la creacion automatica al guardar siguen pendientes de contraste. Las secciones siguientes conservan el flujo completo comunicado por el promotor, con esta distincion frente a lo comprobado. Consultar <a class="document-link" href="CowsIA_revision_aplicacion_desplegada.html">CowsIA_revision_aplicacion_desplegada.md</a>.</p>
+<h2 id="1-dos-ambitos-de-incidencia">1. Dos ambitos de incidencia</h2>
+<p>Incidencias, fotos, observaciones y actuaciones pertenecen a la informacion Particular de la explotacion. Se relacionan con la identificacion Oficial del animal cuando corresponda y pueden dar lugar a informacion Calculada sobre seguimiento. Su historial aportaria contexto a futura IA y anexos a documentacion burocratica, siempre identificando que hechos se registraron realmente.</p>
+<p>CowsIA documenta hechos de campo tanto de la explotacion como de animales concretos. La diferencia determina donde se consulta la incidencia; ambos tipos se incorporan al gestor de tareas.</p>
+<div class="table-scroll"><table><thead><tr><th scope="col">Ambito</th><th scope="col">Ejemplos</th><th scope="col">Lugar de consulta</th><th scope="col">Seguimiento</th></tr></thead><tbody>
+<tr><td class="">Explotacion / finca</td><td class="">Alambrada rota, puerta abierta, arbol caido</td><td class="">Incidencias de la explotacion</td><td class="">Tarea derivada de la incidencia</td></tr>
+<tr><td class="">Animal</td><td class="">Herida, encontrado muerto, crotal caido, cojera, visto en otra finca</td><td class="">Ficha del animal correspondiente</td><td class="">Tarea derivada de la incidencia</td></tr>
+</tbody></table></div>
+<p>Una incidencia del animal conserva el contexto de su explotacion y su asociacion individual. No es simplemente una nota general de finca.</p>
+<h2 id="2-captura-desde-el-movil">2. Captura desde el movil</h2>
+<p>Para cualquiera de los dos ambitos, la persona que reporta documenta la incidencia desde el movil:</p>
+<ol>
+<li>Identifica si el hecho corresponde a la finca o a un animal concreto.</li>
+<li>Describe lo sucedido y toma una o varias fotografias.</li>
+<li>Registra la geolocalizacion del incidente.</li>
+<li>Conserva la fecha y la identidad de quien lo reporta.</li>
+<li>Guarda el registro en su contexto y lo incorpora al seguimiento como tarea.</li>
+</ol>
+<p>Las fotos aportan evidencia visual; la geolocalizacion indica donde ocurrio o se observo el hecho; la fecha lo situa en el tiempo; y el informante permite saber quien lo comunico. Un animal visto en otra finca puede tener una incidencia localizada alli sin que eso implique cambiar automaticamente su explotacion de pertenencia.</p>
+<p>La posicion de un incidente no equivale a seguimiento continuo del animal. Es una observacion en un lugar y fecha concretos. Los permisos de ubicacion del movil y el comportamiento cuando no se obtiene posicion deben contrastarse en la version actual.</p>
+<h2 id="3-gestor-de-tareas-y-estados">3. Gestor de tareas y estados</h2>
+<p>Las incidencias de finca y de animal se incluyen como tareas. Tambien se pueden crear tareas manualmente, por ejemplo revisar una puerta, sin un incidente previo.</p>
+<div class="table-scroll"><table><thead><tr><th scope="col">Estado</th><th scope="col">Significado operativo</th><th scope="col">Ejemplo</th></tr></thead><tbody>
+<tr><td class="">Reportada</td><td class="">Se ha comunicado la incidencia o creado la tarea</td><td class="">Alambrada rota documentada con fotos y ubicacion</td></tr>
+<tr><td class="">En Tratamiento</td><td class="">Se estan realizando actuaciones para atenderla</td><td class="">Reparacion en curso con una nota de intervencion</td></tr>
+<tr><td class="">Solucionada</td><td class="">Se da por resuelta la tarea</td><td class="">Reparacion finalizada y evidencia del resultado que se desee añadir</td></tr>
+</tbody></table></div>
+<p>Durante la resolucion se pueden incorporar notas de texto y/o evidencias graficas de las actuaciones, observaciones y resultado. Estas complementan las fotos y datos iniciales. En Tratamiento tambien puede describir la reparacion de una alambrada; no se limita al tratamiento sanitario de un animal.</p>
+<p>No se presupone que sean obligatorias fotos para cerrar cada tarea, que las transiciones esten bloqueadas en un orden concreto, ni que exista asignacion avanzada, vencimientos o notificaciones automaticas. Esos detalles no se han confirmado.</p>
+<h2 id="4-diagrama-del-ciclo-operativo">4. Diagrama del ciclo operativo</h2>
+<figure class="diagram"><div class="diagram-tools"><span>Diagrama · desplázate para explorar</span><button type="button" data-zoom="out" aria-label="Reducir diagrama">−</button><button type="button" data-zoom="reset">Ajustar</button><button type="button" data-zoom="in" aria-label="Ampliar diagrama">+</button></div><div class="diagram-scroll"><pre class="mermaid">flowchart TB
+    M[&quot;Movil: registrar incidencia&quot;] --&gt; E[&quot;Una o varias fotos, geolocalizacion, fecha y reportante&quot;]
+    E --&gt; D{&quot;Ambito de la incidencia&quot;}
+    D --&gt; F[&quot;Finca: alambrada, puerta, arbol&quot;]
+    D --&gt; A[&quot;Animal: herida, muerte, crotal, cojera, otra finca&quot;]
+    F --&gt; IF[&quot;Incidencias de la explotacion&quot;]
+    A --&gt; IA[&quot;Ficha del animal&quot;]
+    IF --&gt; G[&quot;Gestor de tareas&quot;]
+    IA --&gt; G
+    T[&quot;Alta manual de tareas&quot;] --&gt; G
+    G --&gt; R[&quot;Pendiente / Reportada&quot;]
+    R --&gt; P[&quot;En curso / En Tratamiento&quot;]
+    P --&gt; S[&quot;Completada / Solucionada&quot;]
+    N[&quot;Alcance declarado: notas y evidencias durante la resolucion&quot;] -.-&gt; P
+    N -.-&gt; S</pre></div><details><summary>Ver definición del diagrama</summary><pre>flowchart TB
+    M[&quot;Movil: registrar incidencia&quot;] --&gt; E[&quot;Una o varias fotos, geolocalizacion, fecha y reportante&quot;]
+    E --&gt; D{&quot;Ambito de la incidencia&quot;}
+    D --&gt; F[&quot;Finca: alambrada, puerta, arbol&quot;]
+    D --&gt; A[&quot;Animal: herida, muerte, crotal, cojera, otra finca&quot;]
+    F --&gt; IF[&quot;Incidencias de la explotacion&quot;]
+    A --&gt; IA[&quot;Ficha del animal&quot;]
+    IF --&gt; G[&quot;Gestor de tareas&quot;]
+    IA --&gt; G
+    T[&quot;Alta manual de tareas&quot;] --&gt; G
+    G --&gt; R[&quot;Pendiente / Reportada&quot;]
+    R --&gt; P[&quot;En curso / En Tratamiento&quot;]
+    P --&gt; S[&quot;Completada / Solucionada&quot;]
+    N[&quot;Alcance declarado: notas y evidencias durante la resolucion&quot;] -.-&gt; P
+    N -.-&gt; S</pre></details></figure>
+<h2 id="5-ejemplos-para-la-presentacion">5. Ejemplos para la presentacion</h2>
+<h3 id="alambrada-rota">Alambrada rota</h3>
+<p>Una persona observa la rotura, toma varias fotos y registra lugar, fecha y reportante. La incidencia se consulta en la explotacion y aparece como tarea Reportada. Al intervenir se pasa a En Tratamiento y se añaden notas o imagenes del trabajo. Al terminar se marca Solucionada y se puede añadir evidencia de la reparacion.</p>
+<h3 id="animal-que-cojea">Animal que cojea</h3>
+<p>Se identifica el animal y se documenta la cojera con fotos, posicion del avistamiento, fecha y reportante. La incidencia queda en su ficha y se sigue como tarea. Las notas y evidencias permiten consultar el reporte inicial y las actuaciones posteriores. Marcar la tarea Solucionada documenta su cierre operativo; no constituye un diagnostico automatico.</p>
+<h3 id="animal-visto-en-otra-finca">Animal visto en otra finca</h3>
+<p>Se registra la observacion sobre el animal identificado, con fotos y posicion del incidente. Su historial conserva donde y cuando se observo y quien lo reporto. La tarea documenta las actuaciones y la resolucion, sin presuponer una modificacion automatica del censo.</p>
+<h3 id="tarea-manual">Tarea manual</h3>
+<p>Se añade una revision de una puerta sin un incidente previo. Utiliza los mismos estados y admite notas de texto y/o evidencias graficas. Asi se organizan tambien actuaciones que no nacen de un problema detectado.</p>
+<h2 id="6-valor-para-clientes-y-modelo-de-negocio">6. Valor para clientes y modelo de negocio</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">Usuario o comprador</th><th scope="col">Valor actual</th><th scope="col">Oportunidad comercial</th></tr></thead><tbody>
+<tr><td class="">Ganadero y equipo de campo</td><td class="">Registrar hechos de finca y animal y consultar su resolucion</td><td class="">Suscripcion de gestion y formacion de uso</td></tr>
+<tr><td class="">Asesor o veterinario</td><td class="">Consultar incidencias individuales y actuaciones con acceso autorizado</td><td class="">Implantacion y acompañamiento de procesos</td></tr>
+<tr><td class="">Mantenimiento de fincas</td><td class="">Localizar problemas y documentar reparaciones</td><td class="">Uso del gestor y servicios de campo</td></tr>
+<tr><td class="">Cooperativa</td><td class="">Proceso comun de reporte y seguimiento</td><td class="">Licencias e implantacion; agregacion futura segun capacidades verificadas</td></tr>
+<tr><td class="">Instalador de hardware</td><td class="">Documentar revisiones e intervenciones</td><td class="">Instalacion y mantenimiento ligados al software</td></tr>
+</tbody></table></div>
+<p>La propuesta de valor actual comprende <strong>registro + evidencia + seguimiento + resolucion</strong>. La captura de incidencias y el gestor se presentan como capacidades existentes. Las tarifas y paquetes aun deben definirse; no se afirma que existan contratos pagados por estas capacidades.</p>
+<p>LoRaWAN/RFID puede complementar el flujo. Una deteccion o medida es primero un dato. Convertir automaticamente una anomalia en incidencia o tarea es una integracion futura que necesita reglas, validacion y control de duplicados. El gestor actual puede utilizarse para tareas manuales de revision o mantenimiento de equipos.</p>
+<h2 id="7-comprobacion-propuesta-para-la-nueva-demo">7. Comprobacion propuesta para la nueva demo</h2>
+<p>Usar una explotacion y animales de demostracion para contrastar el ciclo completo.</p>
+<div class="table-scroll"><table><thead><tr><th scope="col">Comprobacion</th><th scope="col">Evidencia a recoger</th><th scope="col">Estado de esta revision</th></tr></thead><tbody>
+<tr><td class="">Incidencia de finca desde movil</td><td class="">Foto, lugar, fecha y reportante</td><td class="">Formulario, registros y mapa observados; captura multiple no verificada</td></tr>
+<tr><td class="">Incidencia animal desde movil</td><td class="">Registro vinculado a la ficha correcta</td><td class="">Sucesos con foto, fecha, informante y lugar observados</td></tr>
+<tr><td class="">Incorporacion al gestor</td><td class="">Tarea vinculada a incidencia o suceso</td><td class="">Botones Crear tarea y asociacion observados; automatismo no probado</td></tr>
+<tr><td class="">Alta manual</td><td class="">Tarea sin incidencia previa</td><td class="">Formulario observado; no se guardo</td></tr>
+<tr><td class="">Cambio de estado</td><td class="">Pendiente, En curso y Completada</td><td class="">Selectores observados; no se cambiaron ni se comprobo persistencia</td></tr>
+<tr><td class="">Notas y evidencias de resolucion</td><td class="">Texto y/o imagenes de actuaciones</td><td class="">Declaradas por el promotor; controles no localizados en tarjetas revisadas</td></tr>
+</tbody></table></div>
+<p>Indicadores de piloto propuestos: incidencias por ambito, evidencia completa, tareas por estado, actuaciones documentadas y utilidad percibida. Los tiempos de resolucion o informes agregados requieren comprobar los datos disponibles; no se presentan como informes ya implementados.</p>
+<h2 id="8-fuentes-y-alcance-de-la-revision">8. Fuentes y alcance de la revision</h2>
+<p>Fuente principal de esta ampliacion: aclaracion directa del promotor sobre la version actual. Se revisaron tambien <code>cowsia.html</code>, <code>guia-cowsia.html</code>, <code>frontend/src/main.jsx</code>, <code>backend/app/models.py</code> y <code>backend/app/main.py</code>.</p>
+<p>La copia local contiene un modelo anterior. Tras recibir la direccion actual se reviso en navegador <code>http://82.29.178.156:8081/</code> usando la sesion abierta por el usuario. Se inspeccionaron Dashboard, Incidencias, ficha animal y Tareas. No se guardaron registros ni se cambiaron estados.</p>
+<p>El dossier distingue ahora evidencia observada, alcance declarado por el promotor y expansion. Queda pendiente probar captura movil, varias fotos por incidente, geolocalizacion de nuevos registros, automatismo de tareas, notas y persistencia de evidencias. La revision no modifica el software y no utiliza los registros simulados como evidencia de actividad comercial real.</p><nav class="pager" aria-label="Anterior y siguiente"><a href="CowsIA_presentacion_inversores.html">← Presentación para inversores</a><a href="CowsIA_asistente_IA_contextual.html">Asistente IA y chat móvil →</a></nav></article><details class="toc" open><summary>En este documento</summary><nav aria-label="Apartados"><a class="level-2" href="#1-dos-ambitos-de-incidencia">1. Dos ambitos de incidencia</a><a class="level-2" href="#2-captura-desde-el-movil">2. Captura desde el movil</a><a class="level-2" href="#3-gestor-de-tareas-y-estados">3. Gestor de tareas y estados</a><a class="level-2" href="#4-diagrama-del-ciclo-operativo">4. Diagrama del ciclo operativo</a><a class="level-2" href="#5-ejemplos-para-la-presentacion">5. Ejemplos para la presentacion</a><a class="level-3" href="#alambrada-rota">Alambrada rota</a><a class="level-3" href="#animal-que-cojea">Animal que cojea</a><a class="level-3" href="#animal-visto-en-otra-finca">Animal visto en otra finca</a><a class="level-3" href="#tarea-manual">Tarea manual</a><a class="level-2" href="#6-valor-para-clientes-y-modelo-de-negocio">6. Valor para clientes y modelo de negocio</a><a class="level-2" href="#7-comprobacion-propuesta-para-la-nueva-demo">7. Comprobacion propuesta para la nueva demo</a><a class="level-2" href="#8-fuentes-y-alcance-de-la-revision">8. Fuentes y alcance de la revision</a></nav></details></div>
+<footer>CowsIA · Materiales preparados el 6 de octubre de 2026 · <a href="index.html">Volver al índice</a></footer></main></div></body></html>
