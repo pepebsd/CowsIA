@@ -1,157 +1,323 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Documentación de CowsIA: producto, expansión y modelo de negocio.">
-<title>Diagrama funcional · CowsIA</title><link rel="stylesheet" href="assets/estilos.css"><link rel="stylesheet" href="assets/chat.css">
-<script defer src="assets/mermaid.min.js"></script><script defer src="assets/navegacion.js"></script></head>
-<body><a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="topbar"><a class="brand" href="index.html">Cows<span>IA</span><small>La tecnología se adapta al ganadero</small></a>
-<div class="actions"><button type="button" id="menu" aria-expanded="false" aria-controls="sidebar">Documentos</button><button type="button" id="print">Imprimir / PDF</button></div></header>
-<div class="layout"><aside id="sidebar"><a class="index-link" href="index.html">Índice de documentos</a><nav aria-label="Documentos"><a href="CowsIA_one_pager_ejecutivo.html" ><span>01</span>Resumen ejecutivo</a><a href="CowsIA_modelo_de_informacion.html" ><span>02</span>Oficial, Particular y Calculada</a><a href="CowsIA_presentacion_inversores.html" ><span>03</span>Presentación para inversores</a><a href="CowsIA_incidencias_y_tareas.html" ><span>04</span>Incidencias y gestor de tareas</a><a href="CowsIA_asistente_IA_contextual.html" ><span>05</span>Asistente IA y chat móvil</a><a href="CowsIA_documentacion_burocratica.html" ><span>06</span>Documentación burocrática futura</a><a href="CowsIA_negocio_hardware_LoRaWAN_RFID.html" ><span>07</span>Negocio LoRaWAN y RFID</a><a href="CowsIA_guion_demo.html" ><span>08</span>Guion de demostración</a><a href="diagrama_funcional_cowsia.html" aria-current="page"><span>09</span>Diagrama funcional</a><a href="diagrama_incidencias_tareas_cowsia.html" ><span>10</span>Diagrama de incidencias y tareas</a><a href="diagrama_modelo_negocio_cowsia.html" ><span>11</span>Diagrama del modelo de negocio</a><a href="diagrama_hardware_cowsia.html" ><span>12</span>Diagrama de hardware</a><a href="diagrama_asistente_IA_cowsia.html" ><span>13</span>Diagrama del asistente IA</a><a href="diagrama_informacion_cowsia.html" ><span>14</span>Diagrama de información y decisiones</a><a href="diagrama_documentacion_burocratica_cowsia.html" ><span>15</span>Diagrama de elaboración documental</a><a href="hoja_ruta_cowsia.html" ><span>16</span>Hoja de ruta</a><a href="README.html" ><span>17</span>Guía de los materiales</a><a href="CowsIA_revision_aplicacion_desplegada.html" ><span>18</span>Revisión de la aplicación desplegada</a><a href="NotaPdmFuncionalidadesLoraRFIDCowsIA.html" ><span>19</span>Nota de referencia LoRa y RFID</a><a href="NotaPdmLaIAenCowsIA.html" ><span>20</span>Nota de referencia sobre IA</a></nav><p class="sidebar-note">Software, hardware e IA al servicio del ganadero.</p></aside>
-<main id="contenido"><div class="reading-grid"><article><div class="document-meta"><span>Diagrama</span><a href="../diagrama_funcional_cowsia.mmd" download>Descargar original</a></div><h1>Diagrama funcional</h1><p>Funcionalidad actual y posibles ampliaciones de CowsIA.</p><p class="callout">El diagrama distingue el producto actual y el alcance comunicado por el promotor de la expansión propuesta. La revisión del despliegue recoge diferencias de etiquetas y capacidades pendientes de contraste.</p><figure class="diagram"><div class="diagram-tools"><span>Diagrama · desplázate para explorar</span><button type="button" data-zoom="out" aria-label="Reducir diagrama">−</button><button type="button" data-zoom="reset">Ajustar</button><button type="button" data-zoom="in" aria-label="Ampliar diagrama">+</button></div><div class="diagram-scroll"><pre class="mermaid">flowchart LR
-    subgraph ACTUAL[&quot;CowsIA actual&quot;]
-        A1[&quot;Usuarios y explotaciones&quot;]
-        A2[&quot;Importacion XML&quot;]
-        A3[&quot;Censo de animales&quot;]
-        A4[&quot;Ficha individual&quot;]
-        A5[&quot;Fotografias&quot;]
-        A6[&quot;Ubicaciones&quot;]
-        A7[&quot;Sucesos del animal&quot;]
-        A8[&quot;Incidencias de finca: fotos, lugar, fecha y reportante&quot;]
-        A11[&quot;Incidencias del animal: fotos, lugar, fecha y reportante&quot;]
-        A12[&quot;Gestor de tareas y alta manual&quot;]
-        A13[&quot;Pendiente → En curso → Completada&quot;]
-        A14[&quot;Alcance declarado: notas y evidencias de resolucion&quot;]
-        A9[&quot;Dashboard&quot;]
-        A10[&quot;CSV&quot;]
-    end
-
-    A1 --&gt; A3
-    A2 --&gt; A3
-    A3 --&gt; A4
-    A4 --&gt; A5
-    A4 --&gt; A6
-    A4 --&gt; A7
-    A3 --&gt; A9
-    A8 --&gt; A9
-    A4 --&gt; A11
-    A8 --&gt; A12
-    A11 --&gt; A12
-    A12 --&gt; A13
-    A13 --&gt; A14
-    A3 --&gt; A10
-
-    subgraph EXPANSION[&quot;Expansion propuesta&quot;]
-        B1[&quot;OCR de crotal&quot;]
-        B2[&quot;Identificacion biometrica&quot;]
-        B3[&quot;Historico visual automatico&quot;]
-        B4[&quot;Peso estimado&quot;]
-        B5[&quot;Condicion corporal&quot;]
-        B6[&quot;Alertas de salud y bienestar&quot;]
-        B7[&quot;LoRaWAN: dispositivos en animales y lectores RFID&quot;]
-        B8[&quot;Drones y camaras fijas&quot;]
-        B9[&quot;Trazabilidad blockchain&quot;]
-        B10[&quot;Informes para terceros&quot;]
-        B11[&quot;Chat IA contextual: datos, fotos y fuentes externas&quot;]
-        B12[&quot;Documentacion burocratica desde datos almacenados&quot;]
-        B13[&quot;Analisis IA de decisiones y sucesos pasados&quot;]
-    end
-
-    A5 --&gt; B1
-    A5 --&gt; B2
-    A5 --&gt; B3
-    B3 --&gt; B4
-    B3 --&gt; B5
-    B5 --&gt; B6
-    A6 --&gt; B7
-    B7 --&gt; A7
-    B7 --&gt; B6
-    A8 --&gt; B8
-    A4 --&gt; B9
-    A9 --&gt; B10
-    A4 --&gt; B11
-    A5 --&gt; B11
-    A8 --&gt; B11
-    A12 --&gt; B11
-    A2 --&gt; B12
-    A4 --&gt; B12
-    A8 --&gt; B12
-    A9 --&gt; B12
-    A7 --&gt; B13
-    A12 --&gt; B13
-    B13 --&gt; B11
-
-</pre></div><details><summary>Ver definición del diagrama</summary><pre>flowchart LR
-    subgraph ACTUAL[&quot;CowsIA actual&quot;]
-        A1[&quot;Usuarios y explotaciones&quot;]
-        A2[&quot;Importacion XML&quot;]
-        A3[&quot;Censo de animales&quot;]
-        A4[&quot;Ficha individual&quot;]
-        A5[&quot;Fotografias&quot;]
-        A6[&quot;Ubicaciones&quot;]
-        A7[&quot;Sucesos del animal&quot;]
-        A8[&quot;Incidencias de finca: fotos, lugar, fecha y reportante&quot;]
-        A11[&quot;Incidencias del animal: fotos, lugar, fecha y reportante&quot;]
-        A12[&quot;Gestor de tareas y alta manual&quot;]
-        A13[&quot;Pendiente → En curso → Completada&quot;]
-        A14[&quot;Alcance declarado: notas y evidencias de resolucion&quot;]
-        A9[&quot;Dashboard&quot;]
-        A10[&quot;CSV&quot;]
-    end
-
-    A1 --&gt; A3
-    A2 --&gt; A3
-    A3 --&gt; A4
-    A4 --&gt; A5
-    A4 --&gt; A6
-    A4 --&gt; A7
-    A3 --&gt; A9
-    A8 --&gt; A9
-    A4 --&gt; A11
-    A8 --&gt; A12
-    A11 --&gt; A12
-    A12 --&gt; A13
-    A13 --&gt; A14
-    A3 --&gt; A10
-
-    subgraph EXPANSION[&quot;Expansion propuesta&quot;]
-        B1[&quot;OCR de crotal&quot;]
-        B2[&quot;Identificacion biometrica&quot;]
-        B3[&quot;Historico visual automatico&quot;]
-        B4[&quot;Peso estimado&quot;]
-        B5[&quot;Condicion corporal&quot;]
-        B6[&quot;Alertas de salud y bienestar&quot;]
-        B7[&quot;LoRaWAN: dispositivos en animales y lectores RFID&quot;]
-        B8[&quot;Drones y camaras fijas&quot;]
-        B9[&quot;Trazabilidad blockchain&quot;]
-        B10[&quot;Informes para terceros&quot;]
-        B11[&quot;Chat IA contextual: datos, fotos y fuentes externas&quot;]
-        B12[&quot;Documentacion burocratica desde datos almacenados&quot;]
-        B13[&quot;Analisis IA de decisiones y sucesos pasados&quot;]
-    end
-
-    A5 --&gt; B1
-    A5 --&gt; B2
-    A5 --&gt; B3
-    B3 --&gt; B4
-    B3 --&gt; B5
-    B5 --&gt; B6
-    A6 --&gt; B7
-    B7 --&gt; A7
-    B7 --&gt; B6
-    A8 --&gt; B8
-    A4 --&gt; B9
-    A9 --&gt; B10
-    A4 --&gt; B11
-    A5 --&gt; B11
-    A8 --&gt; B11
-    A12 --&gt; B11
-    A2 --&gt; B12
-    A4 --&gt; B12
-    A8 --&gt; B12
-    A9 --&gt; B12
-    A7 --&gt; B13
-    A12 --&gt; B13
-    B13 --&gt; B11
-
-</pre></details></figure><nav class="pager" aria-label="Anterior y siguiente"><a href="CowsIA_guion_demo.html">← Guion de demostración</a><a href="diagrama_incidencias_tareas_cowsia.html">Diagrama de incidencias y tareas →</a></nav></article></div>
-<footer>CowsIA · Materiales preparados el 6 de octubre de 2026 · <a href="index.html">Volver al índice</a></footer></main></div></body></html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Diagrama funcional de CowsIA, incluida la elaboración y cumplimentación de documentación oficial de animales y explotación.">
+<title>Diagrama funcional · CowsIA</title>
+<style>
+:root{--green:#247347;--dark:#174c31;--soft:#eaf4ee;--cream:#f7f5ef;--ink:#1c2922;--muted:#66736b;--gold:#b47a00;}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f5f7f5}
+a{color:var(--dark)}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:white;border-bottom:1px solid #dce8e0;position:sticky;top:0;z-index:5}
+.brand{font-size:1.35rem;font-weight:800;text-decoration:none;color:var(--dark)}
+.brand span{color:var(--green)} .brand small{display:block;font-size:.67rem;font-weight:600;color:var(--muted);letter-spacing:.02em}
+.actions button{border:1px solid #b8d6c4;background:white;color:var(--dark);border-radius:9px;padding:8px 12px;font-weight:700;cursor:pointer}
+.layout{max-width:1500px;margin:auto;padding:28px}
+article{background:white;border-radius:20px;padding:30px;box-shadow:0 12px 34px rgba(22,64,40,.08)}
+.meta{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--muted);font-size:.84rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+h1{font-size:clamp(2rem,4vw,3.2rem);line-height:1;margin:.45rem 0 .7rem;color:var(--dark);letter-spacing:-.035em}
+.lead{font-size:1.08rem;color:var(--muted);max-width:980px;margin:0 0 18px}
+.callout{background:var(--soft);border-left:4px solid var(--green);border-radius:12px;padding:14px 16px;margin:18px 0 22px}
+.diagram{border:1px solid #d8e5dc;border-radius:18px;background:#fbfdfb;overflow:auto;padding:18px}
+.diagram svg{width:100%;height:auto;min-width:1050px;display:block}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px;color:var(--muted);font-size:.9rem}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.dot{width:13px;height:13px;border-radius:4px;display:inline-block;border:1px solid #adc6b6;background:#eaf4ee} .dot.docs{background:#fff3d6;border-color:#d3a650}
+.note{margin:22px 0 0;color:var(--muted);font-size:.9rem}
+footer{padding:22px;text-align:center;color:#78857d;font-size:.82rem}
+@media(max-width:800px){.layout{padding:12px}article{padding:20px}.topbar{padding:12px 14px}}
+@media print{
+  body{background:white} .topbar,.actions,footer{display:none!important} .layout{max-width:none;padding:0} article{box-shadow:none;border-radius:0;padding:8mm} .diagram{overflow:visible;border:none;padding:0} .diagram svg{min-width:0;width:100%;height:auto} h1{font-size:26pt} .lead{font-size:11pt} .callout{font-size:9.5pt}
+}
+</style>
+<script>function imprimir(){window.print();}</script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="index.html">Cows<span>IA</span><small>La tecnología se adapta al ganadero</small></a><div class="actions"><button onclick="imprimir()">Imprimir / PDF</button></div></header>
+<main class="layout"><article>
+<div class="meta"><span>Diagrama funcional</span><span>CowsIA</span></div>
+<h1>Diagrama funcional</h1>
+<p class="lead">Visión integrada de la gestión de explotación y animales, incidencias, tareas, información y documentación oficial.</p>
+<p class="callout"><strong>Documentación oficial y burocrática integrada:</strong> CowsIA reutiliza la información ya almacenada de la explotación y de cada animal para ayudar a elaborar y cumplimentar documentos oficiales, dejando la revisión y validación final en manos del usuario.</p>
+<figure class="diagram"><svg width="1412pt" height="531pt"
+ viewBox="0.00 0.00 1412.20 531.20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(21.6 509.6)">
+<title>CowsIA</title>
+<g id="clust1" class="cluster">
+<title>cluster_core</title>
+<path fill="#f4faf6" stroke="#b8d6c4" stroke-width="1.4" d="M20,-8C20,-8 1349,-8 1349,-8 1355,-8 1361,-14 1361,-20 1361,-20 1361,-468 1361,-468 1361,-474 1355,-480 1349,-480 1349,-480 20,-480 20,-480 14,-480 8,-474 8,-468 8,-468 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="95.5" y="-464.8" font-family="Arial Bold" font-size="14.00" fill="#174c31">CowsIA · Flujo funcional</text>
+</g>
+<!-- A1 -->
+<g id="node1" class="node">
+<title>A1</title>
+<path fill="#eaf4ee" stroke="#2f6b4f" stroke-width="1.2" d="M92,-133C92,-133 35,-133 35,-133 29,-133 23,-127 23,-121 23,-121 23,-109 23,-109 23,-103 29,-97 35,-97 35,-97 92,-97 92,-97 98,-97 104,-103 104,-109 104,-109 104,-121 104,-121 104,-127 98,-133 92,-133"/>
+<text text-anchor="middle" x="63.5" y="-118" font-family="Arial" font-size="10.00" fill="#173d2b">Usuarios y</text>
+<text text-anchor="middle" x="63.5" y="-107" font-family="Arial" font-size="10.00" fill="#173d2b">explotaciones</text>
+</g>
+<!-- A3 -->
+<g id="node3" class="node">
+<title>A3</title>
+<path fill="#dff0e6" stroke="#2f6b4f" stroke-width="1.2" d="M251,-133C251,-133 170,-133 170,-133 164,-133 158,-127 158,-121 158,-121 158,-109 158,-109 158,-103 164,-97 170,-97 170,-97 251,-97 251,-97 257,-97 263,-103 263,-109 263,-109 263,-121 263,-121 263,-127 257,-133 251,-133"/>
+<text text-anchor="middle" x="210.5" y="-112.5" font-family="Arial" font-size="10.00" fill="#173d2b">Censo de animales</text>
+</g>
+<!-- A1&#45;&gt;A3 -->
+<g id="edge1" class="edge">
+<title>A1&#45;&gt;A3</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M104.06,-121C104.06,-121 150.95,-121 150.95,-121"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="150.95,-123.45 157.95,-121 150.95,-118.55 150.95,-123.45"/>
+</g>
+<!-- A2 -->
+<g id="node2" class="node">
+<title>A2</title>
+<path fill="#eaf4ee" stroke="#2f6b4f" stroke-width="1.2" d="M99,-64C99,-64 28,-64 28,-64 22,-64 16,-58 16,-52 16,-52 16,-40 16,-40 16,-34 22,-28 28,-28 28,-28 99,-28 99,-28 105,-28 111,-34 111,-40 111,-40 111,-52 111,-52 111,-58 105,-64 99,-64"/>
+<text text-anchor="middle" x="63.5" y="-49" font-family="Arial" font-size="10.00" fill="#173d2b">Importación XML</text>
+<text text-anchor="middle" x="63.5" y="-38" font-family="Arial" font-size="10.00" fill="#173d2b">y datos oficiales</text>
+</g>
+<!-- A2&#45;&gt;A3 -->
+<g id="edge2" class="edge">
+<title>A2&#45;&gt;A3</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M109,-64.22C109,-82.83 109,-109 109,-109 109,-109 150.97,-109 150.97,-109"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="150.97,-111.45 157.97,-109 150.97,-106.55 150.97,-111.45"/>
+</g>
+<!-- D1 -->
+<g id="node15" class="node">
+<title>D1</title>
+<path fill="#fff3d6" stroke="#b47a00" stroke-width="1.5" d="M815,-156C815,-156 722,-156 722,-156 716,-156 710,-150 710,-144 710,-144 710,-132 710,-132 710,-126 716,-120 722,-120 722,-120 815,-120 815,-120 821,-120 827,-126 827,-132 827,-132 827,-144 827,-144 827,-150 821,-156 815,-156"/>
+<text text-anchor="middle" x="768.5" y="-141" font-family="Arial" font-size="10.00" fill="#6c4a00">Documentación oficial</text>
+<text text-anchor="middle" x="768.5" y="-130" font-family="Arial" font-size="10.00" fill="#6c4a00">y burocrática</text>
+</g>
+<!-- A2&#45;&gt;D1 -->
+<g id="edge15" class="edge">
+<title>A2&#45;&gt;D1</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M107,-64.25C107,-91.76 107,-140.67 107,-140.67 107,-140.67 702.8,-140.67 702.8,-140.67"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="702.8,-143.12 709.8,-140.67 702.8,-138.22 702.8,-143.12"/>
+</g>
+<!-- A4 -->
+<g id="node4" class="node">
+<title>A4</title>
+<path fill="#dff0e6" stroke="#2f6b4f" stroke-width="1.2" d="M418.5,-199C418.5,-199 354.5,-199 354.5,-199 348.5,-199 342.5,-193 342.5,-187 342.5,-187 342.5,-175 342.5,-175 342.5,-169 348.5,-163 354.5,-163 354.5,-163 418.5,-163 418.5,-163 424.5,-163 430.5,-169 430.5,-175 430.5,-175 430.5,-187 430.5,-187 430.5,-193 424.5,-199 418.5,-199"/>
+<text text-anchor="middle" x="386.5" y="-184" font-family="Arial" font-size="10.00" fill="#173d2b">Ficha individual</text>
+<text text-anchor="middle" x="386.5" y="-173" font-family="Arial" font-size="10.00" fill="#173d2b">del animal</text>
+</g>
+<!-- A3&#45;&gt;A4 -->
+<g id="edge3" class="edge">
+<title>A3&#45;&gt;A4</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M237,-133.03C237,-152.58 237,-181 237,-181 237,-181 335.45,-181 335.45,-181"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="335.45,-183.45 342.45,-181 335.45,-178.55 335.45,-183.45"/>
+</g>
+<!-- A9 -->
+<g id="node13" class="node">
+<title>A9</title>
+<path fill="#f7fbf8" stroke="#2f6b4f" stroke-width="1.2" d="M608.5,-391C608.5,-391 564.5,-391 564.5,-391 558.5,-391 552.5,-385 552.5,-379 552.5,-379 552.5,-367 552.5,-367 552.5,-361 558.5,-355 564.5,-355 564.5,-355 608.5,-355 608.5,-355 614.5,-355 620.5,-361 620.5,-367 620.5,-367 620.5,-379 620.5,-379 620.5,-385 614.5,-391 608.5,-391"/>
+<text text-anchor="middle" x="586.5" y="-370.5" font-family="Arial" font-size="10.00" fill="#173d2b">Dashboard</text>
+</g>
+<!-- A3&#45;&gt;A9 -->
+<g id="edge8" class="edge">
+<title>A3&#45;&gt;A9</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M211,-133.12C211,-190.9 211,-367 211,-367 211,-367 545.18,-367 545.18,-367"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="545.18,-369.45 552.18,-367 545.18,-364.55 545.18,-369.45"/>
+</g>
+<!-- A10 -->
+<g id="node14" class="node">
+<title>A10</title>
+<path fill="#f7fbf8" stroke="#2f6b4f" stroke-width="1.2" d="M422.5,-133C422.5,-133 350.5,-133 350.5,-133 344.5,-133 338.5,-127 338.5,-121 338.5,-121 338.5,-109 338.5,-109 338.5,-103 344.5,-97 350.5,-97 350.5,-97 422.5,-97 422.5,-97 428.5,-97 434.5,-103 434.5,-109 434.5,-109 434.5,-121 434.5,-121 434.5,-127 428.5,-133 422.5,-133"/>
+<text text-anchor="middle" x="386.5" y="-112.5" font-family="Arial" font-size="10.00" fill="#173d2b">Exportación CSV</text>
+</g>
+<!-- A3&#45;&gt;A10 -->
+<g id="edge14" class="edge">
+<title>A3&#45;&gt;A10</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M263.31,-115C263.31,-115 331.23,-115 331.23,-115"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="331.23,-117.45 338.23,-115 331.23,-112.55 331.23,-117.45"/>
+</g>
+<!-- A3&#45;&gt;D1 -->
+<g id="edge16" class="edge">
+<title>A3&#45;&gt;D1</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M185,-133.03C185,-135.29 185,-136.83 185,-136.83 185,-136.83 702.88,-136.83 702.88,-136.83"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="702.88,-139.28 709.88,-136.83 702.88,-134.38 702.88,-139.28"/>
+</g>
+<!-- A5 -->
+<g id="node5" class="node">
+<title>A5</title>
+<path fill="#f7fbf8" stroke="#2f6b4f" stroke-width="1.2" d="M609.5,-202C609.5,-202 563.5,-202 563.5,-202 557.5,-202 551.5,-196 551.5,-190 551.5,-190 551.5,-178 551.5,-178 551.5,-172 557.5,-166 563.5,-166 563.5,-166 609.5,-166 609.5,-166 615.5,-166 621.5,-172 621.5,-178 621.5,-178 621.5,-190 621.5,-190 621.5,-196 615.5,-202 609.5,-202"/>
+<text text-anchor="middle" x="586.5" y="-181.5" font-family="Arial" font-size="10.00" fill="#173d2b">Fotografías</text>
+</g>
+<!-- A4&#45;&gt;A5 -->
+<g id="edge4" class="edge">
+<title>A4&#45;&gt;A5</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M430.89,-182.5C430.89,-182.5 544.22,-182.5 544.22,-182.5"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="544.22,-184.95 551.22,-182.5 544.22,-180.05 544.22,-184.95"/>
+</g>
+<!-- A6 -->
+<g id="node6" class="node">
+<title>A6</title>
+<path fill="#f7fbf8" stroke="#2f6b4f" stroke-width="1.2" d="M612,-265C612,-265 561,-265 561,-265 555,-265 549,-259 549,-253 549,-253 549,-241 549,-241 549,-235 555,-229 561,-229 561,-229 612,-229 612,-229 618,-229 624,-235 624,-241 624,-241 624,-253 624,-253 624,-259 618,-265 612,-265"/>
+<text text-anchor="middle" x="586.5" y="-244.5" font-family="Arial" font-size="10.00" fill="#173d2b">Ubicaciones</text>
+</g>
+<!-- A4&#45;&gt;A6 -->
+<g id="edge5" class="edge">
+<title>A4&#45;&gt;A6</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M387,-199.03C387,-218.58 387,-247 387,-247 387,-247 541.98,-247 541.98,-247"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="541.98,-249.45 548.98,-247 541.98,-244.55 541.98,-249.45"/>
+</g>
+<!-- A7 -->
+<g id="node7" class="node">
+<title>A7</title>
+<path fill="#f7fbf8" stroke="#2f6b4f" stroke-width="1.2" d="M627.5,-110C627.5,-110 545.5,-110 545.5,-110 539.5,-110 533.5,-104 533.5,-98 533.5,-98 533.5,-86 533.5,-86 533.5,-80 539.5,-74 545.5,-74 545.5,-74 627.5,-74 627.5,-74 633.5,-74 639.5,-80 639.5,-86 639.5,-86 639.5,-98 639.5,-98 639.5,-104 633.5,-110 627.5,-110"/>
+<text text-anchor="middle" x="586.5" y="-89.5" font-family="Arial" font-size="10.00" fill="#173d2b">Sucesos del animal</text>
+</g>
+<!-- A4&#45;&gt;A7 -->
+<g id="edge6" class="edge">
+<title>A4&#45;&gt;A7</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M430.64,-174.25C476.62,-174.25 542,-174.25 542,-174.25 542,-174.25 542,-117.25 542,-117.25"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="544.45,-117.25 542,-110.25 539.55,-117.25 544.45,-117.25"/>
+</g>
+<!-- A11 -->
+<g id="node9" class="node">
+<title>A11</title>
+<path fill="#f7fbf8" stroke="#2f6b4f" stroke-width="1.2" d="M651,-328C651,-328 522,-328 522,-328 516,-328 510,-322 510,-316 510,-316 510,-304 510,-304 510,-298 516,-292 522,-292 522,-292 651,-292 651,-292 657,-292 663,-298 663,-304 663,-304 663,-316 663,-316 663,-322 657,-328 651,-328"/>
+<text text-anchor="middle" x="586.5" y="-313" font-family="Arial" font-size="10.00" fill="#173d2b">Incidencias del animal</text>
+<text text-anchor="middle" x="586.5" y="-302" font-family="Arial" font-size="10.00" fill="#173d2b">foto · lugar · fecha · reportante</text>
+</g>
+<!-- A4&#45;&gt;A11 -->
+<g id="edge7" class="edge">
+<title>A4&#45;&gt;A11</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M430.87,-190.75C470.39,-190.75 522,-190.75 522,-190.75 522,-190.75 522,-284.89 522,-284.89"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="519.55,-284.89 522,-291.89 524.45,-284.89 519.55,-284.89"/>
+</g>
+<!-- A4&#45;&gt;D1 -->
+<g id="edge17" class="edge">
+<title>A4&#45;&gt;D1</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M387,-162.75C387,-153.62 387,-144.5 387,-144.5 387,-144.5 702.73,-144.5 702.73,-144.5"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="702.73,-146.95 709.73,-144.5 702.73,-142.05 702.73,-146.95"/>
+</g>
+<!-- A7&#45;&gt;D1 -->
+<g id="edge18" class="edge">
+<title>A7&#45;&gt;D1</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M632,-110.06C632,-118.41 632,-126.5 632,-126.5 632,-126.5 702.82,-126.5 702.82,-126.5"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="702.82,-128.95 709.82,-126.5 702.82,-124.05 702.82,-128.95"/>
+</g>
+<!-- A8 -->
+<g id="node8" class="node">
+<title>A8</title>
+<path fill="#f7fbf8" stroke="#2f6b4f" stroke-width="1.2" d="M451,-437C451,-437 322,-437 322,-437 316,-437 310,-431 310,-425 310,-425 310,-413 310,-413 310,-407 316,-401 322,-401 322,-401 451,-401 451,-401 457,-401 463,-407 463,-413 463,-413 463,-425 463,-425 463,-431 457,-437 451,-437"/>
+<text text-anchor="middle" x="386.5" y="-422" font-family="Arial" font-size="10.00" fill="#173d2b">Incidencias de finca</text>
+<text text-anchor="middle" x="386.5" y="-411" font-family="Arial" font-size="10.00" fill="#173d2b">foto · lugar · fecha · reportante</text>
+</g>
+<!-- A12 -->
+<g id="node10" class="node">
+<title>A12</title>
+<path fill="#f7fbf8" stroke="#2f6b4f" stroke-width="1.2" d="M803,-388C803,-388 734,-388 734,-388 728,-388 722,-382 722,-376 722,-376 722,-364 722,-364 722,-358 728,-352 734,-352 734,-352 803,-352 803,-352 809,-352 815,-358 815,-364 815,-364 815,-376 815,-376 815,-382 809,-388 803,-388"/>
+<text text-anchor="middle" x="768.5" y="-367.5" font-family="Arial" font-size="10.00" fill="#173d2b">Gestor de tareas</text>
+</g>
+<!-- A8&#45;&gt;A12 -->
+<g id="edge10" class="edge">
+<title>A8&#45;&gt;A12</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M463.44,-419C575.14,-419 769,-419 769,-419 769,-419 769,-395.25 769,-395.25"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="771.45,-395.25 769,-388.25 766.55,-395.25 771.45,-395.25"/>
+</g>
+<!-- A8&#45;&gt;A9 -->
+<g id="edge9" class="edge">
+<title>A8&#45;&gt;A9</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M454,-400.87C454,-390.29 454,-379 454,-379 454,-379 545.38,-379 545.38,-379"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="545.38,-381.45 552.38,-379 545.38,-376.55 545.38,-381.45"/>
+</g>
+<!-- A8&#45;&gt;D1 -->
+<g id="edge19" class="edge">
+<title>A8&#45;&gt;D1</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M444,-400.82C444,-340.13 444,-148.33 444,-148.33 444,-148.33 702.74,-148.33 702.74,-148.33"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="702.74,-150.78 709.74,-148.33 702.74,-145.88 702.74,-150.78"/>
+</g>
+<!-- A11&#45;&gt;A12 -->
+<g id="edge11" class="edge">
+<title>A11&#45;&gt;A12</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M642,-328.31C642,-348.15 642,-377 642,-377 642,-377 714.76,-377 714.76,-377"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="714.76,-379.45 721.76,-377 714.76,-374.55 714.76,-379.45"/>
+</g>
+<!-- A11&#45;&gt;D1 -->
+<g id="edge20" class="edge">
+<title>A11&#45;&gt;D1</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M652,-291.89C652,-250.44 652,-152.17 652,-152.17 652,-152.17 702.91,-152.17 702.91,-152.17"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="702.91,-154.62 709.91,-152.17 702.91,-149.72 702.91,-154.62"/>
+</g>
+<!-- A13 -->
+<g id="node11" class="node">
+<title>A13</title>
+<path fill="#f7fbf8" stroke="#2f6b4f" stroke-width="1.2" d="M994,-388C994,-388 899,-388 899,-388 893,-388 887,-382 887,-376 887,-376 887,-364 887,-364 887,-358 893,-352 899,-352 899,-352 994,-352 994,-352 1000,-352 1006,-358 1006,-364 1006,-364 1006,-376 1006,-376 1006,-382 1000,-388 994,-388"/>
+<text text-anchor="middle" x="946.5" y="-373" font-family="Arial" font-size="10.00" fill="#173d2b">Pendiente → En curso</text>
+<text text-anchor="middle" x="946.5" y="-362" font-family="Arial" font-size="10.00" fill="#173d2b">→ Completada</text>
+</g>
+<!-- A12&#45;&gt;A13 -->
+<g id="edge12" class="edge">
+<title>A12&#45;&gt;A13</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M815.27,-370C815.27,-370 879.95,-370 879.95,-370"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="879.95,-372.45 886.95,-370 879.95,-367.55 879.95,-372.45"/>
+</g>
+<!-- A14 -->
+<g id="node12" class="node">
+<title>A14</title>
+<path fill="#f7fbf8" stroke="#2f6b4f" stroke-width="1.2" d="M1162,-388C1162,-388 1081,-388 1081,-388 1075,-388 1069,-382 1069,-376 1069,-376 1069,-364 1069,-364 1069,-358 1075,-352 1081,-352 1081,-352 1162,-352 1162,-352 1168,-352 1174,-358 1174,-364 1174,-364 1174,-376 1174,-376 1174,-382 1168,-388 1162,-388"/>
+<text text-anchor="middle" x="1121.5" y="-373" font-family="Arial" font-size="10.00" fill="#173d2b">Notas y evidencias</text>
+<text text-anchor="middle" x="1121.5" y="-362" font-family="Arial" font-size="10.00" fill="#173d2b">de resolución</text>
+</g>
+<!-- A13&#45;&gt;A14 -->
+<g id="edge13" class="edge">
+<title>A13&#45;&gt;A14</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M1006.24,-370C1006.24,-370 1061.77,-370 1061.77,-370"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="1061.77,-372.45 1068.77,-370 1061.77,-367.55 1061.77,-372.45"/>
+</g>
+<!-- A9&#45;&gt;D1 -->
+<g id="edge21" class="edge">
+<title>A9&#45;&gt;D1</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M620.52,-366C658.89,-366 716,-366 716,-366 716,-366 716,-163.27 716,-163.27"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="718.45,-163.27 716,-156.27 713.55,-163.27 718.45,-163.27"/>
+</g>
+<!-- D2 -->
+<g id="node16" class="node">
+<title>D2</title>
+<path fill="#fff8e8" stroke="#b47a00" stroke-width="1.2" d="M1007,-156C1007,-156 886,-156 886,-156 880,-156 874,-150 874,-144 874,-144 874,-132 874,-132 874,-126 880,-120 886,-120 886,-120 1007,-120 1007,-120 1013,-120 1019,-126 1019,-132 1019,-132 1019,-144 1019,-144 1019,-150 1013,-156 1007,-156"/>
+<text text-anchor="middle" x="946.5" y="-141" font-family="Arial" font-size="10.00" fill="#6c4a00">Elaboración y</text>
+<text text-anchor="middle" x="946.5" y="-130" font-family="Arial" font-size="10.00" fill="#6c4a00">cumplimentación automática</text>
+</g>
+<!-- D1&#45;&gt;D2 -->
+<g id="edge22" class="edge">
+<title>D1&#45;&gt;D2</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M827.28,-138C827.28,-138 866.81,-138 866.81,-138"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="866.81,-140.45 873.81,-138 866.81,-135.55 866.81,-140.45"/>
+</g>
+<!-- D3 -->
+<g id="node17" class="node">
+<title>D3</title>
+<path fill="#fff8e8" stroke="#b47a00" stroke-width="1.2" d="M1165,-156C1165,-156 1078,-156 1078,-156 1072,-156 1066,-150 1066,-144 1066,-144 1066,-132 1066,-132 1066,-126 1072,-120 1078,-120 1078,-120 1165,-120 1165,-120 1171,-120 1177,-126 1177,-132 1177,-132 1177,-144 1177,-144 1177,-150 1171,-156 1165,-156"/>
+<text text-anchor="middle" x="1121.5" y="-141" font-family="Arial" font-size="10.00" fill="#6c4a00">Revisión / validación</text>
+<text text-anchor="middle" x="1121.5" y="-130" font-family="Arial" font-size="10.00" fill="#6c4a00">por el usuario</text>
+</g>
+<!-- D2&#45;&gt;D3 -->
+<g id="edge23" class="edge">
+<title>D2&#45;&gt;D3</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M1019.2,-138C1019.2,-138 1058.84,-138 1058.84,-138"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="1058.84,-140.45 1065.84,-138 1058.84,-135.55 1058.84,-140.45"/>
+</g>
+<!-- D4 -->
+<g id="node18" class="node">
+<title>D4</title>
+<path fill="#fff3d6" stroke="#b47a00" stroke-width="1.2" d="M1341,-156C1341,-156 1236,-156 1236,-156 1230,-156 1224,-150 1224,-144 1224,-144 1224,-132 1224,-132 1224,-126 1230,-120 1236,-120 1236,-120 1341,-120 1341,-120 1347,-120 1353,-126 1353,-132 1353,-132 1353,-144 1353,-144 1353,-150 1347,-156 1341,-156"/>
+<text text-anchor="middle" x="1288.5" y="-141" font-family="Arial" font-size="10.00" fill="#6c4a00">Documento listo</text>
+<text text-anchor="middle" x="1288.5" y="-130" font-family="Arial" font-size="10.00" fill="#6c4a00">para presentar o archivar</text>
+</g>
+<!-- D3&#45;&gt;D4 -->
+<g id="edge24" class="edge">
+<title>D3&#45;&gt;D4</title>
+<path fill="none" stroke="#6a8978" stroke-width="1.1" d="M1177.11,-138C1177.11,-138 1216.88,-138 1216.88,-138"/>
+<polygon fill="#6a8978" stroke="#6a8978" stroke-width="1.1" points="1216.88,-140.45 1223.88,-138 1216.88,-135.55 1216.88,-140.45"/>
+</g>
+</g>
+</svg>
+</figure>
+<div class="legend"><span><i class="dot"></i> Gestión funcional de CowsIA</span><span><i class="dot docs"></i> Elaboración y cumplimentación documental oficial</span></div>
+<p class="note">La generación documental se alimenta del censo, las fichas individuales, sucesos, incidencias y datos oficiales previamente incorporados, reduciendo duplicidades de introducción manual.</p>
+</article></main>
+<footer>CowsIA · Diagrama funcional</footer>
+</body></html>
